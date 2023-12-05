@@ -4,11 +4,15 @@ import TimeLine from "../components/timeline/index"
 import Projects from "../components/Projects/card/index"
 import Form from "../components/form/index"
 import Footer from "../components/footer/index"
+import LanguageSelector from "../components/country";
+import ThemeToggle from "../components/theme-switch";
 const Home = () => {
     return (
         <div>
             <NavBar/>
             <main>
+                <LanguageSelector/>
+                <ThemeToggle/>
                 <Banner/>
                 <TimeLine/>
                 <Projects/>

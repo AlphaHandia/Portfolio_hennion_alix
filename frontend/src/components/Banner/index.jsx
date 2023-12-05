@@ -1,7 +1,7 @@
 const Banner =() => {
     return (
 <div>
-    
+    <p>Banner</p>
 </div>
     )
 }
