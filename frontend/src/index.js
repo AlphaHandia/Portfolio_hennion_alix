@@ -1,16 +1,16 @@
+import './sass/main.scss'
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './sass/main.scss';
-import App from './App';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import reportWebVitals from './reportWebVitals';
-import store from "./store"
+import store from './store';
+import App from './App';
+import ThemeContext from './components/theme-switch/ThemeContext';  // Assurez-vous que le chemin est correct
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-console.log("hello world")
 root.render(
-  <Provider store ={store}>
-    <App />
+  <Provider store={store}>
+    <ThemeContext.Provider value={{}}>
+      <App />
+    </ThemeContext.Provider>
   </Provider>
 );
-reportWebVitals();

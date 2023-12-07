@@ -1,0 +1,30 @@
+/* TimelineCard.css */
+.timeline-card {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .timeline-card:hover {
+    transform: scale(1.1);
+  }
+  /* Timeline.css */
+.timeline {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .timeline-month {
+    flex: 0 0 100px; /* Largeur fixe pour chaque mois */
+    padding: 10px;
+    position: relative;
+  }
+  
+  .month-label {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  

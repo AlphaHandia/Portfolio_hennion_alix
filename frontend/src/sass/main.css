@@ -1,1 +1,102 @@
-/*# sourceMappingURL=main.css.map */
+@charset "UTF-8";
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Style des sections du footer */
+.footer-section {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+/* Barre droite entre les sections */
+.separator {
+  height: 30px;
+  width: 1px;
+  background-color: #000; /* Couleur de la barre droite */
+  margin: 0 10px;
+}
+
+/* Responsive design : Deux colonnes sur grand écran */
+@media (min-width: 768px) {
+  .footer-section {
+    width: 48%; /* Deux colonnes */
+  }
+}
+/* Responsive design : Une colonne sur mobile */
+@media (max-width: 767px) {
+  .footer-section {
+    width: 100%; /* Une colonne */
+    margin-bottom: 10px; /* Espace entre les sections sur mobile */
+  }
+}
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-form .left-column,
+.contact-form .right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .contact-form {
+    flex-direction: column;
+  }
+  .contact-form .left-column,
+  .contact-form .right-column {
+    margin-right: 0;
+  }
+}
+
+/* ProjectCard.css */
+.project-card {
+  width: 200px;
+  height: 100px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  transition: all 0.3s ease-out;
+}
+
+.project-card.hovered {
+  width: 300px;
+  height: 150px;
+  border: 2px solid #007bff; /* Couleur de la bordure au survol */
+}
+
+/* TimelineCard.css */
+.timeline-card {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.timeline-card:hover {
+  transform: scale(1.1);
+}
+
+/* Timeline.css */
+.timeline {
+  display: flex;
+  align-items: flex-start;
+}
+
+.timeline-month {
+  flex: 0 0 100px; /* Largeur fixe pour chaque mois */
+  padding: 10px;
+  position: relative;
+}
+
+.month-label {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}/*# sourceMappingURL=main.css.map */

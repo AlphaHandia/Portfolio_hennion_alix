@@ -7,14 +7,14 @@ const initialState = {
     // ... d'autres propriétés du thème
   },
 };
-
 const themeSlice = createSlice({
   name: 'theme',
   initialState,
   reducers: {
     toggleTheme: (state) => {
-      state.currentTheme = state.currentTheme === 'light' ? 'dark' : 'light';
-      return state;
+      state.currentTheme = state.currentTheme === 'light'
+        ? { primaryColor: 'darkPrimaryColor', secondaryColor: 'darkSecondaryColor' }
+        : { primaryColor: 'lightPrimaryColor', secondaryColor: 'lightSecondaryColor' };
     },
   },
 });

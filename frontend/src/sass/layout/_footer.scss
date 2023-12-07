@@ -1,0 +1,37 @@
+
+.footer {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Style des sections du footer */
+  .footer-section {
+    flex-grow: 1;
+    padding: 10px; 
+  }
+  
+  /* Barre droite entre les sections */
+  .separator {
+    height: 30px;
+    width: 1px;
+    background-color: #000; /* Couleur de la barre droite */
+    margin: 0 10px; 
+  }
+  
+  /* Responsive design : Deux colonnes sur grand écran */
+  @media (min-width: 768px) {
+    .footer-section {
+      width: 48%; /* Deux colonnes */
+    }
+  }
+  
+  /* Responsive design : Une colonne sur mobile */
+  @media (max-width: 767px) {
+    .footer-section {
+      width: 100%; /* Une colonne */
+      margin-bottom: 10px; /* Espace entre les sections sur mobile */
+    }
+  }
+  
