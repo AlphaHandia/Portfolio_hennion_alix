@@ -6,12 +6,14 @@ import Form from "../components/form/index"
 import Footer from "../components/footer/index"
 import LanguageSelector from "../components/country";
 import ThemeToggle from "../components/theme-switch/index";
+import NetworkCanvas from "../components/MousefollowCanvas/index";
 import '../sass/main.css'
 const Home = () => {
     return (
         <div>
             <NavBar/>
             <main>
+                <NetworkCanvas />
                 <LanguageSelector/>
                 <ThemeToggle/>
                 <Banner/>
