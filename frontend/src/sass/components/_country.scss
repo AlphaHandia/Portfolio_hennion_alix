@@ -1,0 +1,31 @@
+/* Your SCSS file */
+
+button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 5px; /* Adjust the margin as needed */
+  }
+  
+  button img {
+    max-width: 30px; /* Set your desired max width for the flag thumbnail */
+    height: auto;
+    background-image: transparent;
+    background: transparent;
+    margin-right: 5px; /* Optional: Add some space between the image and text */
+  }
+  
+  /* Specific styling for English button */
+  button.english {
+    color: #007bff; /* Customize the text color for the English button */
+  }
+  
+  /* Specific styling for French button */
+  button.french {
+    color: #ff0000; /* Customize the text color for the French button */
+  }
+  
+  /* Add more styling as needed */
+  

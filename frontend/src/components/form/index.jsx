@@ -33,7 +33,7 @@ const ContactForm = () => {
         Message:
         <textarea name="message" value={formData.message} onChange={handleChange}></textarea>
       </label>
-      <button type="submit">Submit</button>
+      <button type="submit"><i class="fa-solid fa-shield-halved"></i>Submit</button>
       </div>
     </form>
   );

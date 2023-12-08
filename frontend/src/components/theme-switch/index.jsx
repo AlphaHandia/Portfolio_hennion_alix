@@ -1,16 +1,25 @@
-import React, { useContext } from 'react';
+// ThemeToggle.js
+
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleTheme } from '../../redux/themeSlice/index';
-import ThemeContext from './ThemeContext';
+
 
 const ThemeToggle = () => {
   const dispatch = useDispatch();
-  const { toggleTheme } = useContext(ThemeContext);
-  const theme = useSelector((state) => state.theme.currentTheme);
+  const currentTheme = useSelector((state) => state.theme.currentTheme);
+
+  const handleToggle = () => {
+    dispatch(toggleTheme());
+    console.log('ok toggle')
+  };
 
   return (
     <div>
-      <button onClick={() => dispatch(toggleTheme())}>Toggle Theme</button>
+      <button onClick={handleToggle}>Toggle Theme</button>
+      <div className={currentTheme === 'cyber' ? 'cyber' : 'garden'}>
+       
+      </div>
     </div>
   );
 };

@@ -1,30 +1,53 @@
-/* TimelineCard.css */
-.timeline-card {
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
+/* Timeline Container */
+.my-timeline {
+  width: 100%;
+ 
+  color: #fff;
+  padding: 30px 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.my-timeline .month-marker {
+  position: absolute;
+  width: 1px;
+  height: 10px;
+  background-color: #fff;
+  transition: height 0.3s;
+
+  &:hover {
+    height: 20px;
   }
-  
-  .timeline-card:hover {
-    transform: scale(1.1);
+}
+
+.my-timeline .timeline-card {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background-color: #f5f5f5;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+
+  &:hover {
+    width: 120px;
+    height: 60px;
   }
-  /* Timeline.css */
-.timeline {
-    display: flex;
-    align-items: flex-start;
+
+  &:nth-child(even) {
+    top: -70px;
   }
-  
-  .timeline-month {
-    flex: 0 0 100px; /* Largeur fixe pour chaque mois */
-    padding: 10px;
-    position: relative;
+}
+
+/* Additional styles as needed */
+
+@media (max-width: 300px) {
+  .my-timeline {
+    width: 100%;
+    padding: 30px 5px 30px 10px;
   }
-  
-  .month-label {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
+
+  .my-timeline .timeline-card .content h3 {
+    color: #34ace0;
+    font-size: 15px;
   }
-  
+}
