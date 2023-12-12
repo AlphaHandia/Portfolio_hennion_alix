@@ -13,7 +13,7 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ajoutez ici la logique pour traiter le formulaire (envoi à un backend, etc.)
+   
   };
 
   return (

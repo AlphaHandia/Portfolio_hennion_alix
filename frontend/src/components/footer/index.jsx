@@ -13,7 +13,6 @@ const Footer = () => {
       <div className="footer-section">
         <h4>GitHub</h4>
         <a href="[Votre lien GitHub]" target="_blank" rel="noopener noreferrer">
-          {/* Utilisez une icône GitHub, par exemple */}
           <i class="fa-brands fa-github"></i>
         </a>
       </div>
@@ -21,7 +20,6 @@ const Footer = () => {
       <div className="footer-section">
         <h4>LinkedIn</h4>
         <a href="[Votre lien LinkedIn]" target="_blank" rel="noopener noreferrer">
-          {/* Utilisez une icône LinkedIn, par exemple */}
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
       </div>

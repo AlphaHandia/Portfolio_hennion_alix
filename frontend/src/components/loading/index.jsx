@@ -22,8 +22,8 @@ const PageLoader = () => {
         left: 0,
         width: '100%',
         height: '100%',
-        background: '#000', // ajustez selon votre thème
-        color: '#fff', // ajustez selon votre thème
+        background: '#000', 
+        color: '#fff', 
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

@@ -1,6 +1,6 @@
 import React from 'react';
 import Timeline from 'react-calendar-timeline';
-import TimelineCard from '../Projects/card/timelinecard/index'; // Import the new component
+import TimelineCard from '../Projects/card/timelinecard/index'; 
 
 const MyTimeline = () => {
   const groups = [{ id: 1, title: 'Groupe 1' }];
@@ -12,7 +12,7 @@ const MyTimeline = () => {
       start_time: new Date(2023, 0, 1),
       end_time: new Date(2023, 0, 2),
     },
-    // Add more items as needed
+   
   ];
 
   const defaultTimeStart = new Date(2023, 0, 1); // Date de début par défaut
@@ -29,7 +29,7 @@ const MyTimeline = () => {
         sidebarContent={<div>Barre Latérale</div>}
       />
 
-      {/* Dynamically render timeline cards based on items */}
+      
       {items.map((item) => (
         <TimelineCard key={item.id} {...item} />
         

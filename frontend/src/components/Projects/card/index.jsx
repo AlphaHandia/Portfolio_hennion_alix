@@ -1,4 +1,3 @@
-// ProjectCard.js
 import React, { useState } from 'react';
 import '../../../sass/components/_ProjectCard.scss';
 
