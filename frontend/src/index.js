@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import App from './App';
-import ThemeContext from './components/theme-switch/ThemeContext';  // Assurez-vous que le chemin est correct
+import ThemeContext from './components/theme-switch/ThemeContext'; 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

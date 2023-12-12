@@ -3,7 +3,7 @@ import React from 'react';
 const TimelineCard = ({ title, start_time, end_time }) => {
   return (
     <div  className="timeline-card" style={{ left: '30%' }}>
-      {/* Add content for each timeline card based on item properties */}
+      {/*ajouter le contenu de chaque card timeline basé sur chaque propriétés */}
       <div className="info">
         <div className="title">{title}</div>
         <div className="content">

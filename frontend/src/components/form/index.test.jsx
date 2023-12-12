@@ -51,7 +51,7 @@ describe('ContactForm Component', () => {
  - Le premier test s'assure que le composant est rendu sans erreur.
  - Le deuxième test vérifie la présence des champs pour le nom, l'email et le message.
  - Le troisième test vérifie si le changement de valeur dans les champs est géré correctement.
- - Le quatrième test vérifie si la soumission du formulaire est gérée correctement (ajoutez des assertions en fonction de votre logique de soumission).
+ - Le quatrième test vérifie si la soumission du formulaire est gérée correctement 
 */
 
 // Explanations in English
@@ -59,5 +59,5 @@ describe('ContactForm Component', () => {
  - The first test ensures that the component renders without errors.
  - The second test checks for the presence of fields for name, email, and message.
  - The third test checks if the value changes in the input fields are handled correctly.
- - The fourth test checks if the form submission is handled correctly (add assertions based on your submission logic).
+ - The fourth test checks if the form submission is handled correctly.
 */

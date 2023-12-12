@@ -40,7 +40,7 @@ const NetworkCanvas = () => {
 
       nodes.forEach((node) => {
         const distance = Math.hypot(node.x - mousePosition.x, node.y - mousePosition.y);
-        const opacity = 1 - Math.min(1, distance / 400); // Ajustez le nombre 200 pour changer la distance à laquelle la ligne devient foncée
+        const opacity = 1 - Math.min(1, distance / 400); // Ajustez le nombre pour changer la distance à laquelle la ligne devient foncée
 
         context.beginPath();
         context.moveTo(node.x, node.y);
@@ -85,7 +85,7 @@ context.stroke();
     display: 'block',
     width: '100%',
     height: '100%',
-    background: `url(${backgroundImage})`, // Remplacez le chemin par votre image
+    background: `url(${backgroundImage})`,
   }}>
     <canvas id="background" style={{ width: '100%', height: '100%' }} />
   </div>

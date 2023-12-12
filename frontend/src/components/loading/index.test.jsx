@@ -26,12 +26,10 @@ describe('PageLoader Component', () => {
 /*
  - Le premier test s'assure que le composant est rendu sans erreur.
  - Le deuxième test vérifie si le message de chargement est affiché pendant une certaine période.
- - Ajoutez d'autres tests spécifiques en fonction de la logique de votre composant.
-*/
+ */
 
 // Explanations in English
 /*
  - The first test ensures that the component renders without errors.
  - The second test checks if the loading message is displayed for a certain period.
- - Add other specific tests based on the logic of your component.
 */

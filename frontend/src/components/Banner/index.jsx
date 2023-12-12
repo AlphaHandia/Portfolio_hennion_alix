@@ -1,4 +1,3 @@
-// Banner.js
 import profileImage from '../../assets/images/alix-hennion.jpg'
 import React from 'react';
 

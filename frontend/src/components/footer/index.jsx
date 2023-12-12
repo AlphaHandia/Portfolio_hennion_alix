@@ -28,12 +28,12 @@ const Footer = () => {
         <h4>Cahier des charges et Recettes</h4>
         <ul>
           <li>
-            <a href="[Lien vers votre cahier des charges]" target="_blank" rel="noopener noreferrer">
+            <a href="[Lien vers mon cahier des charges]" target="_blank" rel="noopener noreferrer">
               Cahier des charges
             </a>
           </li>
           <li>
-            <a href="[Lien vers votre cahier de recettes]" target="_blank" rel="noopener noreferrer">
+            <a href="[Lien vers mon cahier de recettes]" target="_blank" rel="noopener noreferrer">
               Cahier de recettes
             </a>
           </li>

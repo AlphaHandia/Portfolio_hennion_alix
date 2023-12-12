@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import ThemeToggle from './ThemeToggle';
 
-// Créer un store factice avec redux-mock-store
+// Création d'un store factice avec redux-mock-store
 const mockStore = configureStore([]);
 
 // Suite de tests pour le composant ThemeToggle
