@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import TimelineCard from './TimelineCard';
+import TimelineCard from './timelinecard';
 
 // Suite de tests pour le composant TimelineCard
 describe('TimelineCard Component', () => {

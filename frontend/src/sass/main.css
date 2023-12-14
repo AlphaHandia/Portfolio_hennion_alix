@@ -81,8 +81,8 @@
 
 .my-timeline .month-marker {
   position: absolute;
-  width: 1px;
-  height: 10px;
+  width: auto;
+  height: auto;
   background-color: #fff;
   transition: height 0.3s;
 }
@@ -117,6 +117,41 @@
     font-size: 15px;
   }
 }
+.project-timeline {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  overflow: scroll;
+  align-items: flex-start; /* Aligner les éléments en haut */
+}
+
+.project-timeline-item {
+  position: relative;
+  width: 15%; /* Pour une disposition en quinconce, utilisez 50% de la largeur */
+}
+
+.even {
+  margin-top: 20%; /* Décalage pour les éléments pairs */
+}
+
+.odd {
+  margin-bottom: 20%; /* Décalage pour les éléments impairs */
+}
+
+.project-month {
+  position: absolute;
+  left: -30px; /* Ajustez la position verticale en fonction de vos préférences */
+  bottom: 50%; /* Aligner le mois au milieu de l'élément parent */
+  transform: translateX(-50%); /* Ajuster la position horizontale au centre */
+  background-color: #fff; /* Fond blanc pour couvrir la ligne directrice */
+  padding: 5px; /* Espacement autour du mois */
+}
+
+.project-card {
+  width: 100%;
+}
+
 .banner-container {
   display: flex;
   color: #FFFFFF;

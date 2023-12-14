@@ -1,28 +1,24 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
+import enTranslation from './content/English.json';
+import frTranslation from './content/Français.json';
+
 i18n
   .use(initReactI18next)
   .init({
     resources: {
       en: {
-        translation: {
-          // Définir mes traductions pour l'anglais ici
-          welcome: 'Welcome!',
-        },
+        translation: enTranslation,
       },
       fr: {
-        translation: {
-          // Définir mes traductions pour le français ici
-          welcome: 'Bienvenue !',
-        },
+        translation: frTranslation,
       },
-  
     },
-    lng: 'en', // Langue par défaut
-    fallbackLng: 'en-us', // Langue de secours si la langue actuelle n'a pas de traductions disponibles
+    lng: 'en',
+    fallbackLng: 'en-us',
     interpolation: {
-      escapeValue: false, // Permet d'insérer des éléments HTML dans les traductions
+      escapeValue: false,
     },
   });
 
