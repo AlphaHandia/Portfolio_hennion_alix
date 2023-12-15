@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import backgroundImage from '../../assets/images/background-theme-cybersecurity.png';
 
-const NetworkCanvas = () => {
+const CyberCanvas = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [nodes] = useState(() => {
     const newNodes = [];
@@ -92,4 +92,4 @@ context.stroke();
 );
 };
 
-export default NetworkCanvas;
+export default CyberCanvas;

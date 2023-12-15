@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   currentTheme: 'cyber',
+  currentLanguage: 'fr', // Ajout de la gestion de la langue
 };
 
 const themeSlice = createSlice({
@@ -11,8 +12,11 @@ const themeSlice = createSlice({
     toggleTheme: (state) => {
       state.currentTheme = state.currentTheme === 'cyber' ? 'garden' : 'cyber';
     },
+    changeLanguage: (state, action) => {
+      state.currentLanguage = action.payload;
+    },
   },
 });
 
-export const { toggleTheme } = themeSlice.actions;
+export const { toggleTheme, changeLanguage } = themeSlice.actions;
 export default themeSlice.reducer;

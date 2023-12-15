@@ -6,7 +6,10 @@
     margin: 10px;
     transition: all 0.3s ease-out;
   }
-  
+.project-card img {
+  width:100%;
+  height: 100%
+}
   .project-card.hovered {
     width: 300px;
     height: 150px;
