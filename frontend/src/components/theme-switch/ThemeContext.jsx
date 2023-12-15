@@ -1,9 +1,7 @@
 import React, { createContext, useContext, useReducer } from 'react';
 
-// Actions
 const TOGGLE_THEME = 'TOGGLE_THEME';
 
-// Reducer
 const themeReducer = (state, action) => {
   switch (action.type) {
     case TOGGLE_THEME:
@@ -13,15 +11,26 @@ const themeReducer = (state, action) => {
   }
 };
 
-// Initial state
 const initialState = {
-  currentTheme: 'cyber', // Vous pouvez définir le thème initial ici
+  currentTheme: 'cyber',
+  themeStyles: {
+    'cyber': {
+      backgroundImage: 'url(../../assets/images/background-theme-cybersecurity.png)',
+      backgroundSize: 'cover',
+      
+     
+    },
+    'garden': {
+      backgroundImage: 'url(../../assets/images/background-theme-garden.png)',
+      backgroundSize: 'cover',
+      
+    
+    },
+  },
 };
 
-// Créez le contexte
 const ThemeContext = createContext();
 
-// Fournisseur de thème
 const ThemeProvider = ({ children }) => {
   const [state, dispatch] = useReducer(themeReducer, initialState);
 
@@ -36,7 +45,6 @@ const ThemeProvider = ({ children }) => {
   );
 };
 
-// Hook personnalisé pour utiliser le contexte
 const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) {

@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   currentTheme: 'cyber',
-  currentLanguage: 'fr', // Ajout de la gestion de la langue
+  currentLanguage: 'fr', 
 };
 
 const themeSlice = createSlice({

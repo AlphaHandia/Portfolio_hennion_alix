@@ -10,7 +10,7 @@ function App() {
   return (
    <BrowserRouter>
    <LanguageProvider>
-    <ThemeProvider>
+   <ThemeProvider>
    <Routes>
     <Route path="/" element ={<Home/>}/>
     <Route path="/*" element={<Error/>} />

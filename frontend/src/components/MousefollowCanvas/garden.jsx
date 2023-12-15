@@ -1,54 +1,69 @@
-import React, { useState } from 'react';
-import { useSpring, animated } from 'react-spring';
+import React, { useRef, useState } from 'react';
+import backgroundImage from '../../assets/images/background-theme-garden.png';
+import gsap from 'gsap';
+import { useTheme } from '../theme-switch/ThemeContext';
+
+import '../../sass/main.css'; // Assurez-vous d'importer votre fichier CSS
 
 const GardenCanvas = () => {
+  const { state } = useTheme();
   const [isWatering, setWatering] = useState(false);
-
-  // Animation pour le chemin de l'arrosoir
-  const arrosoirAnimation = useSpring({
-    to: async (next, cancel) => {
-      await next({ x: isWatering ? 200 : 0, y: isWatering ? 200 : 0 });
-    },
-    onRest: () => {
-      // Animation terminée, remettez à false
-      setWatering(false);
-    },
-  });
-
-  // Animation de croissance des plantes
-  const plantGrowthAnimation = useSpring({
-    to: async (next, cancel) => {
-      await next({ height: isWatering ? 150 : 100 });
-    },
-  });
+  const arrosoirRef = useRef(null);
+  const planteRef = useRef(null);
 
   const handleClick = () => {
-    // Démarrez l'animation d'arrosoir
     setWatering(true);
+
+    // Animation de l'arrosoir
+    gsap.to(arrosoirRef.current, {
+      x: isWatering ? 200 : 0,
+      y: isWatering ? 200 : 0,
+      ease: 'power2.inOut',
+      onComplete: () => {
+        setWatering(false);
+      },
+    });
+
+    // Animation de croissance des plantes
+    gsap.to(planteRef.current, {
+      height: isWatering ? 150 : 100,
+      ease: 'power2.inOut',
+    });
+
+    // Ajoutez la classe rotate au curseur lors de l'arrosage
+    if (state.currentTheme === 'garden') {
+      document.body.classList.add('rotate');
+      setTimeout(() => {
+        document.body.classList.remove('rotate');
+      }, 300); // Supprimez la classe après la fin de l'animation
+    }
   };
 
   return (
-    <div className="garden-mouse-follow-canvas" onClick={handleClick}>
+    <div
+      className="garden-canvas"
+      onClick={handleClick}
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        zIndex: -1,
+        width: '100%',
+        height: '100%',
+      }}
+    >
       {/* Animation de l'arrosoir */}
-      <animated.img
+      <img
+        ref={arrosoirRef}
         src="arrosoir.png"
         alt="Arrosoir"
-        style={{
-          position: 'absolute',
-          transform: arrosoirAnimation.x
-            .to({ range: [0, 200], output: [0, 1] })
-            .to((x) => `translateX(${x * 100}px)`),
-          top: arrosoirAnimation.y.to((y) => `${y}px`),
-        }}
+        className="arrosoir"
       />
 
       {/* Animation de croissance des plantes */}
-      <animated.div
-        className="plante"
-        style={{
-          height: plantGrowthAnimation.height.to((height) => `${height}px`),
-        }}
-      />
+      <div ref={planteRef} className="plante" />
     </div>
   );
 };

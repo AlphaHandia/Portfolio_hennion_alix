@@ -207,4 +207,43 @@ button.french {
   color: #ff0000; /* Customize the text color for the French button */
 }
 
-/* Add more styling as needed *//*# sourceMappingURL=main.css.map */
+/* Add more styling as needed */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  transition: background-image 0.5s ease;
+}
+
+.rotate {
+  animation: rotateAnimation 0.3s ease-in-out;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+  /* Ajoutez d'autres styles de votre choix, par exemple, taille, couleur, etc. */
+}
+
+.custom-cursor.clicked {
+  transform: rotate(360deg);
+}
+
+#custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none; /* Assurez-vous que le curseur n'interfère pas avec les éléments interactifs */
+  z-index: 1000;
+}/*# sourceMappingURL=main.css.map */

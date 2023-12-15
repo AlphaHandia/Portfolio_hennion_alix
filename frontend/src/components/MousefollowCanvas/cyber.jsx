@@ -14,7 +14,7 @@ const CyberCanvas = () => {
     }
     return newNodes;
   });
-
+ 
   useEffect(() => {
     const canvas = document.getElementById('background');
     const context = canvas.getContext('2d');
@@ -77,18 +77,19 @@ context.stroke();
     };
   }, [mousePosition, nodes]);
   return (
-  <div style={{
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    zIndex: -1,
-    display: 'block',
-    width: '100%',
-    height: '100%',
-    background: `url(${backgroundImage})`,
-  }}>
-    <canvas id="background" style={{ width: '100%', height: '100%' }} />
-  </div>
+    
+<div style={{
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  zIndex:-1, 
+  display: 'block',
+  width: '100%',
+  height: '100%',
+  background: `url(${backgroundImage})`,
+}}>
+  <canvas id="background" style={{ width: '100%', height: '100%' }} />
+</div>
 );
 };
 

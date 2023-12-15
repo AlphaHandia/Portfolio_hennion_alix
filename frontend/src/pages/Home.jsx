@@ -9,26 +9,27 @@ import LanguageSelector from "../components/LanguageSelector/index";
 import ThemeToggle from "../components/theme-switch/index";
 import '../sass/main.css';
 import CyberCanvas from '../components/MousefollowCanvas/cyber';
+import GardenCanvas from '../components/MousefollowCanvas/garden';
+import { useTheme } from '../components/theme-switch/ThemeContext';
+import CustomCursor from '../components/theme-switch/CustomCursor';
 
 const Home = () => {
+  const { state } = useTheme();
+
   return (
-   
-      <div>
-        <NavBar />
-        <main>
-        
-          <CyberCanvas />
-          <LanguageSelector/>
-          <ThemeToggle />
-          <Banner />
-          <TimeLine />
-          <Form />
-          
-          <Footer />
-         
-        </main>
-      </div>
- 
+    <div style={state.themeStyles[state.currentTheme]}>
+      <NavBar />
+      <main>
+        {state.currentTheme === 'cyber' && <CyberCanvas />}
+        {state.currentTheme === 'garden' && <GardenCanvas  />&& <CustomCursor/>}
+        <LanguageSelector/>
+        <ThemeToggle />
+        <Banner />
+        <TimeLine />
+        <Form />
+        <Footer />
+      </main>
+    </div>
   );
 };
 

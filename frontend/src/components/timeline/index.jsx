@@ -17,11 +17,10 @@ const ProjectTimeline = () => {
 const filteredProjects = sortedProjects.filter(
   (project) => {
     const projectDate = new Date(project.date_realization);
-    console.log(project.date_realization)
-    console.log(project.title)
+    
     // Vérifiez si la date est valide
     if (isNaN(projectDate)) {
-      console.warn("Invalid date:", project.date_realization);
+    
       return false; // Exclure les projets avec des dates invalides
     }
 
