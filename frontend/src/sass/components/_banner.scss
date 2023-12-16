@@ -6,16 +6,7 @@
     justify-content: space-between;
     padding: 20px;
   
-    .left-side {
-      display: flex;
-      align-items: center;
-  
-      img {
-        max-width: 100px; // Adjust the size as needed
-        border-radius: 50%; // To make it round
-        margin-right: 20px;
-      }
-  
+    
       div {
         p {
           margin: 0;
@@ -26,5 +17,5 @@
     .right-side {
       color: #FFFFFF;
     }
-  }
+  
   

@@ -1,0 +1,40 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centre le contenu horizontalement
+  
+    h1 {
+      margin-bottom: 20px; // Ajoute un espace sous le titre
+    }
+  
+    .main-project {
+      display: flex;
+      gap: 10px; // Ajoutez l'espace entre les cartes
+  
+      @media (max-width: 767px) {
+        flex-direction: column; // Affichage en colonne sur tablette et mobile
+      }
+  
+      .project-card {
+        display: flex;
+        flex-direction: column;
+  
+        @media (max-width: 767px) {
+          width: 100%; // Ajustez la largeur pour le format mobile
+        }
+  
+        &:hover {
+          transform: scale(1.05); // Légère augmentation de la taille au survol
+        }
+  
+        img {
+          max-width: 100%; // Assurez-vous que l'image ne dépasse pas la largeur du conteneur
+        }
+  
+        .project-details {
+          margin-left: 10px; // Ajoute un espace entre l'image et les détails du projet
+        }
+      }
+    }
+  }
+  
