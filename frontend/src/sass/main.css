@@ -124,24 +124,25 @@
 }
 .project-timeline {
   display: flex;
-  width: 100%;
   flex-wrap: nowrap;
   flex-direction: row;
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
   align-items: flex-start; /* Aligner les éléments en haut */
 }
 
 .project-timeline-item {
   position: relative;
-  width: 15%; /* Pour une disposition en quinconce, utilisez 50% de la largeur */
+  width: 50%;
+  height: 50%; /* Pour une disposition en quinconce, utilisez 50% de la largeur */
 }
 
 .even {
-  margin-top: 20%; /* Décalage pour les éléments pairs */
+  margin-top: 10%; /* Décalage pour les éléments pairs */
 }
 
 .odd {
-  margin-bottom: 20%; /* Décalage pour les éléments impairs */
+  margin-bottom: 10%; /* Décalage pour les éléments impairs */
 }
 
 .project-month {
@@ -243,6 +244,7 @@ body {
 .left-side {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 .left-side img {
   max-width: 100px;
@@ -250,9 +252,19 @@ body {
   margin-right: 20px;
 }
 
+.right-side a {
+  justify-content: space-between;
+  text-decoration: none;
+  color: white;
+  padding: 25px;
+}
+
 .navbar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
 }
 
 .main-content {

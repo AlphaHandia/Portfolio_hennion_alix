@@ -6,12 +6,16 @@ let NavBar = () => {
  <nav className="navbar">
     <div className="left-side">
     <img src={profileImage} alt="alix hennion" />
-    </div>
+
     <LanguageSelector/>
+    </div>
+    
     <h1>Portfolio Alix Hennion </h1>
+    <div className='right-side'>
     <a href=" ">Presentation</a> 
     <a href=" ">Mes projets</a>
-    <a href=" ">Contact</a> 
+    <a href=" ">Contact</a>
+    </div>
  </nav>
  )
 }
