@@ -4,9 +4,11 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    background:#FFFFFF;
+    
   }
   
-  /* Style des sections du footer */
+ 
   .footer-section {
     flex-grow: 1;
     padding: 10px; 
@@ -16,21 +18,21 @@
   .separator {
     height: 30px;
     width: 1px;
-    background-color: #000; /* Couleur de la barre droite */
+    background-color: #000; 
     margin: 0 10px; 
   }
   
   /* Responsive design : Deux colonnes sur grand écran */
   @media (min-width: 768px) {
     .footer-section {
-      width: 48%; /* Deux colonnes */
+      width: 48%; 
     }
   }
   
   /* Responsive design : Une colonne sur mobile */
   @media (max-width: 767px) {
     .footer-section {
-      width: 100%; /* Une colonne */
+      width: 100%;
       margin-bottom: 10px; /* Espace entre les sections sur mobile */
     }
   }

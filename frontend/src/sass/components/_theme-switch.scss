@@ -1,0 +1,23 @@
+.toggle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .toggle button {
+    color: antiquewhite;
+    background-color: #FFB85D;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle.active button {
+    transform: translateX(50px); 
+  }
+  
+ 
+  

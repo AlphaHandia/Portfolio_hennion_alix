@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFaucet } from '@fortawesome/free-solid-svg-icons';
+
 
 const CustomCursor = () => {
   const [cursorVisible] = useState(true);
@@ -31,7 +30,7 @@ const CustomCursor = () => {
             transform: `translate(${position.x}px, ${position.y}px)`,
           }}
         >
-          <FontAwesomeIcon icon={faFaucet} size="2x" color="red" />
+          
         </div>
       )}
     </>
