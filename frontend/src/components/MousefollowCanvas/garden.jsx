@@ -3,7 +3,7 @@ import backgroundImage from '../../assets/images/background-theme-garden.png';
 import gsap from 'gsap';
 import { useTheme } from '../theme-switch/ThemeContext';
 
-import '../../sass/main.css'; // Assurez-vous d'importer votre fichier CSS
+import '../../sass/main.css'; 
 
 const GardenCanvas = () => {
   const { state } = useTheme();
@@ -30,12 +30,12 @@ const GardenCanvas = () => {
       ease: 'power2.inOut',
     });
 
-    // Ajoutez la classe rotate au curseur lors de l'arrosage
+   
     if (state.currentTheme === 'garden') {
       document.body.classList.add('rotate');
       setTimeout(() => {
         document.body.classList.remove('rotate');
-      }, 300); // Supprimez la classe après la fin de l'animation
+      }, 300); 
     }
   };
 
@@ -54,7 +54,7 @@ const GardenCanvas = () => {
         height: '100%',
       }}
     >
-      {/* Animation de l'arrosoir */}
+ 
       <img
         ref={arrosoirRef}
         src="arrosoir.png"
@@ -62,7 +62,7 @@ const GardenCanvas = () => {
         className="arrosoir"
       />
 
-      {/* Animation de croissance des plantes */}
+    
       <div ref={planteRef} className="plante" />
     </div>
   );

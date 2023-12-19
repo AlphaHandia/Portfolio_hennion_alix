@@ -14,7 +14,7 @@ const TimelineCard = () => {
           <h3>Project Details</h3>
           <p>Description: {projects.description[language]}</p>
           <p>Start Date: {projects.date_realization}</p>
-          {/* Add more details as needed */}
+         
         </div>
       </div>
     </div>

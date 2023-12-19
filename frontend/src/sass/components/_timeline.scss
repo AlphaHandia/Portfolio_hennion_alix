@@ -1,4 +1,4 @@
-/* Timeline Container */
+
 .my-timeline {
   width: 100%;
  
@@ -38,7 +38,7 @@
   }
 }
 
-/* Additional styles as needed */
+
 
 @media (max-width: 300px) {
   .my-timeline {
@@ -58,14 +58,14 @@
   flex-direction: row;
   overflow-x: scroll;
   overflow-y: hidden;
-  align-items: flex-start; /* Aligner les éléments en haut */
+  align-items: flex-start;
 }
 
 .project-timeline-item {
   position: relative;
   
   width: 50%;
-  height: 50%; /* Pour une disposition en quinconce, utilisez 50% de la largeur */
+  height: 50%; /* Pour une disposition en quinconce, utilisation 50% de la largeur */
 }
 
 .even {
@@ -78,11 +78,11 @@
 
 .project-month {
   position: absolute;
-  left: -30px; /* Ajustez la position verticale en fonction de vos préférences */
-  bottom: 50%; /* Aligner le mois au milieu de l'élément parent */
-  transform: translateX(-50%); /* Ajuster la position horizontale au centre */
-  background-color: #fff; /* Fond blanc pour couvrir la ligne directrice */
-  padding: 5px; /* Espacement autour du mois */
+  left: -30px;
+  bottom: 50%; 
+  transform: translateX(-50%); 
+  background-color: #fff; 
+  padding: 5px; 
 }
 
 .project-card {

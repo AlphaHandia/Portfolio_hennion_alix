@@ -6,31 +6,27 @@
   align-items: center;
 }
 
-/* Style des sections du footer */
 .footer-section {
   flex-grow: 1;
   padding: 10px;
 }
 
-/* Barre droite entre les sections */
 .separator {
   height: 30px;
   width: 1px;
-  background-color: #000; /* Couleur de la barre droite */
+  background-color: #000;
   margin: 0 10px;
 }
 
-/* Responsive design : Deux colonnes sur grand écran */
 @media (min-width: 768px) {
   .footer-section {
-    width: 48%; /* Deux colonnes */
+    width: 48%;
   }
 }
-/* Responsive design : Une colonne sur mobile */
 @media (max-width: 767px) {
   .footer-section {
-    width: 100%; /* Une colonne */
-    margin-bottom: 10px; /* Espace entre les sections sur mobile */
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 .contact-form {
@@ -55,7 +51,6 @@
   }
 }
 
-/* ProjectCard.css */
 .project-card {
   width: 200px;
   height: 100px;
@@ -75,7 +70,6 @@
   border: 2px solid #007bff; /* Couleur de la bordure au survol */
 }
 
-/* Timeline Container */
 .my-timeline {
   width: 100%;
   color: #fff;
@@ -111,7 +105,6 @@
   top: -70px;
 }
 
-/* Additional styles as needed */
 @media (max-width: 300px) {
   .my-timeline {
     width: 100%;
@@ -128,13 +121,13 @@
   flex-direction: row;
   overflow-x: scroll;
   overflow-y: hidden;
-  align-items: flex-start; /* Aligner les éléments en haut */
+  align-items: flex-start;
 }
 
 .project-timeline-item {
   position: relative;
   width: 50%;
-  height: 50%; /* Pour une disposition en quinconce, utilisez 50% de la largeur */
+  height: 50%; /* Pour une disposition en quinconce, utilisation 50% de la largeur */
 }
 
 .even {
@@ -147,11 +140,11 @@
 
 .project-month {
   position: absolute;
-  left: -30px; /* Ajustez la position verticale en fonction de vos préférences */
-  bottom: 50%; /* Aligner le mois au milieu de l'élément parent */
-  transform: translateX(-50%); /* Ajuster la position horizontale au centre */
-  background-color: #fff; /* Fond blanc pour couvrir la ligne directrice */
-  padding: 5px; /* Espacement autour du mois */
+  left: -30px;
+  bottom: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 5px;
 }
 
 .project-card {
@@ -172,35 +165,31 @@
   color: #FFFFFF;
 }
 
-/* Your SCSS file */
 button {
   display: flex;
   align-items: center;
   background: transparent;
   border: none;
   cursor: pointer;
-  margin: 5px; /* Adjust the margin as needed */
+  margin: 5px;
 }
 
 button img {
-  max-width: 30px; /* Set your desired max width for the flag thumbnail */
+  max-width: 30px;
   height: auto;
   background-image: transparent;
   background: transparent;
-  margin-right: 5px; /* Optional: Add some space between the image and text */
+  margin-right: 5px;
 }
 
-/* Specific styling for English button */
 button.english {
-  color: #007bff; /* Customize the text color for the English button */
+  color: #007bff;
 }
 
-/* Specific styling for French button */
 button.french {
-  color: #ff0000; /* Customize the text color for the French button */
+  color: #ff0000;
 }
 
-/* Add more styling as needed */
 body {
   margin: 0;
   padding: 0;
@@ -226,7 +215,6 @@ body {
   position: fixed;
   pointer-events: none;
   transition: transform 0.3s ease;
-  /* Ajoutez d'autres styles de votre choix, par exemple, taille, couleur, etc. */
 }
 
 .custom-cursor.clicked {
@@ -237,7 +225,7 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-  pointer-events: none; /* Assurez-vous que le curseur n'interfère pas avec les éléments interactifs */
+  pointer-events: none;
   z-index: 1000;
 }
 

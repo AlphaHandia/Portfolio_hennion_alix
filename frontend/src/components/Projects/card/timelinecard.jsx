@@ -18,7 +18,7 @@ const ProjectCard = ({ projectId }) => {
       <div className="project-details">
         <h3>{project.title[language]}</h3>
         <p>{project.description[language]}</p>
-        {/* Ajoutez plus de détails au besoin */}
+        
       </div>
     </div>
   );

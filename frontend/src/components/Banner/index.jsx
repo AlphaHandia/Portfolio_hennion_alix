@@ -10,7 +10,7 @@ const Banner = () => {
       <WeatherApp/>
      
 
-      {/* Right side with weather functionality */}
+      
       <div className="right-side">
       <div>
           <p>Short Presentation: </p>

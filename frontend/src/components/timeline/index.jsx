@@ -1,24 +1,22 @@
 import React from 'react';
-import 'react-calendar-timeline/lib/Timeline.css'; // Assurez-vous d'importer les styles CSS
+import 'react-calendar-timeline/lib/Timeline.css';
 
 import projectData from '../Projects/projectContent.json';
 import ProjectCard from '../Projects/card/timelinecard';
 
 const ProjectTimeline = () => {
-  // Triez les projets par date de réalisation
+ 
   const sortedProjects = projectData.projects.sort(
     (a, b) => new Date(a.date_realization) - new Date(b.date_realization)
   );
 
-  // Filtrez les projets pour ne conserver que ceux de mars à décembre 2023
-// ...
 
-// Filtrez les projets pour ne conserver que ceux de mars à décembre 2023
+// Filtre des projets pour ne conserver que ceux de mars à décembre 2023
 const filteredProjects = sortedProjects.filter(
   (project) => {
     const projectDate = new Date(project.date_realization);
     
-    // Vérifiez si la date est valide
+    
     if (isNaN(projectDate)) {
     
       return false; // Exclure les projets avec des dates invalides

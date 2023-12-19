@@ -35,12 +35,12 @@ const CyberCanvas = () => {
     const updateCanvas = () => {
       context.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Dessiner des lignes entre les nœuds et la position de la souris
+      // Dessin des lignes entre les nœuds et la position de la souris
       context.lineWidth = 1;
 
       nodes.forEach((node) => {
         const distance = Math.hypot(node.x - mousePosition.x, node.y - mousePosition.y);
-        const opacity = 1 - Math.min(1, distance / 400); // Ajustez le nombre pour changer la distance à laquelle la ligne devient foncée
+        const opacity = 1 - Math.min(1, distance / 400); // Ajustement le nombre pour changer la distance à laquelle la ligne devient foncée
 
         context.beginPath();
         context.moveTo(node.x, node.y);
