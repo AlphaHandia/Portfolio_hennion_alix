@@ -7,59 +7,59 @@
           "fr": "Projet 2 - Premiers pas en HTML"
         },
         "description": {
-          "en": "Project 1 description.",
-          "fr": "Description du projet 1."
+          "en": "This project aims to familiarize participants with the HTML language, widely used by web developers. It provides step-by-step guidance to acquire the basics of the language, putting knowledge into practice through a concrete mission. The scenario involves an internship at Webonzaï agency as a junior developer, with the first mission being the update of the Riding Cities webpage, a sports association focused on skateboarding. The project is designed to be completed in 1 to 2 weeks, with exclusive mentorship. Participants are encouraged to start the project without waiting for the first mentorship session, relying on provided resources and preparing questions for the mentor meeting",
+          "fr": "Ce projet vise à familiariser les participants avec le langage HTML, largement utilisé par les développeurs web. Il offre un accompagnement étape par étape pour acquérir les bases du langage, en mettant en pratique les connaissances à travers une mission concrète. Le scénario implique un stage chez l'agence Webonzaï en tant que développeur junior, avec pour première mission la mise à jour de la page web de Riding Cities, une association sportive axée sur le skateboard.Le projet est conçu pour être réalisé en 1 à 2 semaines, avec un accompagnement exclusif du mentor. Les participants sont encouragés à commencer le projet sans attendre la première séance de mentorat, en se basant sur les ressources fournies et en préparant des questions pour la réunion avec le mentor."
         },
         "date_realization": "2023/03",
         "cover": "./projectscover/projectCover2.PNG",
-        "languages": ["HTML", "CSS", "JavaScript"],
+        "languages": ["HTML"],
         "skills_acquired": ["Front-end development"]
       },
       {
         "id": 2,
         "title": {
           "en": "Project 3 - Create the Homepage of a Travel Agency with HTML and CSS",
-          "fr": "Projet 3 - Créez la page d'accueil d'une agence de voyage avec HTML et CSS"
+          "fr": "Projet 3 - Créer la page d'accueil d'une agence de voyage avec HTML et CSS"
         },
         "description": {
-          "en": "Project 2 description.",
-          "fr": "Description du projet 2."
+          "en":  "The developer is tasked with integrating the interface of a website for the start-up Booki, allowing users to find accommodations and activities in the city of their choice. This task involves close collaboration with Sarah, the CTO, and Loïc, the UI designer. Sarah sends an email to the developer to present the finalized mockups of the site in desktop, tablet, and mobile versions, created by Loïc. The specifications and technical constraints are compiled in an attached summary. To facilitate the start, a file structure and a code base are provided. The developer is encouraged to complete the missing HTML and CSS code by drawing inspiration from the existing base. They must maintain the same folder structure and send the complete folder to Sarah once the work is finished.",
+          "fr": "Le développeur est chargé d'intégrer l'interface d'un site Internet pour la start-up Booki, permettant aux utilisateurs de trouver des hébergements et des activités dans la ville de leur choix. Cette tâche implique une collaboration étroite avec Sarah, la CTO, et Loïc, l'UI designer.Sarah envoie un e-mail au développeur pour présenter les maquettes finalisées du site dans les versions desktop, tablette et mobile, réalisées par Loïc. Les spécifications et contraintes techniques sont regroupées dans une note de synthèse jointe. Pour faciliter le démarrage, une structure de fichiers et une base de code sont fournies.Le développeur est encouragé à compléter le code HTML et CSS manquant en s'inspirant de la base existante. Il doit conserver la même structure de dossiers et envoyer le dossier complet à Sarah une fois le travail terminé."
         },
         "date_realization": "2023/04",
         "cover": "./projectscover/projectCover3.PNG",
-        "languages": ["HTML", "CSS", "JavaScript", "React"],
+        "languages": ["HTML", "CSS"],
         "skills_acquired": ["Front-end development", "React development"]
       },
       {
         "id": 3,
         "title": {
           "en": "Project 4 - Enhance the Interface of a Mobile Site with CSS Animations",
-          "fr": "Projet 4 - Améliorez l'interface d'un site mobile avec des animations CSS"
+          "fr": "Projet 4 - Améliorer l'interface d'un site mobile avec des animations CSS"
         },
         "description": {
-          "en": "Project 3 description.",
-          "fr": "Description du projet 3."
+          "en": "The junior developer has joined Ohmyfood, a young catering startup already present in New York and looking to establish itself in Paris. His mission is to develop a mobile-first website listing menus from gourmet restaurants, allowing customers to compose their menu and avoid waiting times at the restaurant. The sales team has successfully convinced four restaurant owners to use the OhMyFood platform, and the site will initially have four menus. The developer collaborated with Paul to create a creative brief containing key project information. Paul sends the mobile and desktop mockups of the site via email, along with the source files (images and texts) and the prototype via Figma, including the animations and behaviors to be integrated. The site must be developed for mobile, tablet, and desktop, respecting the information from the creative brief. It should be responsive and mobile-first, using SASS and carefully crafted animations. The developer will need to explain the functioning of these animations to Paul.",
+          "fr": "Le développeur junior a intégré Ohmyfood, une jeune startup de restauration déjà présente à New-York et cherchant à s'imposer à Paris. Sa mission est de développer un site mobile first épertoriant les menus de restaurants gastronomiques, avec la possibilité pour les clients de composer leur menu et éviter les temps d'attente au restaurant.L'équipe commerciale a réussi à convaincre quatre restaurateurs d'utiliser la plateforme OhMyFood, et le site devra contenir initialement quatre menus. Le développeur a collaboré avec Paul pour établir un brief créatif rassemblant les informations clés du projet.Paul envoie les maquettes mobile et desktop du site par e-mail, accompagnées du dossier des sources du site (images et textes) et du prototype via Figma, incluant les animations et comportements à intégrer. Le site doit être développé pour mobile, tablette, et desktop en respectant les informations du brief créatif. Il doit être responsive et en mobile first , avec l'utilisation de SASS et des animations soignées. Le développeur devra expliquer le fonctionnement de ces animations à Paul."
         },
         "date_realization": "2023/05",
         "cover": "./projectscover/projectCover4.PNG",
-        "languages": ["HTML", "CSS", "JavaScript", "React"],
+        "languages": ["HTML", "CSS", "SASS"],
         "linkGithub": "https://github.com/AlphaHandia/Projet_4_ohmyfood_alix_hennion.git",
         "linkgithubPages": "https://alphahandia.github.io/Projet_4_ohmyfood_alix_hennion/",
-        "skills_acquired": ["Front-end development", "React development"]
+        "skills_acquired": ["Front-end development"]
       },
       {
         "id": 4,
         "title": {
           "en": "Project 5 - First Steps in JavaScript",
-          "fr": "Projet 5 - Premiers pas sur le langage JavaScript"
+          "fr": "Projet 5 - Premiers pas dans le javascript"
         },
         "description": {
-          "en": "Project 4 description.",
-          "fr": "Description du projet 4."
+          "en": "The 'JavaScript for Print it' project aims to provide the junior developer with practical experience in developing an interactive carousel for the Print it printing house website. Under the guidance of Director Lucien, the developer will follow a guided path in five key steps. It will start by updating the HTML code by adding static arrows to the carousel, then will add Event Listeners to make them interactive. Next, it will integrate bullet points into the slider to indicate the current user position. Changing the slide on button click will follow, with dynamic changes such as the bullet point, image, and text. Finally, the developer will implement infinite scrolling to ensure a smooth user experience. The project is designed to be completed in 1 to 2 weeks with exclusive mentorship, providing practical immersion in the JavaScript language. Educational resources are provided at each step to facilitate progressive learning and enhance the developer's skills.",
+          "fr": "Le projet 'JavaScript pour Print it' vise à donner au développeur junior une expérience pratique dans le développement d'un carrousel interactif pour le site de l'imprimerie Print it. Sous la direction du directeur Lucien, le développeur suivra un parcours guidé en cinq étapes clés. Il commencera par mettre à jour le code HTML en ajoutant des flèches statiques au carrousel, puis ajoutera des Event Listeners pour les rendre interactives. Ensuite, il intégrera des bullet points au slider pour indiquer la position actuelle de l'utilisateur. La modification du slide au clic sur le bouton suivra, avec des changements dynamiques tels que le bullet point, l'image et le texte. Enfin, le développeur mettra en place un défilement infini pour assurer une expérience utilisateur fluide. Le projet est conçu pour être réalisé en 1 à 2 semaines avec un mentorat exclusif, offrant une immersion pratique dans le langage JavaScript. Des ressources pédagogiques sont fournies à chaque étape pour faciliter l'apprentissage progressif et renforcer les compétences du développeur."
         },
         "date_realization": "2023/06",
         "cover": "./projectscover/projectCover5.PNG",
-        "languages": ["HTML", "CSS", "JavaScript", "React"],
+        "languages": ["HTML", "CSS", "JavaScript"],
         "linkGithub": "https://github.com/AlphaHandia/Print-it-JS.git",
         "skills_acquired": ["Front-end development", "React development"]
       },
@@ -67,17 +67,17 @@
         "id": 5,
         "title": {
           "en": "Project 6 - Create a Dynamic Web Page with JavaScript",
-          "fr": "Projet 6 - Créez une page web dynamique avec JavaScript"
+          "fr": "Projet 6 - Créer une page web dynamique avec JavaScript"
         },
         "description": {
-          "en": "Project 5 description.",
-          "fr": "Description du projet 5."
+          "en": "As a front-end developer for ArchiWebos agency, you are integrated into a team working on the portfolio website of an interior designer. You receive a detailed brief from Charlotte, the project manager, along with various resources to start. Your main tasks include developing the presentation page for the architect's works from the provided HTML code, creating the login page for the site administrator (the client) from scratch, and developing the modal for uploading new media, also from scratch. The provided resources include the Figma design, the back-end code for data persistence, the original front-end code with the static version of the architect's page, and a Kanban board for task management. Your mission is to integrate new features by collaborating with a team of 50 employees in a dynamic professional environment.",
+          "fr": "En tant que développeur front-end pour l'agence ArchiWebos, vous êtes intégré en renfort dans une équipe travaillant sur le site portfolio d'une architecte d'intérieur. Vous recevez un brief détaillé de Charlotte, la responsable du projet, accompagné de diverses ressources pour démarrer. Vos principales missions consistent à développer la page de présentation des travaux de l'architecte à partir du code HTML fourni, créer la page de connexion de l'administrateur du site (le client) à partir de zéro, et développer la modale permettant d'uploader de nouveaux médias, également à partir de zéro. Les ressources fournies comprennent le design Figma, le code back-end pour la persistance des données, le code front-end d'origine avec la version statique de la page de l'architecte, et un Kanban pour la gestion des tâches. Vous avez pour mission d'intégrer de nouvelles fonctionnalités en collaborant avec une équipe de 50 salariés, dans un environnement professionnel dynamique."
         },
         "date_realization": "2023/07",
         "cover": "./projectscover/projectCover6.PNG",
-        "languages": ["HTML", "CSS", "JavaScript", "React"],
+        "languages": ["HTML", "CSS", "JavaScript"],
         "linkGithub": "https://github.com/AlphaHandia/Projet_6.git",
-        "skills_acquired": ["Front-end development", "React development"]
+        "skills_acquired": ["Front-end development"]
       },
       {
         "id": 6,
@@ -86,14 +86,14 @@
           "fr": "Projet 7 - Planifiez le développement du site de votre client"
         },
         "description": {
-          "en": "Project 6 description.",
-          "fr": "Description du projet 6."
+          "en": "As a front-end developer at Webgencia, you are responsible for leading, preparing, and planning the development project of the 'Menu Maker' site for the client Qwenta. The mission includes implementing an agile methodology in collaboration with Soufiane, the Product Owner. You receive an invitation to the project validation meeting with John, the project manager at Qwenta. Soufiane shares several documents, including the desktop mockup, functional specifications, and the user stories table. You have three main missions: develop a monitoring system, define the technical specifications of the site, and organize project management. You prepare a presentation of your monitoring work, the technical specifications of the site, and a project plan. Soufiane validates your work and requests a 20-slide presentation to explain the chosen technical solution to John, highlighting the technical specifications visually and detailing the communication plan with Qwenta during the project.",
+          "fr": "En tant que développeur front-end chez Webgencia, vous êtes chargé de mener, préparer et planifier le projet de développement du site 'Menu Maker' pour le client Qwenta. La mission comprend la mise en place d'une méthodologie agile en collaboration avec Soufiane, le Product Owner. Vous recevez une invitation à la réunion de validation du projet avec John, le chef de projet chez Qwenta. Soufiane partage plusieurs documents, dont la maquette desktop, les spécifications fonctionnelles, et le tableau des user stories. Vous avez trois principales missions : développer un système de veille, définir les spécifications techniques du site, et organiser la gestion de projet. Vous préparez une présentation de votre travail de veille, les spécifications techniques du site, et une planification du projet. Soufiane valide votre travail et demande une présentation de 20 slides pour expliquer la solution technique retenue à John, mettant en avant les spécifications techniques de manière visuelle et détaillant le plan de communication avec Qwenta durant le projet."
         },
         "date_realization": "2023/08",
         "cover": "./projectscover/projectCover7.PNG",
-        "languages": ["HTML", "CSS", "JavaScript", "React"],
+        "languages": [],
         "linkGithub": "https://github.com/AlphaHandia/Projet_7.git",
-        "skills_acquired": ["Front-end development", "React development"]
+        "skills_acquired": ["Front-end development","agile method"]
       },
       {
         "id": 7,
@@ -102,14 +102,14 @@
           "fr": "Projet 8 - Créez une application web de location immobilière avec React"
         },
         "description": {
-          "en": "Project 7 description.",
-          "fr": "Description du projet 7."
+          "en": "Kasa, a French leader in private apartment rentals, is hiring a freelance front-end developer for the redesign of its web platform. The CTO, Laura, initiated this redesign by replacing the old ASP.NET stack with a JavaScript stack (NodeJS and React). You are required to start the React project, develop the entire application following Figma mockups and information provided by Laura. The back-end has not been recruited yet, but Laura has extracted the last 20 listings in a JSON file to simulate the data. Technical constraints include the use of Create React App or another bundler like Vite, and Kasa's coding guidelines. Designer Paul provides information about the design, including Figma mockups and prototypes of the site. He also specifies certain features such as scrolling through photos in the gallery and the behavior of Collapses. The use of Sass and CSS animations is recommended, especially for students in the Web Developer program.",
+          "fr": "Kasa, leader français dans la location d'appartements entre particuliers, recrute un développeur front-end en freelance pour la refonte de sa plateforme web. La CTO, Laura, a initié cette refonte en remplaçant l'ancienne stack ASP.NET par une stack JavaScript (NodeJS et React). Vous devez démarrer le projet React, développer l'ensemble de l'application en suivant les maquettes Figma et les informations fournies par Laura. Le back-end n'est pas encore recruté, mais Laura a extrait les 20 dernières annonces dans un fichier JSON pour simuler les données. Les contraintes techniques incluent l'utilisation de Create React App ou un autre bundler comme Vite, et les coding guidelines de Kasa. Le designer Paul fournit des informations sur le design, notamment les maquettes sur Figma et les prototypes du site. Il précise également certaines fonctionnalités comme le défilement des photos dans la galerie et le comportement des Collapses. L'utilisation de Sass et les animations CSS sont recommandées, en particulier pour les étudiants du parcours Développeur Web."
         },
         "date_realization": "2023/09",
         "cover": "./projectscover/projectCover8.PNG",
-        "languages": ["HTML", "CSS", "JavaScript"],
+        "languages": ["HTML", "CSS", "JavaScript", "React"],
         "linkGithub": "https://github.com/AlphaHandia/Projet_8_Creez_une_application_web_de_location_immobiliere_avec_react.git",
-        "skills_acquired": ["Front-end development"]
+        "skills_acquired": ["Front-end development","React development"]
       },
       {
         "id": 8,
@@ -118,15 +118,15 @@
           "fr": "Projet 9 - Optimisez le référencement d'un site de photographe"
         },
         "description": {
-          "en": "Project 8 description.",
-          "fr": "Description du projet 8."
+          "en": "As a freelance developer, you offered your SEO optimization services to Nina Carducci, a photographer. After analyzing her site, you sent her a detailed proposal email outlining the encountered issues and the services you can provide. Nina responded positively, expressing interest in collaboration. After a phone discussion, she summarized the tasks to be accomplished, including overall site optimization, setting up local SEO, adding meta tags for social networks, and making accessibility-related modifications. You received information for local SEO from her. Nina also shared the code of her site on GitHub, which you need to clone, modify, and then share in a new repository once ready. You're using an optimization report template prepared for this mission to document the changes made.",
+          "fr": "En tant que développeur freelance, vous avez proposé vos services d'optimisation SEO à Nina Carducci, une photographe. Après avoir analysé son site, vous lui avez envoyé un e-mail de proposition détaillant les problèmes rencontrés et les services que vous pouvez fournir. Nina a répondu favorablement, exprimant son intérêt pour une collaboration. Après une discussion téléphonique, elle a résumé les missions à accomplir, notamment une optimisation globale du site, la mise en place du référencement local, l'ajout de métas pour les réseaux sociaux et des modifications liées à l'accessibilité. Vous avez reçu ses informations pour le référencement local. Nina a également partagé le code de son site sur GitHub, que vous devrez cloner, modifier, puis partager dans un nouveau repository une fois prêt. Vous utilisez un modèle de rapport d'optimisation préparé pour cette mission afin de documenter les modifications effectuées."
         },
         "date_realization": "2023/10",
         "cover": "./projectscover/projectCover9.PNG",
-        "languages": ["HTML", "CSS", "JavaScript", "React"],
+        "languages": ["SEO"],
         "linkGithub": "https://github.com/AlphaHandia/Projet_9_optimisez_le_referencement_d-un_site_de_photographe.git",
         "linkgithubPages": "https://alphahandia.github.io/Projet_9_optimisez_le_referencement_d-un_site_de_photographe/",
-        "skills_acquired": ["Front-end development", "React development"]
+        "skills_acquired": ["SEO development"]
       },
       {
         "id": 9,
@@ -135,14 +135,14 @@
           "fr": "Projet 10 - Débuggez le site d'une agence d'évènementiel"
         },
         "description": {
-          "en": "Project 9 description.",
-          "fr": "Description du projet 9."
+          "en": "As a freelance front-end developer, you have been contacted by the event agency 724events to finalize the new version of its showcase website, a one-page site. The design has been approved, but the first freelance developer abandoned the project, leaving some unresolved bugs. Jean-Baptiste, the Marketing Director of the agency, has sent you the code of the site with instructions in the 'Issues' tab on the tasks to be completed. Additionally, a recipe book has been started, requiring your completion by adding all scenarios to ensure that the site functions correctly. The mission is crucial for the agency, and you quickly get to work to resolve the issues and finalize the project within the specified deadlines.",
+          "fr": "En tant que développeur front-end freelance, vous avez été contacté par l'agence événementielle 724events pour finaliser la nouvelle version de son site vitrine, une page one-page. Le design a été validé, mais le premier développeur freelance a abandonné le projet en laissant quelques bugs non résolus. Jean-Baptiste, le directeur Marketing de l'agence, vous a envoyé le code du site avec des indications dans l'onglet 'Issues' sur les tâches à compléter. De plus, un cahier de recette a été commencé, nécessitant votre finalisation en ajoutant tous les scénarios pour vérifier que le site fonctionne correctement. La mission est cruciale pour l'agence, et vous vous mettez au travail rapidement pour résoudre les problèmes et finaliser le projet dans les délais impartis."
         },
         "date_realization": "2023/11",
         "cover": "./projectscover/projectcover.png",
         "languages": ["HTML", "CSS", "JavaScript"],
         "linkGithub": "https://github.com/AlphaHandia/Debuggez-une-application-React.JS.git",
-        "skills_acquired": ["Front-end development"]
+        "skills_acquired": ["Front-end development","testing development"]
       },
       {
         "id": 10,
@@ -151,8 +151,8 @@
           "fr": "Projet 11 - Implémentez le front-end d'une application bancaire avec React"
         },
         "description": {
-          "en": "Project 10 description.",
-          "fr": "Description du projet 10."
+          "en": "As a new front-end developer at Argent Bank, you are working with Mila, the project manager, on the implementation of the user dashboard. Avery Moreau, the CTO, sends you two emails. In the first one, he introduces phase 1 of the project, which involves user authentication. You need to create a complete and responsive web application with React using the provided static HTML and CSS. The use of Redux to manage the application state is necessary. The application should allow the user to visit the homepage, log in, log out, and view information related to their own profile after a successful login. Changing the first and last names is not allowed, but the username can be modified. It is also requested to optimize images and code following the Green Code best practices. In the second email, Avery announces phase 2, which concerns transactions. You need to provide a document describing the proposed API routes for transaction manipulations following Swagger guidelines. Key elements to specify for each API endpoint are the HTTP method, route, endpoint description, possible parameters, and different responses with corresponding response codes. The document must be exported to a YAML file using Swagger syntax. A code review and discussion on the API proposal will take place once the work is completed.",
+          "fr": "En tant que nouveau développeur front-end chez Argent Bank, vous travaillez avec Mila, la cheffe de projet, sur la mise en place du tableau de bord des utilisateurs. Avery Moreau, le CTO, vous envoie deux mails. Dans le premier, il présente la phase 1 du projet, qui concerne l'authentification des utilisateurs. Vous devez créer une application web complète et responsive avec React en utilisant le HTML statique et le CSS fournis. L'utilisation de Redux pour gérer le state de l'application est nécessaire. L'application doit permettre à l'utilisateur de visiter la page d'accueil, de se connecter, de se déconnecter, et de voir les informations relatives à son propre profil après une connexion réussie. La modification du nom et du prénom est interdite, mais le pseudo peut être modifié. Il est également demandé d'optimiser les images et le code en suivant les bonnes pratiques de Green Code. Dans le deuxième mail, Avery annonce la phase 2 qui concerne les transactions. Vous devez fournir un document décrivant les routes API proposées pour les manipulations sur les transactions en suivant les directives de Swagger. Les éléments clés à spécifier pour chaque endpoint de l'API sont la méthode HTTP, la route, la description de l'endpoint, les paramètres possibles, et les différentes réponses avec les codes de réponse correspondants. Le document doit être exporté vers un fichier YAML en utilisant la syntaxe Swagger. Une revue de code et une discussion sur la proposition d'API auront lieu une fois le travail terminé."
         },
         "date_realization": "2023/12",
         "cover": "./projectscover/projectCover11.PNG",

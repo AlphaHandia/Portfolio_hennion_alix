@@ -67,7 +67,7 @@
 
 .project-timeline-item {
   position: relative;
-  
+  z-index:0;
   width: 100%;
   height: 100%; /* Pour une disposition en quinconce, utilisation 50% de la largeur */
 }
