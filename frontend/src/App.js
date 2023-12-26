@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import Error from "./pages/Error"
 import { LanguageProvider } from './components/LanguageSelector/LanguageContext';
 import { ThemeProvider } from './components/theme-switch/ThemeContext';
+import Contact from './pages/Contact';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
    <Routes>
     <Route path="/" element ={<Home/>}/>
     <Route path="/*" element={<Error/>} />
+    <Route path="/Contact" element={<Contact/>}/>
    </Routes>
    </ThemeProvider>
    </LanguageProvider>

@@ -1,6 +1,18 @@
+.navbar{
+  display: flex;
+  justify-content: space-between;
+}
+.languageselector{
+  display: flex;
+  flex-direction: column;
+  img {
+    border-radius:25%;
+  }
+}
 .left-side {
   display: flex;
   align-items: center;
+  flex-direction: row;
   justify-content: flex-start;
   position: relative; /* Ajout de la position relative pour positionner les drapeaux par rapport à cet élément parent */
   img {

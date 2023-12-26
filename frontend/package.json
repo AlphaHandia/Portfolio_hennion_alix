@@ -25,7 +25,8 @@
     "react-scripts": "5.0.1",
     "redux": "^5.0.0",
     "sass": "^1.69.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^1.3.3"
   },
   "scripts": {
     "sass": "sass --watch ./SASS/main.scss:./assets/css/styles.css --no-source-map",

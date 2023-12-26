@@ -38,24 +38,97 @@
   }
 }
 .contact-form {
+  width: 80%;
+  padding: 30px;
+  margin: 40px;
+  border: 6px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  position: relative;
+}
+.contact-form h2 {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 60px;
+  text-transform: uppercase;
+}
+.contact-form .row {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: stretch;
+  margin-top: 30px;
 }
 .contact-form .left-column,
 .contact-form .right-column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
-  margin-right: 20px;
+  flex: 0 0 48%;
 }
-@media (max-width: 768px) {
-  .contact-form {
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  background: transparent; /* Fond transparent */
+  outline: none;
+  font-size: 24px;
+  padding: 10px 0 10px 20px;
+  border: 5px solid transparent; /* Bordure transparente au départ */
+  box-shadow: 10px 10px 0 transparent; /* Ombre transparente au départ */
+  color: #ffffff;
+  border-radius: 50px;
+  transition: all 0.4s; /* Transition pour l'animation */
+}
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border: 5px solid rgba(0, 0, 0, 0.3); /* Bordure lorsqu'en focus */
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3); /* Ombre lorsqu'en focus */
+}
+.contact-form label {
+  line-height: 40px;
+  color: black;
+  font-size: 24px;
+  margin: 0 0 0 20px;
+  display: block;
+  pointer-events: none;
+}
+.contact-form .row input[type=submit] {
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  text-transform: uppercase;
+  color: black;
+  line-height: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 45px;
+  transition: all 0.4s;
+}
+.contact-form .row input[type=submit]:hover {
+  border: 5px solid rgb(255, 255, 255);
+  color: #ffffff;
+  transition: all 0.4s;
+}
+@media screen and (max-width: 900px) {
+  .contact-form .contact-form {
+    width: 90%;
+  }
+  .contact-form .row {
     flex-direction: column;
+    margin-top: 20px;
   }
   .contact-form .left-column,
   .contact-form .right-column {
+    flex: 0 0 100%;
     margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .contact-form .left-column:last-child,
+  .contact-form .right-column:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -342,9 +415,23 @@ body {
   z-index: 1000;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.languageselector {
+  display: flex;
+  flex-direction: column;
+}
+.languageselector img {
+  border-radius: 25%;
+}
+
 .left-side {
   display: flex;
   align-items: center;
+  flex-direction: row;
   justify-content: flex-start;
   position: relative; /* Ajout de la position relative pour positionner les drapeaux par rapport à cet élément parent */
 }
@@ -403,7 +490,7 @@ main {
   flex-direction: column;
   width: 100%;
   color: antiquewhite;
-  margin: auto;
+  margin: 10px;
   background-color: rgba(255, 184, 93, 0.3);
   border-radius: 15px;
 }
@@ -420,7 +507,7 @@ main {
   }
 }
 .main-content .main-project .project-card .project-details {
-  margin-left: 10px;
+  margin: 20px;
 }
 
 .toggle {

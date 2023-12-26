@@ -14,7 +14,7 @@ let NavBar = () => {
     <div className='right-side'>
     <a href=" ">Presentation</a> 
     <a href=" ">Mes projets</a>
-    <a href=" ">Contact</a>
+    <a href="/Contact">Contact</a>
     </div>
  </nav>
  )

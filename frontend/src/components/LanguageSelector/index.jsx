@@ -14,7 +14,7 @@ const LanguageSelector = () => {
   };
 
   return (
-    <div>
+    <div className='languageselector'>
       <button onClick={() => handleLanguageChange('en')} className={`english ${selectedLanguage === 'en' ? 'selected' : ''}`}>
         <img src={englishflag} alt='english flag' />
         {language === 'en' ? 'English' : 'Anglais'}
