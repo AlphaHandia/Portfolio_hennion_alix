@@ -5,7 +5,7 @@ let NavBar = () => {
  return (
  <nav className="navbar">
     <div className="left-side">
-    <img src={profileImage} alt="alix hennion" />
+    <img src={profileImage} alt="alix hennion" className="ProfileImage"/>
 
     <LanguageSelector/>
     </div>

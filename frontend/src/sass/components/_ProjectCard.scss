@@ -4,7 +4,29 @@
   border-radius: 5px;
     margin: 70px;
     transition: all 0.3s ease-out;
-    color: rgb(2, 252, 239);
+    color: rgb(2, 252, 239);.arrow-left,
+    .arrow-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: #007bff;
+      cursor: pointer;
+      z-index: 2;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: #0056b3;
+      }
+    }
+  
+    .arrow-left {
+      left: 20px;
+    }
+  
+    .arrow-right {
+      right: 20px;
+    }
   }
 .project-card img {
   width:340px;

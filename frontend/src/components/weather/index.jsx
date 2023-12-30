@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import weatherIcons from './weatherIcons.json';
 
 const WeatherApp = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -27,7 +28,7 @@ const WeatherApp = () => {
     fetchWeatherData();
   }, [apiKey]);
   const kelvinToCelsius = (kelvin) => {
-    return kelvin - 273.15;
+    return (kelvin - 273.15).toFixed(1);
   };
   return (
     <div>
@@ -37,10 +38,13 @@ const WeatherApp = () => {
         <div>
           <p>City: {weatherData.name}</p>
           <p>Temperature: {kelvinToCelsius(weatherData.main.temp)}°C</p>
+          <p>Weather: {weatherData.weather[0].description}</p>
+          {weatherData.weather && weatherData.weather.length > 0 && (
+            <i className={`wi ${weatherIcons[weatherData.weather[0].description]}`}></i>
+          )}
         </div>
       )}
     </div>
-  )
-      }
-
+  );
+};
 export default WeatherApp

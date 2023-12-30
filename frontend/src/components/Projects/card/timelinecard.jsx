@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import '../../../sass/components/_ProjectCard.scss'; // Assurez-vous que le chemin est correct
 import { useLanguage } from '../../LanguageSelector/LanguageContext';
-import '../../../sass/components/_ProjectCard.scss';
 import projectData from '../projectContent.json';
 import ProjectModal from './ProjectModal';
 
@@ -21,18 +24,44 @@ const ProjectCard = ({ projectId }) => {
     setSelectedProject(null);
   };
 
+  const NextArrow = ({ onClick }) => (
+    <div className="arrow next" onClick={onClick}>
+      &rarr;
+    </div>
+  );
+
+  const PrevArrow = ({ onClick }) => (
+    <div className="arrow prev" onClick={onClick}>
+      &larr;
+    </div>
+  );
+
+  const settings = {
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    beforeChange: (current, next) => setHovered(false), // Fix pour réinitialiser isHovered
+  };
+
   return (
     <div
       className={`project-card ${isHovered ? 'hovered' : ''}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <img src={project.cover} alt={project.title[language]} />
-      <div className="project-details">
-        <h3>{project.title[language]}</h3>
-        <p>{project.description[language]}</p>
-        <button onClick={openModal}>Voir plus</button>
-      </div>
+      <Slider {...settings}>
+        <div key="slide1">
+          <img src={project.cover} alt={project.title[language]} />
+          <div className="project-details">
+            <h3>{project.title[language]}</h3>
+            <p>{project.resume[language]}</p>
+            <button onClick={openModal}>Voir plus</button>
+          </div>
+        </div>
+       
+      </Slider>
 
       {isModalOpen && selectedProject && (
         <div className="modal-overlay">

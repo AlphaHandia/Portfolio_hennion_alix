@@ -139,6 +139,27 @@
   transition: all 0.3s ease-out;
   color: rgb(2, 252, 239);
 }
+.project-card .arrow-left,
+.project-card .arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #007bff;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.3s;
+}
+.project-card .arrow-left:hover,
+.project-card .arrow-right:hover {
+  color: #0056b3;
+}
+.project-card .arrow-left {
+  left: 20px;
+}
+.project-card .arrow-right {
+  right: 20px;
+}
 
 .project-card img {
   width: 340px;
@@ -337,7 +358,8 @@
 .banner-container {
   display: flex;
   color: #FFFFFF;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
   padding: 20px;
   background-color: #000;
   opacity: 0.7;
@@ -357,11 +379,9 @@ button {
   background: transparent;
   border: none;
   cursor: pointer;
-  margin: 5px;
 }
 
 button img {
-  max-width: 30px;
   height: auto;
   background-image: transparent;
   background: transparent;
@@ -418,43 +438,62 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
 }
 
 .languageselector {
   display: flex;
   flex-direction: column;
+  position: relative;
+  right: 60px;
+  z-index: 0;
+  width: 100px;
+  height: 150px;
+  gap: 2px;
 }
 .languageselector img {
-  border-radius: 25%;
+  width: 100px;
+  height: 70px;
+  border-radius: 15%;
+  border: 0.5px solid #ffffff;
 }
 
 .left-side {
   display: flex;
+  margin: 10px;
   align-items: center;
-  flex-direction: row;
   justify-content: flex-start;
-  position: relative; /* Ajout de la position relative pour positionner les drapeaux par rapport à cet élément parent */
-}
-.left-side img {
-  max-width: 100px;
-  border-radius: 50%;
-  margin-right: 20px;
+  position: relative;
 }
 
-.left-side .english,
-.left-side .french {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.3s ease; /* Ajout d'une transition pour un effet fluide */
-}
-
-.left-side .english.selected {
-  left: 10px; /* Ajustez la position lorsque l'anglais est sélectionné */
-}
-
+.left-side .english.selected,
 .left-side .french.selected {
-  left: 10px; /* Ajustez la position lorsque le français est sélectionné */
+  transform: translateX(25%);
+  transition: all 0.3s ease;
+}
+
+.ProfileImage {
+  position: relative;
+  z-index: 2;
+  border-radius: 25%;
+  width: 125px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+h1 {
+  color: antiquewhite;
+  text-shadow: 1px 1px 1px #fac123;
+  letter-spacing: 2px;
+}
+
+a {
+  gap: 10px;
+  margin: 5px;
+  text-decoration: none;
+  color: aqua;
+  text-shadow: 1px 1px 1px #fac123;
 }
 
 main {
@@ -512,21 +551,46 @@ main {
 
 .toggle {
   position: relative;
+  width: 80px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  padding: 2px;
+  cursor: pointer;
 }
 
 .toggle button {
-  color: antiquewhite;
-  background-color: #FFB85D;
+  width: 36px;
+  height: 36px;
+  background-color: #025afd;
   border: none;
-  padding: 10px 20px;
+  border-radius: 50%;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .toggle.active button {
-  transform: translateX(50px);
+  transform: translateX(40px);
+  background-color: rgb(27, 158, 1);
+}
+
+.PositionToggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.ToggleNameOne {
+  color: #025afd;
+  font-weight: bold;
+}
+
+.ToggleNameTwo {
+  color: rgb(27, 158, 1);
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */

@@ -1,40 +1,61 @@
 .navbar{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-right: 10px;
 }
 .languageselector{
   display: flex;
   flex-direction: column;
-  img {
-    border-radius:25%;
+  position: relative ;
+  right:60px;
+  z-index:0;
+  width: 100px;
+  height: 150px;
+  gap:2px;
+  
+  img{
+    width: 100px;
+    height:70px;
+    border-radius:15%;
+    border: 0.5px solid #ffffff;;
   }
+  
 }
 .left-side {
   display: flex;
+  margin:10px;
+  
   align-items: center;
-  flex-direction: row;
   justify-content: flex-start;
-  position: relative; /* Ajout de la position relative pour positionner les drapeaux par rapport à cet élément parent */
-  img {
-    max-width: 100px; 
-    border-radius: 50%;
-    margin-right: 20px;
-  }
+  position: relative; 
+  
 }
 
-.left-side .english,
-.left-side .french {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.3s ease; /* Ajout d'une transition pour un effet fluide */
-}
-
-
-.left-side .english.selected {
-  left: 10px; /* Ajustez la position lorsque l'anglais est sélectionné */
-}
-
+.left-side .english.selected,
 .left-side .french.selected {
-  left: 10px; /* Ajustez la position lorsque le français est sélectionné */
+  transform: translateX(25%);
+  transition: all 0.3s ease;
+}
+
+
+.ProfileImage {
+  position: relative;
+  z-index:2;
+  border-radius: 25%;
+  width: 125px;
+  height: 150px;
+ border: 1px solid black;
+}
+h1 {
+  color: antiquewhite;
+  text-shadow: 1px 1px 1px #fac123;
+  letter-spacing:2px;
+}
+a{
+  gap:10px;
+  margin: 5px;
+  text-decoration: none;
+  color:aqua;
+  text-shadow: 1px 1px 1px #fac123;
 }

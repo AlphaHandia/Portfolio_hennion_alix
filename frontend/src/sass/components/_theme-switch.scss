@@ -1,23 +1,43 @@
 .toggle {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .toggle button {
-    color: antiquewhite;
-    background-color: #FFB85D;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .toggle.active button {
-    transform: translateX(50px); 
-  }
-  
- 
-  
+  position: relative;
+  width: 80px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.toggle button {
+  width: 36px;
+  height: 36px;
+  background-color: #025afd;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.toggle.active button {
+  transform: translateX(40px);
+  background-color: rgb(27, 158, 1);
+}
+.PositionToggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+
+  z-index: 2;
+}
+.ToggleNameOne {
+  color: #025afd;
+  font-weight: bold;
+}
+.ToggleNameTwo {
+  color: rgb(27, 158, 1);
+  font-weight: bold;
+}

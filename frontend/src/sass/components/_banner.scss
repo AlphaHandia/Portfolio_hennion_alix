@@ -3,7 +3,8 @@
 .banner-container {
     display: flex;
     color: #FFFFFF;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
     padding: 20px;
     background-color: #000;
     opacity: 0.7;
