@@ -1,9 +1,10 @@
 {
-    "Sun": "wi wi-day-sunny",
-    "Clouds": "wi wi-day-cloudy",
-    "Rain": "wi wi-day-rain",
-    "Snow": "wi wi-day-snow",
-    "Thunderstorm": "wi wi-day-thunderstorm",
-    "Fog": "wi wi-day-fog",
-    "Windy": "wi wi-day-windy"
+    "Sun": "fa-regular fa-sun",
+    "Clouds": "fa-solid fa-cloud",
+    "overcast clouds": "fa-solid fa-cloud",
+    "Rain": "fa-solid fa-cloud-rain",
+    "Snow": "fa-solid fa-cloud-meatball",
+    "Thunderstorm": "fa-solid fa-poo-storm",
+    "Fog": "fa-solid fa-smog",
+    "Windy": "fa-solid fa-wind"
   }

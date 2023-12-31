@@ -5,6 +5,9 @@ const ProjectModal = ({ project, onClose }) => {
     const { language } = useLanguage();
   
     const handleBackgroundClick = (e) => {
+      // Empêcher la propagation de l'événement au conteneur parent (la modal)
+      e.stopPropagation();
+    
       if (typeof onClose === 'function') {
         onClose();
       }
@@ -13,10 +16,9 @@ const ProjectModal = ({ project, onClose }) => {
     return (
         <div className="modal-background" onClick={handleBackgroundClick}>
           <div className="modal"style={{ zIndex: 2 }}>
-            <button className="close-button" onClick={onClose}>
-              &times;
-            </button>
+           
             <div className="modal-content">
+            <img src={project.picture} alt={project.title[language]} className='modalpicture' />
               <h2>{project.title[language]}</h2>
               <p>{project.description[language]}</p>
               <p>Languages: {project.languages.join(', ')}</p>

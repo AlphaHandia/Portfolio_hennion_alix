@@ -30,6 +30,10 @@ const WeatherApp = () => {
   const kelvinToCelsius = (kelvin) => {
     return (kelvin - 273.15).toFixed(1);
   };
+  const getWeatherIcon = (weatherDescription) => {
+    const iconClass = weatherIcons[weatherDescription];
+    return iconClass ? <i className={iconClass}></i> : null;
+  };
   return (
     <div>
       <h2>Weather App</h2>
@@ -40,7 +44,9 @@ const WeatherApp = () => {
           <p>Temperature: {kelvinToCelsius(weatherData.main.temp)}°C</p>
           <p>Weather: {weatherData.weather[0].description}</p>
           {weatherData.weather && weatherData.weather.length > 0 && (
-            <i className={`wi ${weatherIcons[weatherData.weather[0].description]}`}></i>
+            <div>
+              <p>{getWeatherIcon(weatherData.weather[0].description)}</p>
+            </div>
           )}
         </div>
       )}

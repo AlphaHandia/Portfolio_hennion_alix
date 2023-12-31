@@ -16,7 +16,8 @@
         },
         
         "date_realization": "2023/03",
-        "cover": "./projectscover/projectCover2.PNG",
+        "cover": "./projectscover/projectCover2-smaller.webp",
+        "picture": "./projectscover/projectCover2.webp",
         "languages": ["HTML"],
         "skills_acquired": ["Front-end development"]
       },
@@ -35,7 +36,8 @@
           "fr": "Le développeur est chargé d'intégrer l'interface d'un site Internet pour la start-up Booki, permettant aux utilisateurs de trouver des hébergements et des activités dans la ville de leur choix. Cette tâche implique une collaboration étroite avec Sarah, la CTO, et Loïc, l'UI designer.Sarah envoie un e-mail au développeur pour présenter les maquettes finalisées du site dans les versions desktop, tablette et mobile, réalisées par Loïc. Les spécifications et contraintes techniques sont regroupées dans une note de synthèse jointe. Pour faciliter le démarrage, une structure de fichiers et une base de code sont fournies.Le développeur est encouragé à compléter le code HTML et CSS manquant en s'inspirant de la base existante. Il doit conserver la même structure de dossiers et envoyer le dossier complet à Sarah une fois le travail terminé."
         },
         "date_realization": "2023/04",
-        "cover": "./projectscover/projectCover3.PNG",
+        "cover": "./projectscover/projectCover3-smaller.webp",
+        "picture": "./projectscover/projectCover3.webp",
         "languages": ["HTML", "CSS"],
         "skills_acquired": ["Front-end development", "React development"]
       },
@@ -54,7 +56,8 @@
           "fr": "Le développeur junior a intégré Ohmyfood, une jeune startup de restauration déjà présente à New-York et cherchant à s'imposer à Paris. Sa mission est de développer un site mobile first épertoriant les menus de restaurants gastronomiques, avec la possibilité pour les clients de composer leur menu et éviter les temps d'attente au restaurant.L'équipe commerciale a réussi à convaincre quatre restaurateurs d'utiliser la plateforme OhMyFood, et le site devra contenir initialement quatre menus. Le développeur a collaboré avec Paul pour établir un brief créatif rassemblant les informations clés du projet.Paul envoie les maquettes mobile et desktop du site par e-mail, accompagnées du dossier des sources du site (images et textes) et du prototype via Figma, incluant les animations et comportements à intégrer. Le site doit être développé pour mobile, tablette, et desktop en respectant les informations du brief créatif. Il doit être responsive et en mobile first , avec l'utilisation de SASS et des animations soignées. Le développeur devra expliquer le fonctionnement de ces animations à Paul."
         },
         "date_realization": "2023/05",
-        "cover": "./projectscover/projectCover4.PNG",
+        "cover": "./projectscover/projectCover4-smaller.webp",
+        "picture": "./projectscover/projectCover4.webp",
         "languages": ["HTML", "CSS", "SASS"],
         "linkGithub": "https://github.com/AlphaHandia/Projet_4_ohmyfood_alix_hennion.git",
         "linkgithubPages": "https://alphahandia.github.io/Projet_4_ohmyfood_alix_hennion/",
@@ -75,7 +78,8 @@
           "fr": "Le projet 'JavaScript pour Print it' vise à donner au développeur junior une expérience pratique dans le développement d'un carrousel interactif pour le site de l'imprimerie Print it. Sous la direction du directeur Lucien, le développeur suivra un parcours guidé en cinq étapes clés. Il commencera par mettre à jour le code HTML en ajoutant des flèches statiques au carrousel, puis ajoutera des Event Listeners pour les rendre interactives. Ensuite, il intégrera des bullet points au slider pour indiquer la position actuelle de l'utilisateur. La modification du slide au clic sur le bouton suivra, avec des changements dynamiques tels que le bullet point, l'image et le texte. Enfin, le développeur mettra en place un défilement infini pour assurer une expérience utilisateur fluide. Le projet est conçu pour être réalisé en 1 à 2 semaines avec un mentorat exclusif, offrant une immersion pratique dans le langage JavaScript. Des ressources pédagogiques sont fournies à chaque étape pour faciliter l'apprentissage progressif et renforcer les compétences du développeur."
         },
         "date_realization": "2023/06",
-        "cover": "./projectscover/projectCover5.PNG",
+        "cover": "./projectscover/projectCover5-smaller.webp",
+        "picture": "./projectscover/projectCover5.webp",
         "languages": ["HTML", "CSS", "JavaScript"],
         "linkGithub": "https://github.com/AlphaHandia/Print-it-JS.git",
         "skills_acquired": ["Front-end development", "React development"]
@@ -95,7 +99,8 @@
           "fr": "En tant que développeur front-end pour l'agence ArchiWebos, vous êtes intégré en renfort dans une équipe travaillant sur le site portfolio d'une architecte d'intérieur. Vous recevez un brief détaillé de Charlotte, la responsable du projet, accompagné de diverses ressources pour démarrer. Vos principales missions consistent à développer la page de présentation des travaux de l'architecte à partir du code HTML fourni, créer la page de connexion de l'administrateur du site (le client) à partir de zéro, et développer la modale permettant d'uploader de nouveaux médias, également à partir de zéro. Les ressources fournies comprennent le design Figma, le code back-end pour la persistance des données, le code front-end d'origine avec la version statique de la page de l'architecte, et un Kanban pour la gestion des tâches. Vous avez pour mission d'intégrer de nouvelles fonctionnalités en collaborant avec une équipe de 50 salariés, dans un environnement professionnel dynamique."
         },
         "date_realization": "2023/07",
-        "cover": "./projectscover/projectCover6.PNG",
+        "cover": "./projectscover/projectCover6-smaller.webp",
+        "picture": "./projectscover/projectCover6.webp",
         "languages": ["HTML", "CSS", "JavaScript"],
         "linkGithub": "https://github.com/AlphaHandia/Projet_6.git",
         "skills_acquired": ["Front-end development"]
@@ -115,7 +120,8 @@
           "fr":"Projet axé sur les méthodes de management et de planification modernes, comprenant pas mal de parties sur mon ancien emploi avec les capacités déjà acquises."
         },
         "date_realization": "2023/08",
-        "cover": "./projectscover/projectCover7.PNG",
+        "cover": "./projectscover/projectCover7-smaller.webp",
+        "picture": "./projectscover/projectCover7.webp",
         "languages": [],
         "linkGithub": "https://github.com/AlphaHandia/Projet_7.git",
         "skills_acquired": ["Front-end development","agile method"]
@@ -135,7 +141,8 @@
           "fr": "Kasa, leader français dans la location d'appartements entre particuliers, recrute un développeur front-end en freelance pour la refonte de sa plateforme web. La CTO, Laura, a initié cette refonte en remplaçant l'ancienne stack ASP.NET par une stack JavaScript (NodeJS et React). Vous devez démarrer le projet React, développer l'ensemble de l'application en suivant les maquettes Figma et les informations fournies par Laura. Le back-end n'est pas encore recruté, mais Laura a extrait les 20 dernières annonces dans un fichier JSON pour simuler les données. Les contraintes techniques incluent l'utilisation de Create React App ou un autre bundler comme Vite, et les coding guidelines de Kasa. Le designer Paul fournit des informations sur le design, notamment les maquettes sur Figma et les prototypes du site. Il précise également certaines fonctionnalités comme le défilement des photos dans la galerie et le comportement des Collapses. L'utilisation de Sass et les animations CSS sont recommandées, en particulier pour les étudiants du parcours Développeur Web."
         },
         "date_realization": "2023/09",
-        "cover": "./projectscover/projectCover8.PNG",
+        "cover": "./projectscover/projectCover8-smaller.webp",
+        "picture": "./projectscover/projectCover8.webp",
         "languages": ["HTML", "CSS", "JavaScript", "React"],
         "linkGithub": "https://github.com/AlphaHandia/Projet_8_Creez_une_application_web_de_location_immobiliere_avec_react.git",
         "skills_acquired": ["Front-end development","React development"]
@@ -155,7 +162,8 @@
           "fr": "En tant que développeur freelance, vous avez proposé vos services d'optimisation SEO à Nina Carducci, une photographe. Après avoir analysé son site, vous lui avez envoyé un e-mail de proposition détaillant les problèmes rencontrés et les services que vous pouvez fournir. Nina a répondu favorablement, exprimant son intérêt pour une collaboration. Après une discussion téléphonique, elle a résumé les missions à accomplir, notamment une optimisation globale du site, la mise en place du référencement local, l'ajout de métas pour les réseaux sociaux et des modifications liées à l'accessibilité. Vous avez reçu ses informations pour le référencement local. Nina a également partagé le code de son site sur GitHub, que vous devrez cloner, modifier, puis partager dans un nouveau repository une fois prêt. Vous utilisez un modèle de rapport d'optimisation préparé pour cette mission afin de documenter les modifications effectuées."
         },
         "date_realization": "2023/10",
-        "cover": "./projectscover/projectCover9.PNG",
+        "cover": "./projectscover/projectCover9-smaller.webp",
+        "picture": "./projectscover/projectCover9.webp",
         "languages": ["SEO"],
         "linkGithub": "https://github.com/AlphaHandia/Projet_9_optimisez_le_referencement_d-un_site_de_photographe.git",
         "linkgithubPages": "https://alphahandia.github.io/Projet_9_optimisez_le_referencement_d-un_site_de_photographe/",
@@ -176,7 +184,8 @@
           "fr": "Very interesting project because it no longer focuses solely on development but on problem-solving, something I appreciate. Here, I had to use various tests to understand where the encountered issues originated, and I had to understand them as they could affect other parts of the problematic code."
         },
         "date_realization": "2023/11",
-        "cover": "./projectscover/projectcover.png",
+        "cover": "./projectscover/projectcover-10-smaller.webp",
+        "picture": "./projectscover/projectcover.webp",
         "languages": ["HTML", "CSS", "JavaScript"],
         "linkGithub": "https://github.com/AlphaHandia/Debuggez-une-application-React.JS.git",
         "skills_acquired": ["Front-end development","testing development"]
@@ -196,7 +205,8 @@
           "fr": "En tant que nouveau développeur front-end chez Argent Bank, vous travaillez avec Mila, la cheffe de projet, sur la mise en place du tableau de bord des utilisateurs. Avery Moreau, le CTO, vous envoie deux mails. Dans le premier, il présente la phase 1 du projet, qui concerne l'authentification des utilisateurs. Vous devez créer une application web complète et responsive avec React en utilisant le HTML statique et le CSS fournis. L'utilisation de Redux pour gérer le state de l'application est nécessaire. L'application doit permettre à l'utilisateur de visiter la page d'accueil, de se connecter, de se déconnecter, et de voir les informations relatives à son propre profil après une connexion réussie. La modification du nom et du prénom est interdite, mais le pseudo peut être modifié. Il est également demandé d'optimiser les images et le code en suivant les bonnes pratiques de Green Code. Dans le deuxième mail, Avery annonce la phase 2 qui concerne les transactions. Vous devez fournir un document décrivant les routes API proposées pour les manipulations sur les transactions en suivant les directives de Swagger. Les éléments clés à spécifier pour chaque endpoint de l'API sont la méthode HTTP, la route, la description de l'endpoint, les paramètres possibles, et les différentes réponses avec les codes de réponse correspondants. Le document doit être exporté vers un fichier YAML en utilisant la syntaxe Swagger. Une revue de code et une discussion sur la proposition d'API auront lieu une fois le travail terminé."
         },
         "date_realization": "2023/12",
-        "cover": "./projectscover/projectCover11.PNG",
+        "cover": "./projectscover/projectCover11-smaller.webp",
+        "picture": "./projectscover/projectCover11.webp",
         "languages": ["HTML", "CSS", "JavaScript", "React"],
         "linkGithub": "https://github.com/AlphaHandia/ArgentBank-website.git",
         "skills_acquired": ["Front-end development", "React development"]
