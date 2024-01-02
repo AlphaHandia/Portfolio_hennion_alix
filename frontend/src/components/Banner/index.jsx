@@ -6,7 +6,7 @@ import WeatherApp from '../weather';
 
 const Banner = () => {
   return (
-    <div className="banner-container">
+    <div className="banner-container" id="Banner">
       <WeatherApp/>
      
 

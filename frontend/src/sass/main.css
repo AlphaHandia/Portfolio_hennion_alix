@@ -19,6 +19,11 @@
   padding: 10px;
 }
 
+.fa-linkedin-in,
+.fa-github {
+  font-size: 50px;
+}
+
 .separator {
   height: 30px;
   width: 1px;
@@ -202,17 +207,13 @@
 }
 
 .close-button {
-  display: flex;
-  justify-content: end;
-  align-items: baseline;
-  position: relative;
+  position: absolute;
+  top: 80px;
   font-size: 20px;
   cursor: pointer;
   border: none;
   background: none;
-  z-index: 1001;
-  left: 480px;
-  bottom: 380px;
+  z-index: 1005;
 }
 
 .project-links {
@@ -364,7 +365,6 @@
   color: rgb(0, 119, 255);
   position: relative;
   top: 475px;
-  z-index: 2;
   opacity: 0.5;
   margin: 8px;
 }
@@ -609,7 +609,6 @@ main {
   align-items: center;
   gap: 10px;
   position: relative;
-  z-index: 2;
 }
 
 .ToggleNameOne {

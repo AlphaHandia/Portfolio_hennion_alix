@@ -12,8 +12,8 @@ let NavBar = () => {
     
     <h1>Portfolio Alix Hennion </h1>
     <div className='right-side'>
-    <a href=" ">Presentation</a> 
-    <a href=" ">Mes projets</a>
+    <a href="#Banner">Presentation</a> 
+    <a href="#mainProject">Mes projets</a>
     <a href="/Contact">Contact</a>
     </div>
  </nav>

@@ -21,7 +21,7 @@ const MainProject = () => {
   return (
     <div className='main-content'>
       <h1>Mes Projets de Développeur</h1>
-      <div className="main-project">
+      <div className="main-project"id="mainProject">
       {filteredProjects.map((project) => (
         <div
           key={project.id}
@@ -29,7 +29,7 @@ const MainProject = () => {
           onMouseEnter={() => handleMouseEnter(project.id)}
           onMouseLeave={handleMouseLeave}
         >
-          <img src={project.cover} alt={project.title[language]} />
+          <img src={project.picture} alt={project.title[language]} />
           <div className="project-details">
             <h2>{project.title[language]}</h2>
             <p>{project.description[language]}</p>

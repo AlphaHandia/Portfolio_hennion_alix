@@ -38,7 +38,7 @@ const ProjectCard = ({ projectId }) => {
         <div className="modal-overlay">
 
             <button className="close-button" onClick={closeModal}>
-              &#x2715;
+              &#x2715;Close
             </button>
             <ProjectModal project={selectedProject} />
           
