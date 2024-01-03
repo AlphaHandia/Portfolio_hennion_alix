@@ -12,11 +12,13 @@ const Contact = () => {
     <div>
       <NavBar />
       <main>
+        <div className="positioncontactform">
         {state.currentTheme === "cyber" && <CyberCanvas />}
         {state.currentTheme === "garden" && <GardenCanvas />}
 
         <ThemeToggle />
         <ContactForm />
+        </div>
       </main>
       <Footer />
     </div>

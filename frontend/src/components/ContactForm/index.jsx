@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useLanguage } from "../LanguageSelector/LanguageContext";
+import translations from "../../initi18n/content/translation.json";
 
 const ContactForm = () => {
+  const { language } = useLanguage();
+  const contactForm = translations.contactForm;
   const [isMessageSent, setIsMessageSent] = useState(false);
 
   const formik = useFormik({
@@ -14,13 +18,13 @@ const ContactForm = () => {
       message: "",
     },
     validationSchema: Yup.object({
-      name: Yup.string().required("Name is required"),
+      name: Yup.string().required(contactForm.nameLabel[language]),
       email: Yup.string()
-        .email("Invalid email address")
-        .required("Email is required"),
-      phone: Yup.string().required("Phone number is required"),
-      subject: Yup.string().required("Subject is required"),
-      message: Yup.string().required("Message is required"),
+        .email(contactForm.emailLabel[language])
+        .required(contactForm.emailLabel[language]),
+      phone: Yup.string().required(contactForm.phoneLabel[language]),
+      subject: Yup.string().required(contactForm.subjectLabel[language]),
+      message: Yup.string().required(contactForm.messageLabel[language]),
     }),
     onSubmit: (values, { resetForm }) => {
       console.log(values);
@@ -30,17 +34,13 @@ const ContactForm = () => {
   });
 
   const subjectOptions = [
-    "General Inquiry",
-    "Project Collaboration",
-    "Job Opportunity",
-    "Feedback",
-    "Other",
+    ...contactForm.subjectOptions[language]
   ];
 
   return (
     <form onSubmit={formik.handleSubmit} className="contact-form">
       <div className="left-column">
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="name">{contactForm.nameLabel[language]}</label>
         <input
           type="text"
           id="name"
@@ -53,7 +53,7 @@ const ContactForm = () => {
           <div className="error">{formik.errors.name}</div>
         )}
 
-        <label htmlFor="email">Email:</label>
+        <label htmlFor="email">{contactForm.emailLabel[language]}</label>
         <input
           type="email"
           id="email"
@@ -66,7 +66,7 @@ const ContactForm = () => {
           <div className="error">{formik.errors.email}</div>
         )}
 
-        <label htmlFor="phone">Phone:</label>
+        <label htmlFor="phone">{contactForm.phoneLabel[language]}</label>
         <input
           type="tel"
           id="phone"
@@ -79,7 +79,7 @@ const ContactForm = () => {
           <div className="error">{formik.errors.phone}</div>
         )}
 
-        <label htmlFor="subject">Subject:</label>
+        <label htmlFor="subject">{contactForm.subjectLabel[language]}</label>
         <select
           id="subject"
           name="subject"
@@ -87,7 +87,7 @@ const ContactForm = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         >
-          <option value="" label="Select a subject" />
+          <option value="" label={contactForm.selectSubject[language]} />
           {subjectOptions.map((option) => (
             <option key={option} value={option}>
               {option}
@@ -100,7 +100,7 @@ const ContactForm = () => {
       </div>
 
       <div className="right-column">
-        <label htmlFor="message">Message:</label>
+        <label htmlFor="message">{contactForm.messageLabel[language]}</label>
         <textarea
           id="message"
           name="message"
@@ -113,13 +113,16 @@ const ContactForm = () => {
         )}
 
         <button type="submit">
-          <i className="fa-solid fa-shield-halved"></i>Submit
+          <i className="fa-solid fa-shield-halved"></i>
+          {contactForm.submitButton[language]}
         </button>
 
         {isMessageSent && (
           <div className="popup">
-            <p>Message sent! I will get back to you shortly.</p>
-            <button onClick={() => setIsMessageSent(false)}>Close</button>
+            <p>{contactForm.messageSent[language]}</p>
+            <button onClick={() => setIsMessageSent(false)}>
+              {contactForm.closeButton[language]}
+            </button>
           </div>
         )}
       </div>

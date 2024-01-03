@@ -1,50 +1,43 @@
 import React from "react";
 import WeatherApp from "../weather";
+import { useLanguage } from "../LanguageSelector/LanguageContext";
+import translations from "../../initi18n/content/translation.json";
 
 const Banner = () => {
+  const { language } = useLanguage();
+  const banner = translations.banner;
+
   return (
-    <div className="banner-container" id="Banner">
+    <div className="banner-container" id={banner.bannerId[language]}>
       <WeatherApp />
 
       <div className="midle-side">
-        <p>Programming Languages:</p>
+        <p>{banner.programmingLanguages[language]}:</p>
         <div className="midle-side-icon">
           <p>
-            <i class="fa-brands fa-html5"></i>
+            <i className="fa-brands fa-html5"></i>
           </p>
           <p>
-            <i class="fa-brands fa-css3-alt"></i>
+            <i className="fa-brands fa-css3-alt"></i>
           </p>
           <p>
-            <i class="fa-brands fa-sass"></i>
+            <i className="fa-brands fa-sass"></i>
           </p>
           <p>
-            <i class="fa-brands fa-js"></i>
+            <i className="fa-brands fa-js"></i>
           </p>
           <p>
-            <i class="fa-brands fa-react"></i>
+            <i className="fa-brands fa-react"></i>
           </p>
         </div>
       </div>
 
       <div className="right-side">
         <div>
-          <p>
-            Short Presentation: je suis devenue intégrateur web suite à une
-            reconversion professionnel.
-          </p>
-          <p>
-            Aupars-avant j'ai été responsable opérationnel d'une cinquantaine
-            d'agent postal et encore avant agriculteur.
-          </p>
-          <p>
-            Soft skills: - Communication - Analyse de Projet - Gestion d'équipe
-            - Adaptabilité
-          </p>
-          <p>
-            Hard skills: - Developpement Front-End - Intégration API - Anglais
-            courant - Gestion de Projet
-          </p>
+          <p>{banner.shortPresentation[language]}</p>
+          <p>{banner.previousRoles[language]}</p>
+          <p>{banner.softSkills[language]}</p>
+          <p>{banner.hardSkills[language]}</p>
         </div>
       </div>
     </div>

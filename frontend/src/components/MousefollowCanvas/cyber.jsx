@@ -43,7 +43,7 @@ const CyberCanvas = () => {
           node.x - mousePosition.x,
           node.y - mousePosition.y
         );
-        const opacity = 1 - Math.min(1, distance / 400); // Ajustement le nombre pour changer la distance à laquelle la ligne devient foncée
+        const opacity = 1 - Math.min(1, distance / 400);
 
         context.beginPath();
         context.moveTo(node.x, node.y);
@@ -75,22 +75,15 @@ const CyberCanvas = () => {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, [mousePosition, nodes]);
+
   return (
     <div
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        zIndex: -1,
-        display: "block",
-        width: "100%",
-        height: "100%",
-        background: `url(${backgroundImage})`,
-      }}
+      className="cyber-canvas"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <canvas id="background" style={{ width: "100%", height: "100%" }} />
+      <canvas id="background" />
     </div>
   );
 };
-//attention au style !!!!/
+
 export default CyberCanvas;

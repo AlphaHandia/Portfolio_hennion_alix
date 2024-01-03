@@ -160,5 +160,29 @@
       "linkGithub": "https://github.com/AlphaHandia/ArgentBank-website.git",
       "skills_acquired": ["Front-end development", "React development"]
     }
+  ],
+  "errorPage": [
+    {
+    "title": {
+      "en": "Security Error",
+      "fr": "Erreur de Sécurité"
+    },
+    "errorMessage": {
+      "en": "Oops! A security error occurred.",
+      "fr": "Oops ! Une erreur de sécurité s'est produite."
+    },
+    "contactAdmin": {
+      "en": "Please contact the system administrator.",
+      "fr": "Veuillez contacter l'administrateur du système."
+    },
+    "errorCode": {
+      "en": "Error Code: ",
+      "fr": "Code d'erreur : "
+    },
+    "returnHome": {
+      "en": "Return to Home",
+      "fr": "Retourner à l'Accueil"
+    }
+  }
   ]
 }

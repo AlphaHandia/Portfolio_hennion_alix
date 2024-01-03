@@ -1,6 +1,12 @@
 .fa-shield-halved {
   font-size: 100px;
 }
+.positioncontactform{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .contact-form {
   width: 80%;
   padding: 30px;
