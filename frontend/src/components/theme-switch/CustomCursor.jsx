@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect } from "react";
 
 const CustomCursor = () => {
   const [cursorVisible] = useState(true);
@@ -10,10 +9,10 @@ const CustomCursor = () => {
   };
 
   useEffect(() => {
-    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
@@ -22,16 +21,14 @@ const CustomCursor = () => {
       {cursorVisible && (
         <div
           style={{
-            position: 'fixed',
+            position: "fixed",
             top: -15,
             left: -15,
-            pointerEvents: 'none',
+            pointerEvents: "none",
             zIndex: 10000,
             transform: `translate(${position.x}px, ${position.y}px)`,
           }}
-        >
-          
-        </div>
+        ></div>
       )}
     </>
   );

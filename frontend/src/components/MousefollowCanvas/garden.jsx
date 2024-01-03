@@ -1,9 +1,8 @@
-import React, { useRef, useState } from 'react';
-import backgroundImage from '../../assets/images/background-theme-garden.png';
-import gsap from 'gsap';
-import { useTheme } from '../theme-switch/ThemeContext';
-
-import '../../sass/main.css'; 
+import React, { useRef, useState } from "react";
+import backgroundImage from "../../assets/images/background-theme-garden.png";
+import gsap from "gsap";
+import { useTheme } from "../theme-switch/ThemeContext";
+import "../../sass/main.css";
 
 const GardenCanvas = () => {
   const { state } = useTheme();
@@ -18,7 +17,7 @@ const GardenCanvas = () => {
     gsap.to(arrosoirRef.current, {
       x: isWatering ? 200 : 0,
       y: isWatering ? 200 : 0,
-      ease: 'power2.inOut',
+      ease: "power2.inOut",
       onComplete: () => {
         setWatering(false);
       },
@@ -27,15 +26,14 @@ const GardenCanvas = () => {
     // Animation de croissance des plantes
     gsap.to(planteRef.current, {
       height: isWatering ? 150 : 100,
-      ease: 'power2.inOut',
+      ease: "power2.inOut",
     });
 
-   
-    if (state.currentTheme === 'garden') {
-      document.body.classList.add('rotate');
+    if (state.currentTheme === "garden") {
+      document.body.classList.add("rotate");
       setTimeout(() => {
-        document.body.classList.remove('rotate');
-      }, 300); 
+        document.body.classList.remove("rotate");
+      }, 300);
     }
   };
 
@@ -45,16 +43,15 @@ const GardenCanvas = () => {
       onClick={handleClick}
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        position: 'fixed',
+        backgroundSize: "cover",
+        position: "fixed",
         top: 0,
         left: 0,
         zIndex: -1,
-        width: '100%',
-        height: '100%',
+        width: "100%",
+        height: "100%",
       }}
     >
- 
       <img
         ref={arrosoirRef}
         src="arrosoir.png"
@@ -62,7 +59,6 @@ const GardenCanvas = () => {
         className="arrosoir"
       />
 
-    
       <div ref={planteRef} className="plante" />
     </div>
   );

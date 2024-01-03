@@ -1,37 +1,40 @@
-import React from 'react';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
-
+import React, { useState } from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 const ContactForm = () => {
+  const [isMessageSent, setIsMessageSent] = useState(false);
+
   const formik = useFormik({
     initialValues: {
-      name: '',
-      email: '',
-      phone: '',
-      subject: '', // Maintenant, 'subject' est une chaîne vide car l'utilisateur va le sélectionner dans la liste déroulante.
-      message: '',
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
     },
     validationSchema: Yup.object({
-      name: Yup.string().required('Name is required'),
-      email: Yup.string().email('Invalid email address').required('Email is required'),
-      phone: Yup.string().required('Phone number is required'),
-      subject: Yup.string().required('Subject is required'),
-      message: Yup.string().required('Message is required'),
+      name: Yup.string().required("Name is required"),
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("Email is required"),
+      phone: Yup.string().required("Phone number is required"),
+      subject: Yup.string().required("Subject is required"),
+      message: Yup.string().required("Message is required"),
     }),
     onSubmit: (values, { resetForm }) => {
-      // Vous pouvez ajouter ici la logique de soumission du formulaire
       console.log(values);
-      resetForm(); // Réinitialiser le formulaire après la soumission
+      setIsMessageSent(true);
+      resetForm();
     },
   });
 
   const subjectOptions = [
-    'General Inquiry',
-    'Project Collaboration',
-    'Job Opportunity',
-    'Feedback',
-    'Other',
+    "General Inquiry",
+    "Project Collaboration",
+    "Job Opportunity",
+    "Feedback",
+    "Other",
   ];
 
   return (
@@ -46,7 +49,9 @@ const ContactForm = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         />
-        {formik.touched.name && formik.errors.name && <div className="error">{formik.errors.name}</div>}
+        {formik.touched.name && formik.errors.name && (
+          <div className="error">{formik.errors.name}</div>
+        )}
 
         <label htmlFor="email">Email:</label>
         <input
@@ -57,7 +62,9 @@ const ContactForm = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         />
-        {formik.touched.email && formik.errors.email && <div className="error">{formik.errors.email}</div>}
+        {formik.touched.email && formik.errors.email && (
+          <div className="error">{formik.errors.email}</div>
+        )}
 
         <label htmlFor="phone">Phone:</label>
         <input
@@ -68,8 +75,10 @@ const ContactForm = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         />
-        {formik.touched.phone && formik.errors.phone && <div className="error">{formik.errors.phone}</div>}
-        
+        {formik.touched.phone && formik.errors.phone && (
+          <div className="error">{formik.errors.phone}</div>
+        )}
+
         <label htmlFor="subject">Subject:</label>
         <select
           id="subject"
@@ -85,7 +94,9 @@ const ContactForm = () => {
             </option>
           ))}
         </select>
-        {formik.touched.subject && formik.errors.subject && <div className="error">{formik.errors.subject}</div>}
+        {formik.touched.subject && formik.errors.subject && (
+          <div className="error">{formik.errors.subject}</div>
+        )}
       </div>
 
       <div className="right-column">
@@ -97,11 +108,20 @@ const ContactForm = () => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         />
-        {formik.touched.message && formik.errors.message && <div className="error">{formik.errors.message}</div>}
+        {formik.touched.message && formik.errors.message && (
+          <div className="error">{formik.errors.message}</div>
+        )}
 
         <button type="submit">
           <i className="fa-solid fa-shield-halved"></i>Submit
         </button>
+
+        {isMessageSent && (
+          <div className="popup">
+            <p>Message sent! I will get back to you shortly.</p>
+            <button onClick={() => setIsMessageSent(false)}>Close</button>
+          </div>
+        )}
       </div>
     </form>
   );

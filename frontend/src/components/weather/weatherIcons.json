@@ -1,10 +1,11 @@
 {
-    "Sun": "fa-regular fa-sun",
-    "Clouds": "fa-solid fa-cloud",
+    "sun": "fa-regular fa-sun",
+    "clouds": "fa-solid fa-cloud",
     "overcast clouds": "fa-solid fa-cloud",
-    "Rain": "fa-solid fa-cloud-rain",
-    "Snow": "fa-solid fa-cloud-meatball",
-    "Thunderstorm": "fa-solid fa-poo-storm",
-    "Fog": "fa-solid fa-smog",
-    "Windy": "fa-solid fa-wind"
+    "broken clouds":"fa-solid fa-cloud",
+    "rain": "fa-solid fa-cloud-rain",
+    "snow": "fa-solid fa-cloud-meatball",
+    "thunderstorm": "fa-solid fa-poo-storm",
+    "fog": "fa-solid fa-smog",
+    "windy": "fa-solid fa-wind"
   }

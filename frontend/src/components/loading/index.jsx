@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const PageLoader = () => {
   const [loading, setLoading] = useState(true);
@@ -16,17 +16,17 @@ const PageLoader = () => {
   return loading ? (
     <div
       style={{
-        position: 'fixed',
+        position: "fixed",
         top: 0,
         left: 0,
-        width: '100%',
-        height: '100%',
-        background: '#000', 
-        color: '#fff', 
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: '24px',
+        width: "100%",
+        height: "100%",
+        background: "#000",
+        color: "#fff",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        fontSize: "24px",
         zIndex: 9999,
       }}
     >

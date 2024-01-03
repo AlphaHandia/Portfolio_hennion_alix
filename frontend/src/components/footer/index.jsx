@@ -1,13 +1,14 @@
-
-import React from 'react';
-
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-section">
         <h4>Informations personnelles</h4>
-        <p><i class="fa-regular fa-mobile"></i> 06-04-05-83-70</p>
-        <p><i class="fa-regular fa-envelope"></i> henion.pierre.alix@hotmail.fr</p>
+        <p>
+          <i class="fa-solid fa-mobile-screen-button"></i> 06-04-05-83-70
+        </p>
+        <p>
+          <i class="fa-regular fa-envelope"></i> henion.pierre.alix@hotmail.fr
+        </p>
       </div>
       <div className="separator"></div>
       <div className="footer-section">
@@ -19,7 +20,11 @@ const Footer = () => {
       <div className="separator"></div>
       <div className="footer-section">
         <h4>LinkedIn</h4>
-        <a href="[Votre lien LinkedIn]" target="_blank" rel="noopener noreferrer">
+        <a
+          href="[Votre lien LinkedIn]"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
       </div>
@@ -28,12 +33,20 @@ const Footer = () => {
         <h4>Cahier des charges et Recettes</h4>
         <ul>
           <li>
-            <a href="[Lien vers mon cahier des charges]" target="_blank" rel="noopener noreferrer">
+            <a
+              href="[Lien vers mon cahier des charges]"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Cahier des charges
             </a>
           </li>
           <li>
-            <a href="[Lien vers mon cahier de recettes]" target="_blank" rel="noopener noreferrer">
+            <a
+              href="[Lien vers mon cahier de recettes]"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Cahier de recettes
             </a>
           </li>

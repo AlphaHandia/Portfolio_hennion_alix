@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTheme } from "./ThemeContext";
 import CustomCursor from "./CustomCursor";
 import GardenCanvas from "../MousefollowCanvas/garden";
-import PageLoader from '../loading/index'; // Assurez-vous de fournir le chemin correct
+import PageLoader from "../loading/index";
 
 const ThemedComponent = () => {
   const { toggleTheme, state } = useTheme();
@@ -12,7 +12,6 @@ const ThemedComponent = () => {
   const handleToggleTheme = async () => {
     setLoading(true);
 
-    // Effectuez les opérations asynchrones, par exemple, le changement de thème
     await toggleTheme();
 
     setButtonClicked(!buttonClicked);
@@ -35,7 +34,7 @@ const ThemedComponent = () => {
           {state.currentTheme === "garden" && buttonClicked && <GardenCanvas />}
           <CustomCursor />
         </div>
-        <p className="ToggleNameTWo">Garden</p>
+        <p className="ToggleNameTwo">Garden</p>
       </div>
     </>
   );

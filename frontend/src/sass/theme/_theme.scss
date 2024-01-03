@@ -1,44 +1,38 @@
-
-
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  transition: background-image 0.5s ease;
+}
+
+.rotate {
+  animation: rotateAnimation 0.3s ease-in-out;
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .app-container {
-    transition: background-image 0.5s ease;
-  }
-  
- 
-  
-  .rotate {
-    animation: rotateAnimation 0.3s ease-in-out;
-  }
-  
-  @keyframes rotateAnimation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  .custom-cursor {
-    position: fixed;
-    pointer-events: none;
-    transition: transform 0.3s ease;
-    
-  }
-  
-  .custom-cursor.clicked {
+  to {
     transform: rotate(360deg);
   }
-  
+}
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
 
-  #custom-cursor {
-    position: fixed;
-    left: 0;
-    top: 0;
-    pointer-events: none; 
-    z-index: 1000;
-  }
+.custom-cursor.clicked {
+  transform: rotate(360deg);
+}
+
+#custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 1000;
+}

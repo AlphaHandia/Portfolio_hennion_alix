@@ -1,16 +1,16 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  currentTheme: 'cyber',
-  currentLanguage: 'fr', 
+  currentTheme: "cyber",
+  currentLanguage: "fr",
 };
 
 const themeSlice = createSlice({
-  name: 'theme',
+  name: "theme",
   initialState,
   reducers: {
     toggleTheme: (state) => {
-      state.currentTheme = state.currentTheme === 'cyber' ? 'garden' : 'cyber';
+      state.currentTheme = state.currentTheme === "cyber" ? "garden" : "cyber";
     },
     changeLanguage: (state, action) => {
       state.currentLanguage = action.payload;

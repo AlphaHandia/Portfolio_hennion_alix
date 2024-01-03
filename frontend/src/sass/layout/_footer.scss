@@ -1,45 +1,62 @@
 * {
-  font-family: 'Mina', sans-serif;
+  font-family: "Mina", sans-serif;
 }
 .footer {
-    width:100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #FFFFFF;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #ffffff;
   background-color: #000;
   opacity: 0.7;
   border-radius: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  p {
+    margin: 10px;
   }
-  
+  h4 {
+    text-decoration: underline;
+  }
+  a {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
 
+.footer-section {
+  flex-grow: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fa-linkedin-in,
+.fa-github {
+  font-size: 100px;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.separator {
+  height: 30px;
+  width: 1px;
+  background-color: #000;
+  margin: 0 10px;
+}
+
+@media (min-width: 768px) {
   .footer-section {
-    flex-grow: 1;
-    padding: 10px; 
+    width: 48%;
   }
-  .fa-linkedin-in,
-  .fa-github{
-    font-size: 50px;
-  }
+}
 
-  .separator {
-    height: 30px;
-    width: 1px;
-    background-color: #000;
-    margin: 0 10px; 
+@media (max-width: 767px) {
+  .footer-section {
+    width: 100%;
+    margin-bottom: 10px;
   }
- 
-  @media (min-width: 768px) {
-    .footer-section {
-      width: 48%; 
-    }
-  }
-  
-
-  @media (max-width: 767px) {
-    .footer-section {
-      width: 100%; 
-      margin-bottom: 10px; 
-    }
-  }
-  
+}

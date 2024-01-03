@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { useLanguage } from '../../LanguageSelector/LanguageContext';
-import '../../../sass/components/_ProjectCard.scss';
-import projectData from '../projectContent.json';
-import ProjectModal from './ProjectModal';
+import React, { useState } from "react";
+import { useLanguage } from "../../LanguageSelector/LanguageContext";
+import "../../../sass/components/_ProjectCard.scss";
+import projectData from "../projectContent.json";
+import ProjectModal from "./ProjectModal";
 
 const ProjectCard = ({ projectId }) => {
   const { language } = useLanguage();
@@ -23,25 +23,29 @@ const ProjectCard = ({ projectId }) => {
 
   return (
     <div
-      className={`project-card ${isHovered ? 'hovered' : ''}`}
+      className={`project-card ${isHovered ? "hovered" : ""}`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <img src={project.cover} alt={project.title[language]} className='coverCard' />
+      <img
+        src={project.cover}
+        alt={project.title[language]}
+        className="coverCard"
+      />
       <div className="project-details">
         <h3>{project.title[language]}</h3>
         <p>{project.resume[language]}</p>
-        <button onClick={openModal}>Voir plus</button>
+        <button className="open-modal" onClick={openModal}>
+          Voir plus
+        </button>
       </div>
 
       {isModalOpen && selectedProject && (
         <div className="modal-overlay">
-
-            <button className="close-button" onClick={closeModal}>
-              &#x2715;Close
-            </button>
-            <ProjectModal project={selectedProject} />
-          
+          <button className="close-button" onClick={closeModal}>
+            &#x2715;Close
+          </button>
+          <ProjectModal project={selectedProject} />
         </div>
       )}
     </div>

@@ -1,12 +1,10 @@
-
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import weatherIcons from './weatherIcons.json';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import weatherIcons from "./weatherIcons.json";
 
 const WeatherApp = () => {
   const [weatherData, setWeatherData] = useState(null);
-  const apiKey = '5267af40013b633d8858ae94ed177e54'; 
-
+  const apiKey = "5267af40013b633d8858ae94ed177e54";
 
   const [loading, setLoading] = useState(true);
 
@@ -18,13 +16,12 @@ const WeatherApp = () => {
         );
         setWeatherData(response.data);
       } catch (error) {
-        console.error('Error fetching weather data:', error);
-        // Afficher un message d'erreur à l'utilisateur
+        console.error("Error fetching weather data:", error);
       } finally {
         setLoading(false);
       }
     };
-  
+
     fetchWeatherData();
   }, [apiKey]);
   const kelvinToCelsius = (kelvin) => {
@@ -39,7 +36,7 @@ const WeatherApp = () => {
       <h2>Weather App</h2>
       {loading && <p>Loading...</p>}
       {weatherData && (
-        <div>
+        <div className="weather">
           <p>City: {weatherData.name}</p>
           <p>Temperature: {kelvinToCelsius(weatherData.main.temp)}°C</p>
           <p>Weather: {weatherData.weather[0].description}</p>
@@ -53,4 +50,4 @@ const WeatherApp = () => {
     </div>
   );
 };
-export default WeatherApp
+export default WeatherApp;

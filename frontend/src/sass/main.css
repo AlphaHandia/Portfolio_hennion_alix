@@ -6,22 +6,41 @@
 .footer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #000;
   opacity: 0.7;
   border-radius: 15px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.footer p {
+  margin: 10px;
+}
+.footer h4 {
+  text-decoration: underline;
+}
+.footer a:hover {
+  opacity: 0.7;
 }
 
 .footer-section {
   flex-grow: 1;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .fa-linkedin-in,
 .fa-github {
-  font-size: 50px;
+  font-size: 100px;
+}
+.fa-linkedin-in:hover,
+.fa-github:hover {
+  opacity: 0.7;
 }
 
 .separator {
@@ -42,19 +61,37 @@
     margin-bottom: 10px;
   }
 }
+.fa-shield-halved {
+  font-size: 100px;
+}
+
 .contact-form {
   width: 80%;
   padding: 30px;
-  margin: 40px;
-  border: 6px solid rgba(0, 0, 0, 0.3);
-  box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.3);
+  margin: 40px 40px 175px 40px;
+  border: 6px solid rgba(0, 0, 0, 0.6);
+  box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.6);
   border-radius: 50px;
   position: relative;
+}
+.contact-form:hover {
+  box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.8);
 }
 .contact-form h2 {
   color: rgba(0, 0, 0, 0.3);
   font-size: 60px;
   text-transform: uppercase;
+}
+.contact-form button {
+  font-size: 52px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.contact-form button:hover {
+  opacity: 0.5;
 }
 .contact-form .row {
   display: flex;
@@ -66,34 +103,52 @@
 .contact-form .left-column,
 .contact-form .right-column {
   flex: 0 0 48%;
+  margin-right: 10px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
   width: 100%;
-  background: transparent; /* Fond transparent */
+  background: transparent;
   outline: none;
   font-size: 24px;
+  font-weight: bold;
   padding: 10px 0 10px 20px;
-  border: 5px solid transparent; /* Bordure transparente au départ */
-  box-shadow: 10px 10px 0 transparent; /* Ombre transparente au départ */
-  color: #ffffff;
+  margin-right: 10px;
+  border: 5px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+  color: black;
   border-radius: 50px;
-  transition: all 0.4s; /* Transition pour l'animation */
+  transition: all 0.4s;
+}
+.contact-form input:hover,
+.contact-form textarea:hover,
+.contact-form select:hover {
+  border: 5px solid rgba(0, 0, 0, 0.6);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.6);
 }
 .contact-form input:focus,
 .contact-form textarea:focus,
 .contact-form select:focus {
-  border: 5px solid rgba(0, 0, 0, 0.3); /* Bordure lorsqu'en focus */
-  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3); /* Ombre lorsqu'en focus */
+  border: 5px solid rgba(0, 0, 0, 0.8);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.8);
 }
 .contact-form label {
   line-height: 40px;
   color: black;
-  font-size: 24px;
+  font-size: 40px;
+  font-weight: bold;
   margin: 0 0 0 20px;
   display: block;
   pointer-events: none;
+}
+.contact-form .popup p {
+  font-size: 30px;
+  font-weight: bold;
 }
 .contact-form .row input[type=submit] {
   border: 5px solid rgba(0, 0, 0, 0.3);
@@ -140,30 +195,9 @@
 .project-card {
   background-color: rgba(252, 92, 17, 0.3);
   border-radius: 15px;
-  margin: 80px;
+  margin: 20px;
   transition: all 0.3s ease-out;
-  color: rgb(2, 252, 239);
-}
-.project-card .arrow-left,
-.project-card .arrow-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  color: #007bff;
-  cursor: pointer;
-  z-index: 2;
-  transition: color 0.3s;
-}
-.project-card .arrow-left:hover,
-.project-card .arrow-right:hover {
-  color: #0056b3;
-}
-.project-card .arrow-left {
-  left: 20px;
-}
-.project-card .arrow-right {
-  right: 20px;
+  color: rgb(190, 240, 241);
 }
 
 .coverCard {
@@ -172,16 +206,6 @@
   border-radius: 15px;
 }
 
-.project-card.hovered {
-  width: 360px;
-  height: 360px;
-  border: 2px solid #007bff;
-}
-.project-card.hovered img {
-  width: 100%;
-}
-
-/* _ProjectModal.scss */
 .modal-background {
   position: fixed;
   top: 0;
@@ -204,6 +228,14 @@
   max-height: 80%;
   overflow-y: auto;
   z-index: 1001;
+}
+
+.open-modal {
+  color: rgb(190, 240, 241);
+}
+.open-modal:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 .close-button {
@@ -238,15 +270,6 @@
   justify-content: center;
 }
 
-.project-card.hovered {
-  width: 360px;
-  height: 360px;
-  border: 2px solid #007bff;
-}
-.project-card.hovered img {
-  width: 100%;
-}
-
 .modal {
   background: #fff;
   border-radius: 8px;
@@ -270,6 +293,12 @@
   margin-bottom: 10px;
   text-decoration: none;
   color: #007bff;
+}
+
+.project-details {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
 }
 
 .my-timeline {
@@ -330,7 +359,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%; /* Pour une disposition en quinconce, utilisation 50% de la largeur */
+  height: 100%;
 }
 
 .even {
@@ -361,10 +390,10 @@
 
 .fa-arrow-left,
 .fa-arrow-right {
-  font-size: 80px;
+  font-size: 130px;
   color: rgb(0, 119, 255);
   position: relative;
-  top: 475px;
+  top: 600px;
   opacity: 0.5;
   margin: 8px;
 }
@@ -373,15 +402,21 @@
   opacity: 1;
 }
 
+.weather p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 .banner-container {
   display: flex;
-  color: #FFFFFF;
+  color: #ffffff;
   justify-content: space-evenly;
   align-items: center;
   padding: 20px;
   background-color: #000;
   opacity: 0.7;
   border-radius: 15px;
+  gap: 30px;
 }
 .banner-container:hover {
   opacity: 1;
@@ -390,14 +425,34 @@
   margin: 0;
 }
 .banner-container div i {
-  color: #FFFFFF;
+  color: #ffffff;
   position: relative;
   z-index: 2;
-  font-size: 100px;
+  font-size: 110px;
 }
 
 .right-side {
-  color: #FFFFFF;
+  color: #ffffff;
+}
+.right-side p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.midle-side {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.midle-side p {
+  font-size: 30px;
+  font-weight: bold;
+}
+.midle-side .midle-side-icon {
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
 }
 
 button {
@@ -406,6 +461,8 @@ button {
   background: transparent;
   border: none;
   cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 button img {
@@ -513,14 +570,19 @@ h1 {
   color: antiquewhite;
   text-shadow: 1px 1px 1px #fac123;
   letter-spacing: 2px;
+  font-size: 80px;
 }
 
 a {
   gap: 10px;
-  margin: 5px;
+  margin: 5px 15px 5px 5px;
   text-decoration: none;
   color: aqua;
   text-shadow: 1px 1px 1px #fac123;
+  font-size: 30px;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 main {
@@ -591,7 +653,7 @@ main {
 .toggle button {
   width: 36px;
   height: 36px;
-  background-color: #025afd;
+  background-color: #4d02fd;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -609,14 +671,38 @@ main {
   align-items: center;
   gap: 10px;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .ToggleNameOne {
-  color: #025afd;
+  color: #4d02fd;
+  font-size: 25px;
   font-weight: bold;
 }
 
 .ToggleNameTwo {
   color: rgb(27, 158, 1);
+  font-size: 25px;
   font-weight: bold;
+}
+
+.error-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+}
+.error-container p {
+  font-size: 40px;
+  font-weight: bold;
+  color: antiquewhite;
+}
+.error-container a {
+  font-size: 40px;
+  font-weight: bold;
+}
+.error-container .code {
+  text-decoration: overline;
 }/*# sourceMappingURL=main.css.map */
