@@ -27,7 +27,7 @@ const PageLoader = () => {
             icon={faShieldAlt}
             className="icon"
             style={{
-              transform: `rotate(${index * (360 / 18)}deg) translate(400px)`,
+              transform: `rotate(${index * (360 / 18)}deg) translate(500%)`,
             }}
           />
         ))}

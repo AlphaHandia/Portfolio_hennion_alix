@@ -19,14 +19,14 @@ const LanguageSelector = () => {
         className={`english ${selectedLanguage === "en" ? "selected" : ""}`}
       >
         <img src={englishflag} alt="english flag" />
-        {language === "en" ? "English" : "Anglais"}
+        
       </button>
       <button
         onClick={() => handleLanguageChange("fr")}
         className={`french ${selectedLanguage === "fr" ? "selected" : ""}`}
       >
         <img src={frenchflag} alt="french flag" />
-        {language === "fr" ? "French" : "Français"}
+    
       </button>
     </div>
   );

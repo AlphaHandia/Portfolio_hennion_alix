@@ -1,9 +1,11 @@
+/* Styles de base pour les écrans de bureau et tablettes */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-right: 10px;
 }
+
 .languageselector {
   display: flex;
   flex-direction: column;
@@ -21,6 +23,7 @@
     border: 0.5px solid #ffffff;
   }
 }
+
 .left-side {
   display: flex;
   margin: 10px;
@@ -43,12 +46,14 @@
   height: 150px;
   border: 1px solid black;
 }
+
 h1 {
   color: antiquewhite;
   text-shadow: 1px 1px 1px #fac123;
   letter-spacing: 2px;
   font-size: 80px;
 }
+
 a {
   gap: 10px;
   margin: 5px 15px 5px 5px;
@@ -60,6 +65,46 @@ a {
     text-decoration: underline;
   }
 }
-.right-side{
-  display:flex;
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media query pour les tablettes */
+@media only screen and (max-width: 1024px) {
+  
+  .right-side {
+    display: flex;
+    flex-direction:column;
+  }
+  h1{
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .languageselector {
+    width: 100%;
+  }
+
+  .left-side {
+    margin: 10px 0;
+    justify-content: center;
+  }
+
+  .right-side {
+    display: flex;
+    flex-direction: row; /* Ajout d'une colonne pour le format mobile */
+  }
+  h1{
+    font-size:50px;
+    flex-wrap: wrap;
+  }
 }

@@ -2,6 +2,12 @@ body {
   margin: 0;
   padding: 0;
 }
+@media (max-width: 767px) {
+  body{
+    width:100%;
+    margin-left: 0%;
+  }
+}
 
 .app-container {
   transition: background-image 0.5s ease;

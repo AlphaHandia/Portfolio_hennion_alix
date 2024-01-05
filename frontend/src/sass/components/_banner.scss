@@ -53,3 +53,8 @@
     flex-direction: row;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .banner-container{
+    flex-direction: column;
+  }
+}

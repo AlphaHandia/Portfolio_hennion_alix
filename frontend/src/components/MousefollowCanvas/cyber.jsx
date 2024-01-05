@@ -81,7 +81,7 @@ const CyberCanvas = () => {
       className="cyber-canvas"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <canvas id="background" />
+      <canvas id="background"/>
     </div>
   );
 };

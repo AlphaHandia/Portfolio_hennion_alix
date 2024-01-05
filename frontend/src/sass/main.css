@@ -61,6 +61,10 @@
     width: 100%;
     margin-bottom: 10px;
   }
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .fa-shield-halved {
   font-size: 100px;
@@ -469,6 +473,11 @@
   flex-direction: row;
 }
 
+@media only screen and (max-width: 1024px) {
+  .banner-container {
+    flex-direction: column;
+  }
+}
 button {
   display: flex;
   align-items: center;
@@ -481,7 +490,7 @@ button {
 
 button img {
   height: auto;
-  
+  background-image: transparent;
   background: transparent;
   margin-right: 5px;
 }
@@ -499,6 +508,12 @@ body {
   padding: 0;
 }
 
+@media (max-width: 767px) {
+  body {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
 .app-container {
   transition: background-image 0.5s ease;
 }
@@ -562,6 +577,7 @@ body {
   height: 100%;
 }
 
+/* Styles de base pour les écrans de bureau et tablettes */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -630,8 +646,41 @@ a:hover {
 
 .right-side {
   display: flex;
+  flex-direction: column;
 }
 
+/* Media query pour les tablettes */
+@media only screen and (max-width: 1024px) {
+  .right-side {
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .languageselector {
+    width: 100%;
+  }
+  .left-side {
+    margin: 10px 0;
+    justify-content: center;
+  }
+  .right-side {
+    display: flex;
+    flex-direction: row; /* Ajout d'une colonne pour le format mobile */
+  }
+  h1 {
+    font-size: 50px;
+    flex-wrap: wrap;
+  }
+}
 main {
   display: flex;
   flex-direction: column;
@@ -660,6 +709,11 @@ main {
     flex-direction: column;
   }
 }
+@media (max-width: 768px) {
+  .main-content .main-project {
+    margin: 0px;
+  }
+}
 .main-content .main-project .project-card {
   display: flex;
   flex-direction: column;
@@ -668,6 +722,11 @@ main {
   margin: 10px;
   background-color: rgba(255, 184, 93, 0.3);
   border-radius: 15px;
+}
+@media (max-width: 768px) {
+  .main-content .main-project .project-card {
+    margin: 0px;
+  }
 }
 .main-content .main-project .project-card:hover {
   transform: scale(1.05);
@@ -791,7 +850,7 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-45%, -45%) rotate(360deg);
+  transform: translate(-45%, -45%);
   animation: fillCenter 3s linear infinite;
 }
 @keyframes fill {
@@ -819,5 +878,21 @@ main {
 @keyframes rotateCircle {
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .page-loader-container {
+    font-size: 12px;
+  }
+  .loader {
+    width: 100px;
+    height: 100px;
+  }
+  .icon {
+    font-size: 20px;
+  }
+  .center-icon {
+    font-size: 50px;
   }
 }/*# sourceMappingURL=main.css.map */

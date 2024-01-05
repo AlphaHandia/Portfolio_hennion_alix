@@ -38,7 +38,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-45%, -45%) rotate(360deg); // Rotation dans l'autre sens
+    transform: translate(-45%, -45%) ; // Rotation dans l'autre sens
     animation: fillCenter 3s linear infinite;
   }
 
@@ -70,5 +70,24 @@
     100% {
       transform: rotate(-360deg); // Rotation complète sur 360 degrés
     }
+  }
+ 
+}
+@media only screen and (max-width: 1024px) {
+  .page-loader-container {
+    font-size: 12px; // Ajustez la taille de la police pour les écrans de tablette
+  }
+
+  .loader {
+    width: 100px; // Ajustement pour les écrans de tablette
+    height: 100px; // Ajustement pour les écrans de tablette
+  }
+
+  .icon {
+    font-size: 20px; // Ajustement pour les écrans de tablette
+  }
+
+  .center-icon {
+    font-size: 50px; // Ajustement pour les écrans de tablette
   }
 }
