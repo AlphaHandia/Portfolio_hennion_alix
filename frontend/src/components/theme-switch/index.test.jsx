@@ -1,55 +1,57 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
-import ThemeToggle from './ThemeToggle';
+import React from "react";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import ThemedComponent from "./ThemedComponent";
+import { ThemeProvider } from "./ThemeContext";
+import { LanguageProvider } from "../LanguageSelector/LanguageContext";
 
-// Création d'un store factice avec redux-mock-store
-const mockStore = configureStore([]);
+// Mock LanguageProvider pour fournir le contexte de langue
+jest.mock("../LanguageSelector/LanguageContext", () => ({
+  ...jest.requireActual("../LanguageSelector/LanguageContext"),
+  useLanguage: jest.fn(),
+}));
 
-// Suite de tests pour le composant ThemeToggle
-describe('ThemeToggle Component', () => {
-  // Test : le composant rend sans erreur
-  it('renders without crashing', () => {
-    const store = mockStore({
-      theme: {
-        currentTheme: 'cyber', 
-      },
-    });
+describe("ThemedComponent", () => {
+  it("renders ThemedComponent correctly", () => {
     render(
-      <Provider store={store}>
-        <ThemeToggle />
-      </Provider>
-    );
-  });
-
-  // Test : le composant change de thème lorsqu'il est cliqué
-  it('changes theme when clicked', () => {
-    const store = mockStore({
-      theme: {
-        currentTheme: 'cyber',
-      },
-    });
-    render(
-      <Provider store={store}>
-        <ThemeToggle />
-      </Provider>
+      <LanguageProvider>
+        <ThemedComponent />
+      </LanguageProvider>
     );
 
-    const toggleButton = screen.getByText('Toggle Theme');
-    fireEvent.click(toggleButton);
-
+    // Vous pouvez ajouter des assertions ici pour vérifier le rendu initial du composant
+    expect(screen.getByText("Cyber")).toBeInTheDocument();
+    expect(screen.getByText("Garden")).toBeInTheDocument();
   });
+
+  it("toggles the theme on button click", async () => {
+    render(
+      <LanguageProvider>
+        <ThemeProvider>
+          <ThemedComponent />
+        </ThemeProvider>
+      </LanguageProvider>
+    );
+
+    fireEvent.click(screen.getByRole("button"));
+
+    // Attendez que le chargement soit terminé
+    await waitFor(() => {
+      expect(screen.getByText("Garden Canvas")).toBeInTheDocument();
+    });
+
+    // Vous pouvez ajouter d'autres assertions ici pour vérifier le changement de thème
+    expect(document.body.classList.contains("garden-theme")).toBe(true);
+  });
+
+  // Explications en français
+  /*
+   - Le premier test vérifie que le composant ThemedComponent est rendu correctement.
+   - Le deuxième test vérifie que le thème est basculé lorsqu'on clique sur le bouton.
+  */
+
+  // Explanations in English
+  /*
+   - The first test checks that the ThemedComponent renders correctly.
+   - The second test checks that the theme is toggled when the button is clicked.
+  */
 });
-
-// Explications en français
-/*
- - Le premier test s'assure que le composant est rendu sans erreur.
- - Le deuxième test vérifie si le composant change de thème lorsqu'il est cliqué.
-*/
-
-// Explanations in English
-/*
- - The first test ensures that the component renders without errors.
- - The second test checks if the component changes the theme when clicked.
-*/

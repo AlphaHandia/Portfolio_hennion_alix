@@ -1,50 +1,64 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import LanguageSelector from './LanguageSelector';
+import React from "react";
+import { render, screen, fireEvent } from "@testing-library/react";
+import LanguageSelector from "./LanguageSelector";
+import { LanguageProvider } from "./LanguageContext";
 
-// Suite de tests pour le composant LanguageSelector
-describe('LanguageSelector Component', () => {
-  // Test : le composant rend sans erreur
-  it('renders without crashing', () => {
-    render(<LanguageSelector />);
+// Mock LanguageProvider pour fournir le contexte de langue
+jest.mock("./LanguageContext", () => ({
+  ...jest.requireActual("./LanguageContext"),
+  useLanguage: jest.fn(),
+}));
+
+describe("LanguageSelector", () => {
+  it("renders LanguageSelector correctly", () => {
+    
+    render(
+      <LanguageProvider>
+        <LanguageSelector />
+      </LanguageProvider>
+    );
+
+    // Vous pouvez ajouter des assertions ici pour vérifier le rendu initial du composant
+    expect(screen.getByText("English")).toBeInTheDocument();
+    expect(screen.getByText("Français")).toBeInTheDocument();
   });
 
-  // Test : le composant affiche les boutons pour les langues avec les drapeaux
-  it('displays language buttons with flags', () => {
-    render(<LanguageSelector />);
-    const englishButton = screen.getByAltText('english flag');
-    const frenchButton = screen.getByAltText('french flag');
+  it("changes language on button click", () => {
+    // Mock de la fonction useLanguage
+    const useLanguageMock = jest.fn(() => ({ language: "en", changeLanguage: jest.fn() }));
+    render(
+      <LanguageProvider>
+        <LanguageSelector />
+      </LanguageProvider>
+    );
 
-    expect(englishButton).toBeInTheDocument();
-    expect(frenchButton).toBeInTheDocument();
-  });
+    const frenchButton = screen.getByText("Français");
 
-  // Test : le changement de langue est déclenché correctement
-  it('triggers language change correctly', () => {
-    render(<LanguageSelector />);
-    const englishButton = screen.getByAltText('english flag');
-    const frenchButton = screen.getByAltText('french flag');
+    // Assurez-vous que la langue actuelle est correcte
+    expect(frenchButton).toHaveClass("french");
+    expect(frenchButton).not.toHaveClass("selected");
 
-    // Simule un clic sur le bouton anglais
-    fireEvent.click(englishButton);
-    expect(localStorage.getItem('i18nextLng')).toBe('en');
-
-    // Simule un clic sur le bouton français
+    // Déclenchez l'événement de clic sur le bouton français
     fireEvent.click(frenchButton);
-    expect(localStorage.getItem('i18nextLng')).toBe('fr');
+
+    // Assurez-vous que la fonction changeLanguage a été appelée avec le bon paramètre
+    expect(useLanguageMock().changeLanguage).toHaveBeenCalledWith("fr");
+
+    // Assurez-vous que le style du bouton change après le clic
+    expect(frenchButton).toHaveClass("selected");
   });
+
+  // Ajoutez d'autres tests si nécessaire
 });
 
 // Explications en français
 /*
- - Le premier test s'assure que le composant est rendu sans erreur.
- - Le deuxième test vérifie la présence des boutons de langues avec les drapeaux.
- - Le troisième test simule un clic sur les boutons de langues et vérifie si le changement de langue est déclenché correctement.
+ - Le premier test vérifie que le composant LanguageSelector est rendu correctement avec les boutons de sélection de langue.
+ - Le deuxième test vérifie que la langue change lorsqu'un bouton est cliqué.
 */
 
 // Explanations in English
 /*
- - The first test ensures that the component renders without errors.
- - The second test checks for the presence of language buttons with flags.
- - The third test simulates a click on the language buttons and checks if the language change is triggered correctly.
+ - The first test checks that the LanguageSelector component renders correctly with language selection buttons.
+ - The second test checks that the language changes when a button is clicked.
 */

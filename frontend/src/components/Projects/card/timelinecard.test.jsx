@@ -1,47 +1,99 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import TimelineCard from './timelinecard';
+import React from "react";
+import { render, screen, fireEvent } from "@testing-library/react";
+import ProjectCard from "./ProjectCard";
+import { LanguageProvider } from "../../LanguageSelector/LanguageContext";
+import { ThemeProvider } from "../../theme-switch/ThemeContext";
 
+// Mock LanguageProvider et ThemeProvider pour fournir les contextes de langue et de thème
+jest.mock("../../LanguageSelector/LanguageContext", () => ({
+  ...jest.requireActual("../../LanguageSelector/LanguageContext"),
+  useLanguage: jest.fn(),
+}));
+jest.mock("../../theme-switch/ThemeContext", () => ({
+  ...jest.requireActual("../../theme-switch/ThemeContext"),
+  useTheme: jest.fn(),
+}));
 
-// Suite de tests pour le composant TimelineCard
-describe('TimelineCard Component', () => {
-  // Test : le composant rend sans erreur
-  it('renders without crashing', () => {
-    const mockData = {
-      title: 'Sample Project',
-      start_time: new Date('2022-01-01'),
-      end_time: new Date('2022-02-01'),
+describe("ProjectCard", () => {
+  it("renders ProjectCard correctly", () => {
+    const project = {
+      id: 1,
+      title: {
+        en: "Project Title",
+        fr: "Titre du projet",
+      },
+      resume: {
+        en: "Project Summary",
+        fr: "Résumé du projet",
+      },
+      cover: "/path/to/cover.jpg",
     };
-    render(<TimelineCard {...mockData} />);
+
+
+
+    render(
+      <LanguageProvider>
+        <ThemeProvider>
+          <ProjectCard projectId={project.id} />
+        </ThemeProvider>
+      </LanguageProvider>
+    );
+
+    // Vous pouvez ajouter des assertions ici pour vérifier le rendu initial du composant
+    expect(screen.getByText("Project Title")).toBeInTheDocument();
+    expect(screen.getByText("Project Summary")).toBeInTheDocument();
+    expect(screen.getByAltText("Project Title")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Voir plus" })).toBeInTheDocument();
   });
 
-  // Test : le composant affiche le titre, la date de début et la date de fin correctement
-  it('displays title, start date, and end date correctly', () => {
-    const mockData = {
-      title: 'Sample Project',
-      start_time: new Date('2022-01-01'),
-      end_time: new Date('2022-02-01'),
+  it("opens and closes ProjectModal when 'Voir plus' button is clicked", () => {
+    const project = {
+      id: 1,
+      title: {
+        en: "Project Title",
+        fr: "Titre du projet",
+      },
+      resume: {
+        en: "Project Summary",
+        fr: "Résumé du projet",
+      },
+      cover: "/path/to/cover.jpg",
     };
-    render(<TimelineCard {...mockData} />);
 
-    const titleElement = screen.getByText('Sample Project');
-    const startDateElement = screen.getByText('Start Date: Sat Jan 01 2022');
-    const endDateElement = screen.getByText('End Date: Tue Feb 01 2022');
 
-    expect(titleElement).toBeInTheDocument();
-    expect(startDateElement).toBeInTheDocument();
-    expect(endDateElement).toBeInTheDocument();
+
+    render(
+      <LanguageProvider>
+        <ThemeProvider>
+          <ProjectCard projectId={project.id} />
+        </ThemeProvider>
+      </LanguageProvider>
+    );
+
+    // Vous pouvez ajouter des assertions ici pour vérifier le rendu initial du composant
+
+    // Cliquez sur le bouton "Voir plus"
+    fireEvent.click(screen.getByRole("button", { name: "Voir plus" }));
+
+    // Vérifiez que ProjectModal est ouvert
+    expect(screen.getByText("Project Title")).toBeInTheDocument();
+
+    // Cliquez sur le bouton de fermeture dans ProjectModal
+    fireEvent.click(screen.getByText("× Close"));
+
+    // Vérifiez que ProjectModal est fermé
+    expect(screen.queryByText("Project Title")).not.toBeInTheDocument();
   });
+
+  // Explications en français
+  /*
+   - Le premier test vérifie que le composant ProjectCard est rendu correctement avec les données du projet.
+   - Le deuxième test vérifie que ProjectModal s'ouvre et se ferme correctement lorsque le bouton "Voir plus" est cliqué.
+  */
+
+  // Explanations in English
+  /*
+   - The first test checks that the ProjectCard component renders correctly with project data.
+   - The second test checks that ProjectModal opens and closes correctly when the "Voir plus" button is clicked.
+  */
 });
-
-// Explications en français
-/*
- - Le premier test s'assure que le composant est rendu sans erreur.
- - Le deuxième test vérifie si le composant affiche correctement le titre, la date de début et la date de fin.
-*/
-
-// Explanations in English
-/*
- - The first test ensures that the component renders without errors.
- - The second test checks if the component displays the title, start date, and end date correctly.
-*/

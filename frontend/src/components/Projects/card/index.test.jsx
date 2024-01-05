@@ -1,35 +1,35 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import ProjectCard from './ProjectCard';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import TimelineCard from "./TimelineCard";
+import { LanguageProvider } from "../../LanguageSelector/LanguageContext";
 
-// Suite de tests pour le composant ProjectCard
-describe('ProjectCard Component', () => {
-  // Test : le composant rend sans erreur
-  it('renders without crashing', () => {
-    render(<ProjectCard project={{/* mock data */}} />);
+// Mock LanguageProvider pour fournir le contexte de langue
+jest.mock("../../LanguageSelector/LanguageContext", () => ({
+  ...jest.requireActual("../../LanguageSelector/LanguageContext"),
+  useLanguage: jest.fn(),
+}));
+
+describe("TimelineCard", () => {
+  it("renders TimelineCard correctly", () => {
+    render(
+      <LanguageProvider>
+        <TimelineCard />
+      </LanguageProvider>
+    );
+
+    // Vous pouvez ajouter des assertions ici pour vérifier le rendu initial du composant
+    expect(screen.getByText("Project Details")).toBeInTheDocument();
+    expect(screen.getByText("Description: Project Description")).toBeInTheDocument();
+    expect(screen.getByText("Start Date: 2022-01-01")).toBeInTheDocument();
   });
 
-  // Test : le composant change d'état lorsqu'il est survolé
-  it('changes state when hovered over', () => {
-    render(<ProjectCard project={{/* mock data */}} />);
-    const projectCard = screen.getByTestId('project-card');
+  // Explications en français
+  /*
+   - Le premier test vérifie que le composant TimelineCard est rendu correctement.
+  */
 
-    fireEvent.mouseEnter(projectCard);
-    expect(projectCard).toHaveClass('hovered');
-
-    fireEvent.mouseLeave(projectCard);
-    expect(projectCard).not.toHaveClass('hovered');
-  });
+  // Explanations in English
+  /*
+   - The first test checks that the TimelineCard component renders correctly.
+  */
 });
-
-// Explications en français
-/*
- - Le premier test s'assure que le composant est rendu sans erreur.
- - Le deuxième test vérifie si le composant change d'état lorsqu'il est survolé.
-*/
-
-// Explanations in English
-/*
- - The first test ensures that the component renders without errors.
- - The second test checks if the component changes state when hovered over.
-*/

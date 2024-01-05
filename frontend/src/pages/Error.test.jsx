@@ -1,30 +1,57 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Error from './Error';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import { ThemeProvider } from "../components/theme-switch/ThemeContext";
+import { LanguageProvider } from "../components/LanguageSelector/LanguageContext";
+import Error from "./Error";
 
-// Suite de tests pour le composant Error
-describe('Error Component', () => {
-  // Test : le composant rend sans erreur
-  it('renders without crashing', () => {
-    render(<Error />);
+describe("Error Component", () => {
+  it("renders Error component with default message", () => {
+    render(
+      <ThemeProvider>
+        <LanguageProvider>
+          <Error />
+        </LanguageProvider>
+      </ThemeProvider>
+    );
+
+    const errorMessage = screen.getByText(/an unexpected error occurred/i);
+    expect(errorMessage).toBeInTheDocument();
   });
 
-  // Test : le composant affiche le titre "Erreur de Sécurité"
-  it('displays the title "Erreur de Sécurité"', () => {
-    render(<Error />);
-    const titleElement = screen.getByText('Erreur de Sécurité');
-    expect(titleElement).toBeInTheDocument();
+  it("renders Error component with translated error message", () => {
+    // Mock error page data
+    const mockErrorData = {
+      title: {
+        en: "Error Title",
+        fr: "Titre d'erreur",
+      },
+      errorMessage: {
+        en: "This is an error message.",
+        fr: "Ceci est un message d'erreur.",
+      },
+      contactAdmin: {
+        en: "Please contact the administrator.",
+        fr: "Veuillez contacter l'administrateur.",
+      },
+      errorCode: {
+        en: "Error Code",
+        fr: "Code d'erreur",
+      },
+      returnHome: {
+        en: "Return to home",
+        fr: "Retour à l'accueil",
+      },
+    };
+
+    render(
+      <ThemeProvider>
+        <LanguageProvider>
+          <Error errorData={mockErrorData} />
+        </LanguageProvider>
+      </ThemeProvider>
+    );
+
+    const translatedErrorMessage = screen.getByText(/ceci est un message d'erreur/i);
+    expect(translatedErrorMessage).toBeInTheDocument();
   });
 });
-
-// Explications en français
-/*
- - Le premier test s'assure que le composant est rendu sans erreur.
- - Le deuxième test vérifie si le composant affiche le titre "Erreur de Sécurité".
- */
-
-// Explanations in English
-/*
- - The first test ensures that the component renders without errors.
- - The second test checks if the component displays the title "Erreur de Sécurité".
-*/

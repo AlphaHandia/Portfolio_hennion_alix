@@ -16,16 +16,15 @@ describe('MyTimeline Component', () => {
     expect(sidebar).toBeInTheDocument();
   });
 
+  // Explications en français
+  /*
+   - Le premier test s'assure que le composant est rendu sans erreur.
+   - Le deuxième test vérifie si le composant affiche la barre latérale.
+  */
+
+  // Explanations in English
+  /*
+   - The first test ensures that the component renders without errors.
+   - The second test checks if the component displays the sidebar.
+  */
 });
-
-// Explications en français
-/*
- - Le premier test s'assure que le composant est rendu sans erreur.
- - Le deuxième test vérifie si le composant affiche la barre latérale.
-*/
-
-// Explanations in English
-/*
- - The first test ensures that the component renders without errors.
- - The second test checks if the component displays the sidebar.
-*/

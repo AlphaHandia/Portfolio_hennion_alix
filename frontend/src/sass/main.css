@@ -481,7 +481,7 @@ button {
 
 button img {
   height: auto;
-  background-image: transparent;
+  
   background: transparent;
   margin-right: 5px;
 }
@@ -626,6 +626,10 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+
+.right-side {
+  display: flex;
 }
 
 main {

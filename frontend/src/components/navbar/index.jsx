@@ -1,22 +1,31 @@
-// NavBar.jsx
 import React, { useState } from "react";
 import { useLanguage } from "../LanguageSelector/LanguageContext";
 import profileImage from "../../assets/images/alix-hennion.jpg";
 import LanguageSelector from "../LanguageSelector/index";
 import translations from "../../initi18n/content/translation.json";
-import PageLoader from "../loading/index"; 
+import PageLoader from "../loading/index";
 import { useTheme } from "../theme-switch/ThemeContext";
-const NavBar = () => {
-  const { language } = useLanguage();
-  const { state: themeState } = useTheme();  // Assurez-vous d'avoir l'état du thème
+import { useLocation } from "react-router-dom"; // Importez useLocation et useHistory
 
+const NavBar = () => {
+  const location = useLocation();
+  const { language } = useLanguage();
+  const { state: themeState } = useTheme();
   const navbar = translations.navbar;
   const [loading, setLoading] = useState(false);
 
   const handleContactClick = () => {
     setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  };
 
-    // Simulez un chargement en différé (remplacez cela par votre logique de chargement réelle)
+  const isContactPage = location.pathname === "/Contact";
+  const homeLinkText = isContactPage ? "Accueil" : "Contact";
+
+  const handleHomeClick = () => {
+    setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 3000);
@@ -50,7 +59,13 @@ const NavBar = () => {
           <a href="/Contact" onClick={handleContactClick} style={{
             color: themeState.currentTheme === 'garden' ? '#ff6000' : 'aqua',
             textShadow: themeState.currentTheme === 'garden' ? 'none' : '1px 1px 1px #fac123',
-          }}>{navbar.contact[language]}</a>
+            display: isContactPage ? 'none' :'flex' , // Affiche le lien seulement si c'est la page de contact
+          }}>{homeLinkText}</a>
+          <a href="/" onClick={handleHomeClick} style={{ 
+            color: themeState.currentTheme === 'garden' ? '#ff6000' : 'aqua',
+            textShadow: themeState.currentTheme === 'garden' ? 'none' : '1px 1px 1px #fac123',
+            display: isContactPage ?  'flex':'none' , // Affiche le lien seulement si ce n'est pas la page de contact
+          }}>Accueil</a>
         </div>
       </nav>
     </div>
