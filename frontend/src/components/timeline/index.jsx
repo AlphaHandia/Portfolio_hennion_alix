@@ -2,8 +2,11 @@ import React from "react";
 import "react-calendar-timeline/lib/Timeline.css";
 import projectData from "../Projects/projectContent.json";
 import ProjectCard from "../Projects/card/timelinecard";
+import { useTheme } from "../theme-switch/ThemeContext"; // Assurez-vous d'avoir le chemin d'importation correct
 
 const ProjectTimeline = () => {
+  const { state: themeState } = useTheme();
+
   const sortedProjects = projectData.projects.sort(
     (a, b) => new Date(a.date_realization) - new Date(b.date_realization)
   );
@@ -33,17 +36,18 @@ const ProjectTimeline = () => {
       timeline.scrollLeft += scrollAmount;
     }
   };
+
   return (
     <div>
       <div className="scroll-buttons">
         <button onClick={() => handleScroll("left")}>
-          <i class="fa-solid fa-arrow-left"></i>
+          <i className="fa-solid fa-arrow-left" style={{ color: themeState.currentTheme === 'garden' ? 'rgb(255, 96, 0)' : 'rgb(0, 119, 255)' }}></i>
         </button>
         <button onClick={() => handleScroll("right")}>
-          <i class="fa-solid fa-arrow-right"></i>
+          <i className="fa-solid fa-arrow-right" style={{ color: themeState.currentTheme === 'garden' ? 'rgb(255, 96, 0)' : 'rgb(0, 119, 255)' }}></i>
         </button>
       </div>
-      <div className="project-timeline">
+      <div className={`project-timeline ${themeState.currentTheme === 'garden' ? 'garden-theme' : ''}`}>
         {filteredProjects.map((project, index) => (
           <div
             key={project.id}
@@ -51,7 +55,7 @@ const ProjectTimeline = () => {
               index % 2 === 0 ? "even" : "odd"
             }`}
           >
-            <div className="project-month">
+            <div className="project-month" style={{ color: themeState.currentTheme === 'garden' ? 'rgb(255, 96, 0)' : 'aqua', textShadow: '1px 1px 1px #fac123', fontSize: '60px', fontWeight: 'bold', letterSpacing: '2px', whiteSpace: 'nowrap' }}>
               {getMonthString(project.date_realization)} &gt;
             </div>
             <ProjectCard projectId={project.id} />

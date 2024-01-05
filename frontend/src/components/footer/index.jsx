@@ -1,10 +1,18 @@
 import React from "react";
 import { useLanguage } from "../LanguageSelector/LanguageContext";
 import translations from "../../initi18n/content/translation.json";
+import { useTheme } from "../theme-switch/ThemeContext";
 
 const Footer = () => {
   const { language } = useLanguage();
+  const { state: themeState } = useTheme();
   const footer = translations.footer;
+
+  const linkStyle = {
+    color: themeState.currentTheme === 'garden' ? 'rgba(255, 96, 0)' : '#ffffff',
+    textDecoration: 'none',
+    transition: 'color 0.3s ease-out',
+  };
 
   return (
     <footer className="footer">
@@ -26,8 +34,9 @@ const Footer = () => {
           href={footer.githubLink}
           target="_blank"
           rel="noopener noreferrer"
+          style={footer.githubLink && linkStyle}
         >
-          <i className="fa-brands fa-github"></i>
+          <i className="fa-brands fa-github" style={footer.githubLink && linkStyle}></i>
         </a>
       </div>
       <div className="separator"></div>
@@ -37,8 +46,9 @@ const Footer = () => {
           href={footer.linkedinLink}
           target="_blank"
           rel="noopener noreferrer"
+          style={footer.linkedinLink && linkStyle}
         >
-          <i className="fa-brands fa-linkedin-in"></i>
+          <i className="fa-brands fa-linkedin-in" style={footer.linkedinLink && linkStyle}></i>
         </a>
       </div>
       <div className="separator"></div>
@@ -50,6 +60,7 @@ const Footer = () => {
               href={footer.requirementsLink}
               target="_blank"
               rel="noopener noreferrer"
+              style={footer.requirementsLink && linkStyle}
             >
               {footer.requirements[language]}
             </a>
@@ -59,6 +70,7 @@ const Footer = () => {
               href={footer.recipeLink}
               target="_blank"
               rel="noopener noreferrer"
+              style={footer.recipeLink && linkStyle}
             >
               {footer.recipe[language]}
             </a>

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useLanguage } from "../../LanguageSelector/LanguageContext";
+import { useTheme } from "../../theme-switch/ThemeContext";
 import "../../../sass/components/_MainProject.scss";
 import projectData from "../projectContent.json";
 
 const MainProject = () => {
   const { language } = useLanguage();
+  const { state: themeState } = useTheme();
   const [hoveredProject, setHoveredProject] = useState(null);
 
   const handleMouseEnter = (projectId) => {
@@ -22,15 +24,17 @@ const MainProject = () => {
   return (
     <div className="main-content">
       <h1>Mes Projets de Développeur</h1>
-      <div className="main-project" id="mainProject">
+      <div className={`main-project ${themeState.currentTheme === 'garden' ? 'garden-theme' : ''}`} id="mainProject">
         {filteredProjects.map((project) => (
           <div
             key={project.id}
-            className={`project-card ${
-              hoveredProject === project.id ? "hovered" : ""
-            }`}
+            className={`project-card ${hoveredProject === project.id ? "hovered" : ""}`}
             onMouseEnter={() => handleMouseEnter(project.id)}
             onMouseLeave={handleMouseLeave}
+            style={{
+              backgroundColor: themeState.currentTheme === 'garden' ? 'rgba(190, 240, 241, 0.6)' : 'rgba(255, 184, 93, 0.3)',
+              color: themeState.currentTheme === 'garden' ? 'rgba(252, 92, 17)' : 'antiquewhite',
+            }}
           >
             <img src={project.picture} alt={project.title[language]} />
             <div className="project-details">
@@ -45,6 +49,11 @@ const MainProject = () => {
                     href={project.linkGithub}
                     target="_blank"
                     rel="noopener noreferrer"
+                    style={{
+                      color: themeState.currentTheme === 'garden' ? 'rgb(255, 96, 0)' : '#007bff',
+                      textDecoration: 'underline',
+                      transition: 'color 0.3s ease-out',
+                    }}
                   >
                     GitHub
                   </a>
@@ -56,6 +65,11 @@ const MainProject = () => {
                     href={project.linkgithubPages}
                     target="_blank"
                     rel="noopener noreferrer"
+                    style={{
+                      color: themeState.currentTheme === 'garden' ? 'rgb(255, 96, 0)' : '#007bff',
+                      textDecoration: 'underline',
+                      transition: 'color 0.3s ease-out',
+                    }}
                   >
                     GitHub Pages
                   </a>
