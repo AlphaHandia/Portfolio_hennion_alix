@@ -3,10 +3,13 @@ import { useLanguage } from "../../LanguageSelector/LanguageContext";
 import { useTheme } from "../../theme-switch/ThemeContext";
 import "../../../sass/components/_MainProject.scss";
 import projectData from "../projectContent.json";
+import translations from "../../../initi18n/content/translation.json";
 
 const MainProject = () => {
   const { language } = useLanguage();
   const { state: themeState } = useTheme();
+  const mainProject = translations.mainProject;
+
   const [hoveredProject, setHoveredProject] = useState(null);
 
   const handleMouseEnter = (projectId) => {
@@ -23,7 +26,12 @@ const MainProject = () => {
 
   return (
     <div className="main-content">
-      <h1>Mes Projets de Développeur</h1>
+      <h1 style={{
+  color: themeState.currentTheme === 'garden' ? 'rgb(32,163,56)' : 'inherit',
+  textShadow: themeState.currentTheme === 'garden' ? 'rgb(187,138,0) 1px 1px 1px' : 'none',
+}}>
+  {mainProject.projectTitle[language]}
+</h1>
       <div className={`main-project ${themeState.currentTheme === 'garden' ? 'garden-theme' : ''}`} id="mainProject">
         {filteredProjects.map((project) => (
           <div
@@ -40,9 +48,9 @@ const MainProject = () => {
             <div className="project-details">
               <h2>{project.title[language]}</h2>
               <p>{project.description[language]}</p>
-              <p>Date de réalisation: {project.date_realization}</p>
-              <p>Langages: {project.languages.join(", ")}</p>
-              <p>Compétences acquises: {project.skills_acquired.join(", ")}</p>
+              <p>{mainProject.dateLabel[language]}: {project.date_realization}</p>
+              <p>{mainProject.languagesLabel[language]}: {project.languages.join(", ")}</p>
+              <p>{mainProject.skillsLabel[language]}: {project.skills_acquired.join(", ")}</p>
               {project.linkGithub && (
                 <p>
                   <a

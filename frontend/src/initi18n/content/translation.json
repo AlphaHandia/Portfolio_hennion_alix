@@ -191,5 +191,23 @@
       "en": "Garden",
       "fr": "Jardin"
     }
+  },
+  "mainProject": {
+    "projectTitle": {
+      "en": "My Developer Projects",
+      "fr": "Mes Projets de Développeur"
+    },
+    "dateLabel": {
+      "en": "Date of realization",
+      "fr": "Date de réalisation"
+    },
+    "languagesLabel": {
+      "en": "Languages",
+      "fr": "Langages"
+    },
+    "skillsLabel": {
+      "en": "Skills acquired",
+      "fr": "Compétences acquises"
+    }
   }
 }
