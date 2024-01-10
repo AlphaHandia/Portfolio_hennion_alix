@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLanguage } from "../../LanguageSelector/LanguageContext";
 import { useTheme } from "../../theme-switch/ThemeContext";
 import "../../../sass/components/_ProjectCard.scss";
@@ -12,7 +12,24 @@ const ProjectCard = ({ projectId }) => {
   const project = projectData.projects.find((proj) => proj.id === projectId);
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
-
+    // Ajoutez un effet useEffect pour ajouter et supprimer l'event listener
+    useEffect(() => {
+      const handleKeyPress = (e) => {
+        if (e.key === "Escape") {
+          closeModal();
+        }
+      };
+  
+      // Ajoute l'event listener lors du montage du composant
+      window.addEventListener("keydown", handleKeyPress);
+  
+      // Nettoie l'event listener lors du démontage du composant
+      return () => {
+        window.removeEventListener("keydown", handleKeyPress);
+      };
+    }, []); // Le tableau de dépendances vide signifie que l'effet s'exécute uniquement lors du montage/démontage du composant
+  
+   
   const openModal = () => {
     setModalOpen(true);
     setSelectedProject(project);

@@ -28,7 +28,7 @@ const ProjectTimeline = () => {
 
   const handleScroll = (direction) => {
     const timeline = document.querySelector(".project-timeline");
-    const scrollAmount = 450; // Ajustement de la valeur de défilement selon votre préférence
+    const scrollAmount = 275; // Ajustement de la valeur de défilement selon votre préférence
 
     if (direction === "left") {
       timeline.scrollLeft -= scrollAmount;

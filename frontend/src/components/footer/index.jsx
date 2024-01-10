@@ -31,7 +31,7 @@ const Footer = () => {
       <div className="footer-section">
         <h4>GitHub</h4>
         <a
-          href={footer.githubLink}
+          href="https://github.com/AlphaHandia?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
           style={footer.githubLink && linkStyle}
@@ -43,7 +43,7 @@ const Footer = () => {
       <div className="footer-section">
         <h4>LinkedIn</h4>
         <a
-          href={footer.linkedinLink}
+          href="https://www.linkedin.com/in/alix-hennion-1389081b8/"
           target="_blank"
           rel="noopener noreferrer"
           style={footer.linkedinLink && linkStyle}
@@ -57,7 +57,7 @@ const Footer = () => {
         <ul>
           <li>
             <a
-              href={footer.requirementsLink}
+              href="../../../Spécifications techniques Portfolio ALix Hennion.pdf"
               target="_blank"
               rel="noopener noreferrer"
               style={footer.requirementsLink && linkStyle}
@@ -67,7 +67,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href={footer.recipeLink}
+              href="../../../Alix+Hennion+Cahier+de+recette+du+Portfolio+complété.pdf"
               target="_blank"
               rel="noopener noreferrer"
               style={footer.recipeLink && linkStyle}

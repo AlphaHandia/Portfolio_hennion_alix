@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useLanguage } from "../LanguageSelector/LanguageContext";
 import translations from "../../initi18n/content/translation.json";
+import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
   const { language } = useLanguage();
@@ -27,15 +28,19 @@ const ContactForm = () => {
       message: Yup.string().required(contactForm.messageLabel[language]),
     }),
     onSubmit: (values, { resetForm }) => {
-      console.log(values);
-      setIsMessageSent(true);
-      resetForm();
+      emailjs.sendForm('8QuJjEPV-i15q3GhA', 'service_xe5t36o', values)
+        .then(function(response) {
+          console.log('Email sent successfully:', response);
+          setIsMessageSent(true);
+          resetForm();
+        })
+        .catch(function(error) {
+          console.error('Failed to send email:', error);
+        });
     },
   });
 
-  const subjectOptions = [
-    ...contactForm.subjectOptions[language]
-  ];
+  const subjectOptions = [...contactForm.subjectOptions[language]];
 
   return (
     <form onSubmit={formik.handleSubmit} className="contact-form">
