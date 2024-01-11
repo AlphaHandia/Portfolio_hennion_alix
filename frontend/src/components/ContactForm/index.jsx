@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import emailjs from "emailjs-com";
 import { useLanguage } from "../LanguageSelector/LanguageContext";
 import translations from "../../initi18n/content/translation.json";
-import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
   const { language } = useLanguage();
@@ -28,18 +28,26 @@ const ContactForm = () => {
       message: Yup.string().required(contactForm.messageLabel[language]),
     }),
     onSubmit: (values, { resetForm }) => {
-      emailjs.sendForm('8QuJjEPV-i15q3GhA', 'service_xe5t36o', values)
-        .then(function(response) {
-          console.log('Email sent successfully:', response);
+      // Envoyer l'e-mail avec le paramètre user_id
+      emailjs.send("service_xe5t36o", "template_wg6rccb", {
+        to_email: "hennion.pierre.alix@hotmail.fr",
+        from_name: values.name,
+        from_email: values.email,
+        phone: values.phone,
+        subject: values.subject,
+        message: values.message,
+      }, "yl-54KXzl4JNROFLu").then(
+        (response) => {
+          console.log("E-mail envoyé avec succès", response);
           setIsMessageSent(true);
           resetForm();
-        })
-        .catch(function(error) {
-          console.error('Failed to send email:', error);
-        });
+        },
+        (error) => {
+          console.error("Erreur lors de l'envoi de l'e-mail", error);
+        }
+      );
     },
   });
-
   const subjectOptions = [...contactForm.subjectOptions[language]];
 
   return (

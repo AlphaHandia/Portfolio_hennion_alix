@@ -1,17 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLanguage } from "../LanguageSelector/LanguageContext";
 import translations from "../../initi18n/content/translation.json";
 import { useTheme } from "../theme-switch/ThemeContext";
+import { Document, Page } from "react-pdf";
+import { saveAs } from "file-saver";
 
 const Footer = () => {
   const { language } = useLanguage();
   const { state: themeState } = useTheme();
   const footer = translations.footer;
+  const [pdfSrc, setPdfSrc] = useState(null);
 
   const linkStyle = {
     color: themeState.currentTheme === 'garden' ? 'rgba(255, 96, 0)' : '#ffffff',
     textDecoration: 'none',
     transition: 'color 0.3s ease-out',
+  };
+
+  const handleDownload = (pdfName) => {
+    const pdfPath = `./${pdfName}`;
+    setPdfSrc(pdfPath);
+
+    // Save the file using file-saver
+    saveAs(pdfPath, pdfName);
   };
 
   return (
@@ -57,26 +68,31 @@ const Footer = () => {
         <ul>
           <li>
             <a
-              href="../../../Spécifications techniques Portfolio ALix Hennion.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/"
               style={footer.requirementsLink && linkStyle}
+              onClick={() => handleDownload("Spécifications techniques Portfolio ALix Hennion.pdf")}
             >
               {footer.requirements[language]}
             </a>
           </li>
           <li>
             <a
-              href="../../../Alix+Hennion+Cahier+de+recette+du+Portfolio+complété.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/"
               style={footer.recipeLink && linkStyle}
+              onClick={() =>
+                handleDownload("Alix+Hennion+Cahier+de+recette+du+Portfolio+complété.pdf")
+              }
             >
               {footer.recipe[language]}
             </a>
           </li>
         </ul>
       </div>
+      {pdfSrc && (
+        <Document file={pdfSrc}>
+          <Page pageNumber={1} />
+        </Document>
+      )}
     </footer>
   );
 };
