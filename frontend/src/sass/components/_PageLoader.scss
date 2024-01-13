@@ -1,8 +1,7 @@
 // PageLoader.scss
 .page-loader-container {
   position: fixed;
-  top: 0;
-  left: 0;
+  
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.95);
@@ -16,10 +15,10 @@
   .loader {
     display: inline-block;
     position: relative;
-    width: 300px; // Ajustez la taille totale du cercle selon vos besoins
-    height: 300px; // Ajustez la taille totale du cercle selon vos besoins
+    width: 270px; // Ajustez la taille totale du cercle selon vos besoins
+    height: 270px; // Ajustez la taille totale du cercle selon vos besoins
     border-radius: 50%; // Assurez-vous que le conteneur a une forme de cercle
-    animation: rotateCircle 6s linear infinite; // Ajout de l'animation de rotation au cercle
+    animation: rotateCircle 3s linear infinite; // Ajout de l'animation de rotation au cercle
   }
 
   .icon {
@@ -28,18 +27,18 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    
     animation: fill 3s linear infinite;
   }
 
   .center-icon {
     font-size: 150px; // Ajustez la taille de l'icône centrale selon vos besoins
     color: #fff; // Couleur initiale blanche pour l'icône centrale
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-45%, -45%) ; // Rotation dans l'autre sens
-    animation: fillCenter 3s linear infinite;
+    position: relative;
+    top:27.5%;
+    left: 27.5%;
+    
+    animation: fill 3s linear infinite;
   }
 
   @keyframes fill {
@@ -68,7 +67,7 @@
 
   @keyframes rotateCircle {
     100% {
-      transform: rotate(-360deg); // Rotation complète sur 360 degrés
+      transform: rotate(360deg); // Rotation complète sur 360 degrés
     }
   }
  

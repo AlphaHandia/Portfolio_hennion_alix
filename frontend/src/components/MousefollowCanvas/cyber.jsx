@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import backgroundImage from "../../assets/images/background-theme-cybersecurity.png";
+import backgroundImage from "../../assets/images/background-theme-cybersecurity.webp";
 
 const CyberCanvas = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });

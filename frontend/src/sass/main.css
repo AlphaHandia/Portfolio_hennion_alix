@@ -393,7 +393,7 @@
   display: flex;
   justify-content: flex-start;
   color: aqua;
-  text-shadow: 1px 1px 1px #fac123;
+  text-shadow: 1px 1px 1px #00AD03;
   font-size: 60px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -626,7 +626,8 @@ body {
 }
 
 h1 {
-  color: antiquewhite;
+  color: #00AD03;
+  background-color: transparent;
   text-shadow: 1px 1px 1px #fac123;
   letter-spacing: 2px;
   font-size: 80px;
@@ -698,6 +699,7 @@ main {
 }
 .main-content h1 {
   margin-bottom: 20px;
+  color: #00AD03;
 }
 .main-content .main-project {
   display: flex;
@@ -815,8 +817,6 @@ main {
 
 .page-loader-container {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.95);
@@ -830,10 +830,10 @@ main {
 .page-loader-container .loader {
   display: inline-block;
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 270px;
+  height: 270px;
   border-radius: 50%;
-  animation: rotateCircle 6s linear infinite;
+  animation: rotateCircle 3s linear infinite;
 }
 .page-loader-container .icon {
   font-size: 65px;
@@ -841,17 +841,15 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   animation: fill 3s linear infinite;
 }
 .page-loader-container .center-icon {
   font-size: 150px;
   color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-45%, -45%);
-  animation: fillCenter 3s linear infinite;
+  position: relative;
+  top: 27.5%;
+  left: 27.5%;
+  animation: fill 3s linear infinite;
 }
 @keyframes fill {
   0% {
@@ -877,7 +875,7 @@ main {
 }
 @keyframes rotateCircle {
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
   }
 }
 

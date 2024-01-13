@@ -33,7 +33,9 @@ const ThemedComponent = () => {
       <div className="PositionToggle">
         <p className="ToggleNameOne">{themedComponent.cyber[language]}</p>
         <div className={`toggle ${buttonClicked ? "active" : ""}`}>
-          <button onClick={handleToggleTheme}></button>
+        <button onClick={handleToggleTheme} aria-label="theme switch"></button>
+
+
 
           {state.currentTheme === "garden" && buttonClicked && (
             <GardenCanvas />

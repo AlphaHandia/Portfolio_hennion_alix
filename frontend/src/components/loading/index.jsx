@@ -27,11 +27,11 @@ const PageLoader = () => {
             icon={faShieldAlt}
             className="icon"
             style={{
-              transform: `rotate(${index * (360 / 18)}deg) translate(500%)`,
+              transform: `rotate(${index * (360 / 18)}deg) translate(400%)`,
             }}
           />
         ))}
-        <FontAwesomeIcon icon={faShieldAlt} className="center-icon" />
+        <FontAwesomeIcon icon={faShieldAlt} className="center-icon"  />
       </div>
   
     </div>

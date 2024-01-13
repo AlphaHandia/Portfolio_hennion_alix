@@ -40,10 +40,10 @@ const ProjectTimeline = () => {
   return (
     <div>
       <div className="scroll-buttons">
-        <button onClick={() => handleScroll("left")}>
+        <button onClick={() => handleScroll("left")} aria-label="scroll to left">
           <i className="fa-solid fa-arrow-left" style={{ color: themeState.currentTheme === 'garden' ? 'rgb(255, 96, 0)' : 'rgb(0, 119, 255)' }}></i>
         </button>
-        <button onClick={() => handleScroll("right")}>
+        <button onClick={() => handleScroll("right")} aria-label="scroll to right">
           <i className="fa-solid fa-arrow-right" style={{ color: themeState.currentTheme === 'garden' ? 'rgb(255, 96, 0)' : 'rgb(0, 119, 255)' }}></i>
         </button>
       </div>
@@ -55,7 +55,7 @@ const ProjectTimeline = () => {
               index % 2 === 0 ? "even" : "odd"
             }`}
           >
-            <div className="project-month" style={{ color: themeState.currentTheme === 'garden' ? 'rgb(255, 96, 0)' : 'aqua', textShadow: '1px 1px 1px #fac123', fontSize: '60px', fontWeight: 'bold', letterSpacing: '2px', whiteSpace: 'nowrap' }}>
+            <div className="project-month" style={{ color: themeState.currentTheme === 'garden' ? 'rgb(255, 96, 0)' : '#00AD03', textShadow: '1px 1px 1px #fac123', fontSize: '60px', fontWeight: 'bold', letterSpacing: '2px', whiteSpace: 'nowrap' }}>
               {getMonthString(project.date_realization)} &gt;
             </div>
             <ProjectCard projectId={project.id} />

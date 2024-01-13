@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useLanguage } from "../LanguageSelector/LanguageContext";
 import translations from "../../initi18n/content/translation.json";
 import { useTheme } from "../theme-switch/ThemeContext";
@@ -9,21 +9,25 @@ const Footer = () => {
   const { language } = useLanguage();
   const { state: themeState } = useTheme();
   const footer = translations.footer;
-  const [pdfSrc, setPdfSrc] = useState(null);
 
-  const linkStyle = {
+  const buttonStyle = {
     color: themeState.currentTheme === 'garden' ? 'rgba(255, 96, 0)' : '#ffffff',
-    textDecoration: 'none',
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    textDecoration: 'underline',
     transition: 'color 0.3s ease-out',
   };
-
-  const handleDownload = (pdfName) => {
-    const pdfPath = `./${pdfName}`;
-    setPdfSrc(pdfPath);
-
-    // Save the file using file-saver
-    saveAs(pdfPath, pdfName);
+  const downloadPDF = (nomPDF, cheminComplet) => {
+    // Créer un lien temporaire et le déclencher pour démarrer le téléchargement.
+    const lien = document.createElement('a');
+    lien.href = cheminComplet;
+    lien.download = nomPDF;
+    document.body.appendChild(lien);
+    lien.click();
+    document.body.removeChild(lien);
   };
+  
 
   return (
     <footer className="footer">
@@ -44,10 +48,11 @@ const Footer = () => {
         <a
           href="https://github.com/AlphaHandia?tab=repositories"
           target="_blank"
+          aria-label="link to GitHub"
           rel="noopener noreferrer"
-          style={footer.githubLink && linkStyle}
+          style={footer.githubLink && buttonStyle}
         >
-          <i className="fa-brands fa-github" style={footer.githubLink && linkStyle}></i>
+          <i className="fa-brands fa-github" style={footer.githubLink && buttonStyle}></i>
         </a>
       </div>
       <div className="separator"></div>
@@ -56,10 +61,11 @@ const Footer = () => {
         <a
           href="https://www.linkedin.com/in/alix-hennion-1389081b8/"
           target="_blank"
+          aria-label="link to linkedin"
           rel="noopener noreferrer"
-          style={footer.linkedinLink && linkStyle}
+          style={footer.linkedinLink && buttonStyle}
         >
-          <i className="fa-brands fa-linkedin-in" style={footer.linkedinLink && linkStyle}></i>
+          <i className="fa-brands fa-linkedin-in" style={footer.linkedinLink && buttonStyle}></i>
         </a>
       </div>
       <div className="separator"></div>
@@ -67,32 +73,31 @@ const Footer = () => {
         <h4>{footer.documentationTitle[language]}</h4>
         <ul>
           <li>
-            <a
-              href="/"
-              style={footer.requirementsLink && linkStyle}
-              onClick={() => handleDownload("Spécifications techniques Portfolio ALix Hennion.pdf")}
-            >
-              {footer.requirements[language]}
-            </a>
+          <button
+  style={footer.requirementsLink && buttonStyle}
+  onClick={() =>
+    downloadPDF("Spécifications techniques Portfolio ALix Hennion.pdf",
+    "Spécifications techniques Portfolio ALix Hennion.pdf")
+  }
+>
+  {footer.requirements[language]}
+</button>
           </li>
           <li>
-            <a
-              href="/"
-              style={footer.recipeLink && linkStyle}
+            <button
+              style={footer.recipeLink && buttonStyle}
               onClick={() =>
-                handleDownload("Alix+Hennion+Cahier+de+recette+du+Portfolio+complété.pdf")
+                downloadPDF(
+                  "Alix+Hennion+Cahier+de+recette+du+Portfolio+complété.pdf",
+                  "Alix+Hennion+Cahier+de+recette+du+Portfolio+complété.pdf"
+                )
               }
             >
               {footer.recipe[language]}
-            </a>
+            </button>
           </li>
         </ul>
       </div>
-      {pdfSrc && (
-        <Document file={pdfSrc}>
-          <Page pageNumber={1} />
-        </Document>
-      )}
     </footer>
   );
 };

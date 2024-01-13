@@ -68,5 +68,8 @@
     "babel-jest": "^29.7.0",
     "identity-obj-proxy": "^3.0.0",
     "jasmine": "^5.1.0"
+  },
+  "resolutions": {
+    "react": "16.14.0"
   }
 }

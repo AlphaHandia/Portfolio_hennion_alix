@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLanguage } from "../LanguageSelector/LanguageContext";
-import profileImage from "../../assets/images/alix-hennion.jpg";
+import profileImage from "../../assets/images/alix-hennion.webp";
 import LanguageSelector from "../LanguageSelector/index";
 import translations from "../../initi18n/content/translation.json";
 import PageLoader from "../loading/index";
@@ -44,20 +44,20 @@ const NavBar = () => {
           <LanguageSelector />
         </div>
         <h1 style={{
-          color: themeState.currentTheme === 'garden' ? '#20a338' : 'antiquewhite',
+          color: themeState.currentTheme === 'garden' ? '#20a338' : '#00AD03',
           textShadow: themeState.currentTheme === 'garden' ? '1px 1px 1px #bb8a00' : '1px 1px 1px #fac123',
         }}>{navbar.title[language]}</h1>
         <div className="right-side">
           <a href="/#Banner" style={{
-            color: themeState.currentTheme === 'garden' ? '#ff6000' : 'aqua',
+            color: themeState.currentTheme === 'garden' ? '#ff6000' : '#317A00',
             textShadow: themeState.currentTheme === 'garden' ? 'none' : '1px 1px 1px #fac123',
           }}>{navbar.presentation[language]}</a>
           <a href="/#mainProject" style={{
-            color: themeState.currentTheme === 'garden' ? '#ff6000' : 'aqua',
+            color: themeState.currentTheme === 'garden' ? '#ff6000' : '#317A00',
             textShadow: themeState.currentTheme === 'garden' ? 'none' : '1px 1px 1px #fac123',
           }}>{navbar.projects[language]}</a>
           <a href="/Contact" onClick={handleContactClick} style={{
-            color: themeState.currentTheme === 'garden' ? '#ff6000' : 'aqua',
+            color: themeState.currentTheme === 'garden' ? '#ff6000' : '#317A00',
             textShadow: themeState.currentTheme === 'garden' ? 'none' : '1px 1px 1px #fac123',
             display: isContactPage ? 'none' :'flex' , // Affiche le lien seulement si c'est la page de contact
           }}>{homeLinkText}</a>

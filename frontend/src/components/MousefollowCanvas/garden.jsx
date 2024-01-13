@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import backgroundImage from "../../assets/images/background-theme-garden.png";
+import backgroundImage from "../../assets/images/background-theme-garden.webp";
 import gsap from "gsap";
 import { useTheme } from "../theme-switch/ThemeContext";
 import "../../sass/main.css";
@@ -54,7 +54,7 @@ const GardenCanvas = () => {
     >
       <img
         ref={arrosoirRef}
-        src="arrosoir.png"
+        src="arrosoir.webp"
         alt="Arrosoir"
         className="arrosoir"
       />

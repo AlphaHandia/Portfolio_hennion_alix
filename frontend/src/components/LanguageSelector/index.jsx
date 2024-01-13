@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLanguage } from "./LanguageContext";
-import frenchflag from "../../assets/images/french-flag.jpg";
-import englishflag from "../../assets/images/english-flag.jpg";
+import frenchflag from "../../assets/images/french-flag.webp";
+import englishflag from "../../assets/images/english-flag.webp";
 
 const LanguageSelector = () => {
   const { language, changeLanguage } = useLanguage();

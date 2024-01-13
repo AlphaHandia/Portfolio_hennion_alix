@@ -27,7 +27,7 @@ const MainProject = () => {
   return (
     <div className="main-content">
       <h1 style={{
-  color: themeState.currentTheme === 'garden' ? 'rgb(32,163,56)' : 'inherit',
+  color: themeState.currentTheme === 'garden' ? 'rgb(32,163,56)' : '#00AD03',
   textShadow: themeState.currentTheme === 'garden' ? 'rgb(187,138,0) 1px 1px 1px' : 'none',
 }}>
   {mainProject.projectTitle[language]}
