@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 /.pnp
+/frontend
+/.git/index.lock
+
 .pnp.js
 
 # testing
