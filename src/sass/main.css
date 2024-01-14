@@ -52,17 +52,12 @@
   margin: 0 10px;
 }
 
-@media (min-width: 768px) {
-  .footer-section {
-    width: 48%;
-  }
-}
-@media (max-width: 767px) {
+@media (max-width: 1215px) {
   .footer-section {
     width: 100%;
     margin-bottom: 10px;
   }
-  footer {
+  .footer {
     display: flex;
     flex-wrap: wrap;
   }
@@ -211,6 +206,7 @@
   margin: 20px;
   transition: all 0.3s ease-out;
   color: rgb(190, 240, 241);
+  min-width: 300px;
 }
 
 .coverCard {
@@ -489,6 +485,15 @@
 @media only screen and (max-width: 1024px) {
   .banner-container {
     flex-direction: column;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .banner-container {
+    justify-content: center;
+  }
+  .midle-side-icon {
+    justify-content: center;
+    flex-direction: row;
   }
 }
 button {

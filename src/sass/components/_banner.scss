@@ -60,3 +60,12 @@
       flex-direction: column;
     }
   }
+  @media only screen and (min-width: 1024px) {
+    .banner-container{
+     justify-content: center;
+    }
+    .midle-side-icon{
+      justify-content: center;
+      flex-direction: row;
+    }
+  }

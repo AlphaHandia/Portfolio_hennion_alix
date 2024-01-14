@@ -124,6 +124,7 @@ const MainProject = () => {
           </div>
         ))}
       </div>
+   
     </div>
   );
 };

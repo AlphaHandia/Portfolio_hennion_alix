@@ -50,20 +50,16 @@
     margin: 0 10px;
   }
   
-  @media (min-width: 768px) {
-    .footer-section {
-      width: 48%;
-    }
-  }
+ 
   
-  @media (max-width: 767px) {
+  @media (max-width: 1215px) {
     .footer-section {
       width: 100%;
       margin-bottom: 10px;
       
     }
-    footer{
+    .footer{
       display: flex;
-      flex-wrap:wrap;
+      flex-wrap: wrap;
     }
   }

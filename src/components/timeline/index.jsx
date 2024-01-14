@@ -1,5 +1,6 @@
 import React from "react";
 import "react-calendar-timeline/lib/Timeline.css";
+
 import projectData from "../Projects/projectContent.json";
 import ProjectCard from "../Projects/card/timelinecard";
 import { useTheme } from "../theme-switch/ThemeContext";
