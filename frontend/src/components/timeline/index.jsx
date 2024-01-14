@@ -2,7 +2,7 @@ import React from "react";
 import "react-calendar-timeline/lib/Timeline.css";
 import projectData from "../Projects/projectContent.json";
 import ProjectCard from "../Projects/card/timelinecard";
-import { useTheme } from "../theme-switch/ThemeContext"; // Assurez-vous d'avoir le chemin d'importation correct
+import { useTheme } from "../theme-switch/ThemeContext";
 
 const ProjectTimeline = () => {
   const { state: themeState } = useTheme();
@@ -28,7 +28,7 @@ const ProjectTimeline = () => {
 
   const handleScroll = (direction) => {
     const timeline = document.querySelector(".project-timeline");
-    const scrollAmount = 275; // Ajustement de la valeur de défilement selon votre préférence
+    const scrollAmount = 200; // Ajustement de la valeur de défilement selon la préférence
 
     if (direction === "left") {
       timeline.scrollLeft -= scrollAmount;
@@ -40,14 +40,40 @@ const ProjectTimeline = () => {
   return (
     <div>
       <div className="scroll-buttons">
-        <button onClick={() => handleScroll("left")} aria-label="scroll to left">
-          <i className="fa-solid fa-arrow-left" style={{ color: themeState.currentTheme === 'garden' ? 'rgb(255, 96, 0)' : 'rgb(0, 119, 255)' }}></i>
+        <button
+          onClick={() => handleScroll("left")}
+          aria-label="scroll to left"
+        >
+          <i
+            className="fa-solid fa-arrow-left"
+            style={{
+              color:
+                themeState.currentTheme === "garden"
+                  ? "rgb(255, 96, 0)"
+                  : "rgb(0, 119, 255)",
+            }}
+          ></i>
         </button>
-        <button onClick={() => handleScroll("right")} aria-label="scroll to right">
-          <i className="fa-solid fa-arrow-right" style={{ color: themeState.currentTheme === 'garden' ? 'rgb(255, 96, 0)' : 'rgb(0, 119, 255)' }}></i>
+        <button
+          onClick={() => handleScroll("right")}
+          aria-label="scroll to right"
+        >
+          <i
+            className="fa-solid fa-arrow-right"
+            style={{
+              color:
+                themeState.currentTheme === "garden"
+                  ? "rgb(255, 96, 0)"
+                  : "rgb(0, 119, 255)",
+            }}
+          ></i>
         </button>
       </div>
-      <div className={`project-timeline ${themeState.currentTheme === 'garden' ? 'garden-theme' : ''}`}>
+      <div
+        className={`project-timeline ${
+          themeState.currentTheme === "garden" ? "garden-theme" : ""
+        }`}
+      >
         {filteredProjects.map((project, index) => (
           <div
             key={project.id}
@@ -55,7 +81,20 @@ const ProjectTimeline = () => {
               index % 2 === 0 ? "even" : "odd"
             }`}
           >
-            <div className="project-month" style={{ color: themeState.currentTheme === 'garden' ? 'rgb(255, 96, 0)' : '#00AD03', textShadow: '1px 1px 1px #fac123', fontSize: '60px', fontWeight: 'bold', letterSpacing: '2px', whiteSpace: 'nowrap' }}>
+            <div
+              className="project-month"
+              style={{
+                color:
+                  themeState.currentTheme === "garden"
+                    ? "rgb(255, 96, 0)"
+                    : "#00AD03",
+                textShadow: "1px 1px 1px #fac123",
+                fontSize: "60px",
+                fontWeight: "bold",
+                letterSpacing: "2px",
+                whiteSpace: "nowrap",
+              }}
+            >
               {getMonthString(project.date_realization)} &gt;
             </div>
             <ProjectCard projectId={project.id} />

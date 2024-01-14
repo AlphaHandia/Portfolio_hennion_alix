@@ -56,13 +56,17 @@
 }
 
 .project-timeline-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
   width: 100%;
-  height: 100%; 
+  height: 100%;
+   
 }
-
+@media (min-width: 768px) {
+  .project-timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }}
 .even {
   margin-bottom: 10%;
   /* Décalage pour les éléments pairs */
@@ -87,9 +91,10 @@
   justify-content: space-between;
   margin-bottom: 10px;
 }
+
 .fa-arrow-left,
 .fa-arrow-right {
-  font-size: 130px;
+  font-size: 75px;
   color: rgb(0, 119, 255);
   position: relative;
   top: 600px;
@@ -99,3 +104,8 @@
     opacity: 1;
   }
 }
+@media (min-width: 768px) {
+  .fa-arrow-left,
+.fa-arrow-right {
+    font-size: 130px;
+  }}

@@ -28,24 +28,30 @@ const ContactForm = () => {
       message: Yup.string().required(contactForm.messageLabel[language]),
     }),
     onSubmit: (values, { resetForm }) => {
-      // Envoyer l'e-mail avec le paramètre user_id
-      emailjs.send("service_xe5t36o", "template_wg6rccb", {
-        to_email: "hennion.pierre.alix@hotmail.fr",
-        from_name: values.name,
-        from_email: values.email,
-        phone: values.phone,
-        subject: values.subject,
-        message: values.message,
-      }, "yl-54KXzl4JNROFLu").then(
-        (response) => {
-          console.log("E-mail envoyé avec succès", response);
-          setIsMessageSent(true);
-          resetForm();
-        },
-        (error) => {
-          console.error("Erreur lors de l'envoi de l'e-mail", error);
-        }
-      );
+      emailjs
+        .send(
+          "service_xe5t36o",
+          "template_wg6rccb",
+          {
+            to_email: "hennion.pierre.alix@hotmail.fr",
+            from_name: values.name,
+            from_email: values.email,
+            phone: values.phone,
+            subject: values.subject,
+            message: values.message,
+          },
+          "yl-54KXzl4JNROFLu"
+        )
+        .then(
+          (response) => {
+            console.log("E-mail envoyé avec succès", response);
+            setIsMessageSent(true);
+            resetForm();
+          },
+          (error) => {
+            console.error("Erreur lors de l'envoi de l'e-mail", error);
+          }
+        );
     },
   });
   const subjectOptions = [...contactForm.subjectOptions[language]];

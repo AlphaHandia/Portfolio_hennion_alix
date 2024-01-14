@@ -2,8 +2,6 @@ import React from "react";
 import { useLanguage } from "../LanguageSelector/LanguageContext";
 import translations from "../../initi18n/content/translation.json";
 import { useTheme } from "../theme-switch/ThemeContext";
-import { Document, Page } from "react-pdf";
-import { saveAs } from "file-saver";
 
 const Footer = () => {
   const { language } = useLanguage();
@@ -11,23 +9,22 @@ const Footer = () => {
   const footer = translations.footer;
 
   const buttonStyle = {
-    color: themeState.currentTheme === 'garden' ? 'rgba(255, 96, 0)' : '#ffffff',
-    background: 'none',
-    border: 'none',
-    cursor: 'pointer',
-    textDecoration: 'underline',
-    transition: 'color 0.3s ease-out',
+    color:
+      themeState.currentTheme === "garden" ? "rgba(255, 96, 0)" : "#ffffff",
+    background: "none",
+    border: "none",
+    cursor: "pointer",
+    textDecoration: "underline",
+    transition: "color 0.3s ease-out",
   };
   const downloadPDF = (nomPDF, cheminComplet) => {
-    // Créer un lien temporaire et le déclencher pour démarrer le téléchargement.
-    const lien = document.createElement('a');
+    const lien = document.createElement("a");
     lien.href = cheminComplet;
     lien.download = nomPDF;
     document.body.appendChild(lien);
     lien.click();
     document.body.removeChild(lien);
   };
-  
 
   return (
     <footer className="footer">
@@ -38,8 +35,7 @@ const Footer = () => {
           {footer.phone[language]}
         </p>
         <p>
-          <i className="fa-regular fa-envelope"></i>{" "}
-          {footer.email[language]}
+          <i className="fa-regular fa-envelope"></i> {footer.email[language]}
         </p>
       </div>
       <div className="separator"></div>
@@ -52,7 +48,10 @@ const Footer = () => {
           rel="noopener noreferrer"
           style={footer.githubLink && buttonStyle}
         >
-          <i className="fa-brands fa-github" style={footer.githubLink && buttonStyle}></i>
+          <i
+            className="fa-brands fa-github"
+            style={footer.githubLink && buttonStyle}
+          ></i>
         </a>
       </div>
       <div className="separator"></div>
@@ -65,7 +64,10 @@ const Footer = () => {
           rel="noopener noreferrer"
           style={footer.linkedinLink && buttonStyle}
         >
-          <i className="fa-brands fa-linkedin-in" style={footer.linkedinLink && buttonStyle}></i>
+          <i
+            className="fa-brands fa-linkedin-in"
+            style={footer.linkedinLink && buttonStyle}
+          ></i>
         </a>
       </div>
       <div className="separator"></div>
@@ -73,15 +75,17 @@ const Footer = () => {
         <h4>{footer.documentationTitle[language]}</h4>
         <ul>
           <li>
-          <button
-  style={footer.requirementsLink && buttonStyle}
-  onClick={() =>
-    downloadPDF("Spécifications techniques Portfolio ALix Hennion.pdf",
-    "Spécifications techniques Portfolio ALix Hennion.pdf")
-  }
->
-  {footer.requirements[language]}
-</button>
+            <button
+              style={footer.requirementsLink && buttonStyle}
+              onClick={() =>
+                downloadPDF(
+                  "Spécifications techniques Portfolio ALix Hennion.pdf",
+                  "Spécifications techniques Portfolio ALix Hennion.pdf"
+                )
+              }
+            >
+              {footer.requirements[language]}
+            </button>
           </li>
           <li>
             <button

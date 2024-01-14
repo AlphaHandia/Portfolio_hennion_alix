@@ -26,31 +26,62 @@ const MainProject = () => {
 
   return (
     <div className="main-content">
-      <h1 style={{
-  color: themeState.currentTheme === 'garden' ? 'rgb(32,163,56)' : '#00AD03',
-  textShadow: themeState.currentTheme === 'garden' ? 'rgb(187,138,0) 1px 1px 1px' : 'none',
-}}>
-  {mainProject.projectTitle[language]}
-</h1>
-      <div className={`main-project ${themeState.currentTheme === 'garden' ? 'garden-theme' : ''}`} id="mainProject">
+      <h1
+        style={{
+          color:
+            themeState.currentTheme === "garden" ? "rgb(32,163,56)" : "#00AD03",
+          textShadow:
+            themeState.currentTheme === "garden"
+              ? "rgb(187,138,0) 1px 1px 1px"
+              : "none",
+        }}
+      >
+        {mainProject.projectTitle[language]}
+      </h1>
+      <div
+        className={`main-project ${
+          themeState.currentTheme === "garden" ? "garden-theme" : ""
+        }`}
+        id="mainProject"
+      >
         {filteredProjects.map((project) => (
           <div
             key={project.id}
-            className={`project-card ${hoveredProject === project.id ? "hovered" : ""}`}
+            className={`project-card ${
+              hoveredProject === project.id ? "hovered" : ""
+            }`}
             onMouseEnter={() => handleMouseEnter(project.id)}
             onMouseLeave={handleMouseLeave}
             style={{
-              backgroundColor: themeState.currentTheme === 'garden' ? 'rgba(190, 240, 241, 0.6)' : 'rgba(255, 184, 93, 0.3)',
-              color: themeState.currentTheme === 'garden' ? 'rgba(252, 92, 17)' : 'antiquewhite',
+              backgroundColor:
+                themeState.currentTheme === "garden"
+                  ? "rgba(190, 240, 241, 0.6)"
+                  : "rgba(255, 184, 93, 0.3)",
+              color:
+                themeState.currentTheme === "garden"
+                  ? "rgba(252, 92, 17)"
+                  : "antiquewhite",
             }}
           >
-            <img src={project.picture} alt={project.title[language]} />
+            <img
+              src={project.picture}
+              alt={project.title[language]}
+              loading="lazy"
+            />
             <div className="project-details">
               <h2>{project.title[language]}</h2>
               <p>{project.description[language]}</p>
-              <p>{mainProject.dateLabel[language]}: {project.date_realization}</p>
-              <p>{mainProject.languagesLabel[language]}: {project.languages.join(", ")}</p>
-              <p>{mainProject.skillsLabel[language]}: {project.skills_acquired.join(", ")}</p>
+              <p>
+                {mainProject.dateLabel[language]}: {project.date_realization}
+              </p>
+              <p>
+                {mainProject.languagesLabel[language]}:{" "}
+                {project.languages.join(", ")}
+              </p>
+              <p>
+                {mainProject.skillsLabel[language]}:{" "}
+                {project.skills_acquired.join(", ")}
+              </p>
               {project.linkGithub && (
                 <p>
                   <a
@@ -58,9 +89,12 @@ const MainProject = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
-                      color: themeState.currentTheme === 'garden' ? 'rgb(255, 96, 0)' : '#007bff',
-                      textDecoration: 'underline',
-                      transition: 'color 0.3s ease-out',
+                      color:
+                        themeState.currentTheme === "garden"
+                          ? "rgb(255, 96, 0)"
+                          : "#007bff",
+                      textDecoration: "underline",
+                      transition: "color 0.3s ease-out",
                     }}
                   >
                     GitHub
@@ -74,9 +108,12 @@ const MainProject = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
-                      color: themeState.currentTheme === 'garden' ? 'rgb(255, 96, 0)' : '#007bff',
-                      textDecoration: 'underline',
-                      transition: 'color 0.3s ease-out',
+                      color:
+                        themeState.currentTheme === "garden"
+                          ? "rgb(255, 96, 0)"
+                          : "#007bff",
+                      textDecoration: "underline",
+                      transition: "color 0.3s ease-out",
                     }}
                   >
                     GitHub Pages

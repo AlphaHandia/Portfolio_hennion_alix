@@ -33,6 +33,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .fa-linkedin-in,
@@ -213,8 +214,8 @@
 }
 
 .coverCard {
-  width: 350px;
-  height: 190px;
+  width: 100%;
+  height: 100%;
   border-radius: 15px;
 }
 
@@ -373,13 +374,17 @@
 }
 
 .project-timeline-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
 }
 
+@media (min-width: 768px) {
+  .project-timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .even {
   margin-bottom: 10%;
   /* Décalage pour les éléments pairs */
@@ -408,7 +413,7 @@
 
 .fa-arrow-left,
 .fa-arrow-right {
-  font-size: 130px;
+  font-size: 75px;
   color: rgb(0, 119, 255);
   position: relative;
   top: 600px;
@@ -420,6 +425,12 @@
   opacity: 1;
 }
 
+@media (min-width: 768px) {
+  .fa-arrow-left,
+  .fa-arrow-right {
+    font-size: 130px;
+  }
+}
 .weather p {
   font-size: 30px;
   font-weight: bold;
@@ -461,7 +472,9 @@
   color: #ffffff;
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 10px;
+  width: 100%;
 }
 .midle-side p {
   font-size: 30px;
@@ -470,7 +483,7 @@
 .midle-side .midle-side-icon {
   gap: 15px;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -675,7 +688,7 @@ a:hover {
   }
   .right-side {
     display: flex;
-    flex-direction: row; /* Ajout d'une colonne pour le format mobile */
+    flex-direction: column; /* Ajout d'une colonne pour le format mobile */
   }
   h1 {
     font-size: 50px;

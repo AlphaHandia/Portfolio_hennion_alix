@@ -102,7 +102,7 @@ a {
 
   .right-side {
     display: flex;
-    flex-direction: row; /* Ajout d'une colonne pour le format mobile */
+    flex-direction: column; /* Ajout d'une colonne pour le format mobile */
   }
   h1{
     font-size:50px;

@@ -42,7 +42,9 @@
   color: #ffffff;
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 10px;
+  width:100%;
   p {
     font-size: 30px;
     font-weight: bold;
@@ -50,7 +52,7 @@
   .midle-side-icon {
     gap: 15px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 @media only screen and (max-width: 1024px) {

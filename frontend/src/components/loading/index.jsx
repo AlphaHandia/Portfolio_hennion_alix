@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShieldAlt } from "@fortawesome/free-solid-svg-icons";
 
-
-
 const PageLoader = () => {
   const [loading, setLoading] = useState(true);
 
@@ -31,9 +29,8 @@ const PageLoader = () => {
             }}
           />
         ))}
-        <FontAwesomeIcon icon={faShieldAlt} className="center-icon"  />
+        <FontAwesomeIcon icon={faShieldAlt} className="center-icon" />
       </div>
-  
     </div>
   ) : null;
 };

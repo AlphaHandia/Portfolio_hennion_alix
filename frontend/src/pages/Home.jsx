@@ -13,14 +13,13 @@ import GardenCanvas from "../components/MousefollowCanvas/garden";
 import { useTheme } from "../components/theme-switch/ThemeContext";
 
 import MainProject from "../components/Projects/MainProjects";
-import PageLoader from "../components/loading/index"; // Assurez-vous de fournir le chemin correct
+import PageLoader from "../components/loading/index";
 
 const Home = () => {
   const { state } = useTheme();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulez un chargement de page ici, par exemple avec un délai de 2000 ms
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);

@@ -12,24 +12,21 @@ const ProjectCard = ({ projectId }) => {
   const project = projectData.projects.find((proj) => proj.id === projectId);
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
-    // Ajoutez un effet useEffect pour ajouter et supprimer l'event listener
-    useEffect(() => {
-      const handleKeyPress = (e) => {
-        if (e.key === "Escape") {
-          closeModal();
-        }
-      };
-  
-      // Ajoute l'event listener lors du montage du composant
-      window.addEventListener("keydown", handleKeyPress);
-  
-      // Nettoie l'event listener lors du démontage du composant
-      return () => {
-        window.removeEventListener("keydown", handleKeyPress);
-      };
-    }, []); // Le tableau de dépendances vide signifie que l'effet s'exécute uniquement lors du montage/démontage du composant
-  
-   
+
+  useEffect(() => {
+    const handleKeyPress = (e) => {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
+
   const openModal = () => {
     setModalOpen(true);
     setSelectedProject(project);
@@ -41,19 +38,31 @@ const ProjectCard = ({ projectId }) => {
   };
 
   const cardStyle = {
-    backgroundColor: themeState.currentTheme === 'garden' ? 'rgba(190, 240, 241, 0.6)' : 'rgba(252, 92, 17, 0.3)',
-    color: themeState.currentTheme === 'garden' ? 'rgba(252, 92, 17)' : 'rgb(190, 240, 241)',
+    backgroundColor:
+      themeState.currentTheme === "garden"
+        ? "rgba(190, 240, 241, 0.6)"
+        : "rgba(252, 92, 17, 0.3)",
+    color:
+      themeState.currentTheme === "garden"
+        ? "rgba(252, 92, 17)"
+        : "rgb(190, 240, 241)",
   };
 
   const buttonStyle = {
-    color: themeState.currentTheme === 'garden' ? 'rgba(252, 92, 17)' : 'rgb(190, 240, 241)',
-    textDecoration: 'none',
-    transition: 'color 0.3s ease-out',
+    color:
+      themeState.currentTheme === "garden"
+        ? "rgba(252, 92, 17)"
+        : "rgb(190, 240, 241)",
+    textDecoration: "none",
+    transition: "color 0.3s ease-out",
   };
 
   const hoverButtonStyle = {
-    color: themeState.currentTheme === 'garden' ? 'rgba(252, 92, 17)' : 'rgb(190, 240, 241)',
-    textDecoration: 'underline',
+    color:
+      themeState.currentTheme === "garden"
+        ? "rgba(252, 92, 17)"
+        : "rgb(190, 240, 241)",
+    textDecoration: "underline",
   };
 
   return (
@@ -67,6 +76,7 @@ const ProjectCard = ({ projectId }) => {
         src={project.cover}
         alt={project.title[language]}
         className="coverCard"
+        loading="lazy"
       />
       <div className="project-details">
         <h3>{project.title[language]}</h3>

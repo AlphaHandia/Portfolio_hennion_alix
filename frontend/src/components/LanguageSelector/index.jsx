@@ -18,15 +18,13 @@ const LanguageSelector = () => {
         onClick={() => handleLanguageChange("en")}
         className={`english ${selectedLanguage === "en" ? "selected" : ""}`}
       >
-        <img src={englishflag} alt="english flag" />
-        
+        <img src={englishflag} alt="english flag" loading="lazy" />
       </button>
       <button
         onClick={() => handleLanguageChange("fr")}
         className={`french ${selectedLanguage === "fr" ? "selected" : ""}`}
       >
-        <img src={frenchflag} alt="french flag" />
-    
+        <img src={frenchflag} alt="french flag" loading="lazy" />
       </button>
     </div>
   );

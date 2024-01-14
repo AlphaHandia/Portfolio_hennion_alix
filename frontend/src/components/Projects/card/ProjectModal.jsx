@@ -20,6 +20,7 @@ const ProjectModal = ({ project, onClose }) => {
             src={project.picture}
             alt={project.title[language]}
             className="modalpicture"
+            loading="lazy"
           />
           <h2>{project.title[language]}</h2>
           <p>{project.description[language]}</p>

@@ -11,9 +11,8 @@ import translations from "../initi18n/content/translation.json";
 const Error = () => {
   const { state } = useTheme();
   const { language } = useLanguage();
-  const errorData = translations.errorPage; // Access the errorPage object directly
+  const errorData = translations.errorPage;
 
-  // Check if errorData and title exist before accessing them
   if (!errorData || !errorData.title) {
     return (
       <div style={state.themeStyles[state.currentTheme]}>
@@ -47,7 +46,8 @@ const Error = () => {
           <p>{errorData.errorMessage[language]}</p>
           <p>{errorData.contactAdmin[language]}</p>
           <p>
-            {errorData.errorCode[language]} <span className="code">SECURITY-123</span>
+            {errorData.errorCode[language]}{" "}
+            <span className="code">SECURITY-123</span>
           </p>
           <p>
             {errorData.returnHome[language]} <a href="/">Accueil</a>.

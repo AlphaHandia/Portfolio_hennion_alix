@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTheme } from "./ThemeContext";
 import { useLanguage } from "../LanguageSelector/LanguageContext";
 import translations from "../../initi18n/content/translation.json";
-import CustomCursor from "./CustomCursor";
+
 import GardenCanvas from "../MousefollowCanvas/garden";
 import PageLoader from "../loading/index";
 
@@ -33,14 +33,12 @@ const ThemedComponent = () => {
       <div className="PositionToggle">
         <p className="ToggleNameOne">{themedComponent.cyber[language]}</p>
         <div className={`toggle ${buttonClicked ? "active" : ""}`}>
-        <button onClick={handleToggleTheme} aria-label="theme switch"></button>
+          <button
+            onClick={handleToggleTheme}
+            aria-label="theme switch"
+          ></button>
 
-
-
-          {state.currentTheme === "garden" && buttonClicked && (
-            <GardenCanvas />
-          )}
-          <CustomCursor />
+          {state.currentTheme === "garden" && buttonClicked && <GardenCanvas />}
         </div>
         <p className="ToggleNameTwo">{themedComponent.garden[language]}</p>
       </div>
