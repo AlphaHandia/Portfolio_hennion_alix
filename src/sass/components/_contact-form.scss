@@ -1,0 +1,139 @@
+.fa-shield-halved {
+    font-size: 100px;
+  }
+  .positioncontactform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-form {
+    width: 80%;
+    padding: 30px;
+    margin: 40px 40px 175px 40px;
+    border: 6px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 50px;
+    position: relative;
+  
+    &:hover {
+      box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.8);
+    }
+    h2 {
+      color: rgba(0, 0, 0, 0.3);
+      font-size: 60px;
+      text-transform: uppercase;
+    }
+    button {
+      font-size: 52px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      margin-top: 30px;
+    }
+  
+    .left-column,
+    .right-column {
+      flex: 0 0 48%;
+      margin-right: 10px;
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    input,
+    textarea,
+    select {
+      width: 100%;
+      background: transparent;
+      outline: none;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 10px 0 10px 20px;
+      margin-right: 10px;
+      border: 5px solid rgba(0, 0, 0, 0.3);
+      box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+      color: black;
+      border-radius: 50px;
+      transition: all 0.4s;
+      &:hover {
+        border: 5px solid rgba(0, 0, 0, 0.6);
+        box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.6);
+      }
+      &:focus {
+        border: 5px solid rgba(0, 0, 0, 0.8);
+        box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.8);
+      }
+    }
+  
+    label {
+      line-height: 40px;
+      color: black;
+      font-size: 40px;
+      font-weight: bold;
+      margin: 0 0 0 20px;
+      display: block;
+      pointer-events: none;
+    }
+    .popup p {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .row input[type="submit"] {
+      border: 5px solid rgba(0, 0, 0, 0.3);
+      box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+      padding: 10px;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      outline: none;
+      background: transparent;
+      text-transform: uppercase;
+      color: black;
+      line-height: 40px;
+      font-size: 24px;
+      font-weight: 700;
+      border-radius: 45px;
+      transition: all 0.4s;
+  
+      &:hover {
+        border: 5px solid rgba(255, 255, 255, 1);
+        color: #ffffff;
+        transition: all 0.4s;
+      }
+    }
+  
+    @media screen and (max-width: 900px) {
+      .contact-form {
+        width: 90%;
+      }
+  
+      .row {
+        flex-direction: column;
+        margin-top: 20px;
+      }
+  
+      .left-column,
+      .right-column {
+        flex: 0 0 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+  
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }

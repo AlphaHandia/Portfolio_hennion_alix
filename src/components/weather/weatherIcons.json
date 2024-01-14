@@ -1,0 +1,11 @@
+{
+    "sun": "fa-regular fa-sun",
+    "clouds": "fa-solid fa-cloud",
+    "overcast clouds": "fa-solid fa-cloud",
+    "broken clouds":"fa-solid fa-cloud",
+    "rain": "fa-solid fa-cloud-rain",
+    "snow": "fa-solid fa-cloud-meatball",
+    "thunderstorm": "fa-solid fa-poo-storm",
+    "fog": "fa-solid fa-smog",
+    "windy": "fa-solid fa-wind"
+  }

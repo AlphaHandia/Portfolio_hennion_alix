@@ -1,0 +1,24 @@
+button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  button img {
+    height: auto;
+    background-image: transparent;
+    background: transparent;
+    margin-right: 5px;
+  }
+  
+  button.english {
+    color: #007bff;
+  }
+  
+  button.french {
+    color: #ff0000;
+  }
