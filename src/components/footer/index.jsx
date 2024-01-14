@@ -93,7 +93,7 @@ const Footer = () => {
               onClick={() =>
                 downloadPDF(
                   "Alix+Hennion+Cahier+de+recette+du+Portfolio+complété.pdf",
-                  "Alix+Hennion+Cahier+de+recette+du+Portfolio+complété.pdf"
+                  encodeURIComponent("Alix+Hennion+Cahier+de+recette+du+Portfolio+complété.pdf")
                 )
               }
             >
